@@ -1,0 +1,279 @@
+@charset "utf-8";
+#J_metric {
+position: fixed;
+left: 100px;
+right: 100px;
+top: 60px;
+bottom: 20px;
+height: auto;
+}
+.vmPage {
+height: 100%;
+font-size: 13px;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+min-width: 900px;
+}
+.vmPage>.tabs{
+position: absolute;
+top: -10px;
+bottom: -10px;
+left: 0;
+right: 0;
+margin-top: 0;
+height: 48px;
+border-bottom: 3px solid #ecf0f2;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.vmPage>.tabs .tab.selected {
+border-bottom: 3px solid #00afc8;
+color: #252f3d;
+cursor: default;
+}
+.vmPage>.tabs .tab:first-child {
+margin-left: 0;
+}
+.vmPage>.tabs .tab{
+border: none;
+font-size: 14px;
+line-height: 35px;
+height: 35px;
+display: block;
+margin-left: 8px;
+}
+.tabs .tab.selected {
+background-color: #fff;
+cursor: default;
+}
+.tabs .tab {
+color: #738293;
+padding: 6px 12px 4px;
+height: 35px;
+line-height: 25px;
+border-right: 2px solid #fff;
+overflow: hidden;
+font-size: 13px;
+display: block;
+float: left;
+cursor: pointer;
+position: relative;
+}
+.vmPage>.tabs .tab:hover{
+background-color:#fff;border-bottom:3px solid #abe9f2
+}
+.metric-con {
+position: absolute;
+left: 0px;
+right: 0px;
+top: 58px;
+bottom: 0px;
+height: auto;
+}
+.metric-con .metric-wp {
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+}
+.metric-con .metric-l {
+position: relative;
+width: 40%;
+height: 100%;
+float: left;
+}
+.metric-con .metric-r {
+float: left;
+width: 60%;
+height: 100%;
+padding-left: 20px;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.metric-con .btn-create {
+color: #ffffff;
+background-color: #1eb9a5;
+border-color: #1eb9a5;
+}
+a {
+color: #00afc8;
+text-decoration: none;
+}
+.metric-con .metric-l .table {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 35px;
+margin: 0;
+}
+.metric-con .metric-l .table .table-content {
+max-height: none;
+}
+.metric-con .metric-l .table .table-content {
+flex: 1;
+max-height: 410px;
+overflow-y: auto;
+overflow-x: hidden;
+}
+.metric-con .metric-l .table .row {
+display: flex;
+border-bottom: 1px solid #e7ebed;
+white-space: nowrap;
+font-size: 12px;
+}
+.metric-con .metric-l .row {
+cursor: pointer;
+}
+.metric-con .metric-l .table .row:hover{
+background-color:#e1f4f7
+}
+.metric-con .metric-l .table .row.selected{
+background-color:#b9f1f9
+}
+.metric-con .metric-l .table .row .status{
+text-transform:capitalize
+}
+.metric-con .metric-l .table .row a.disabled{
+color:#738293;cursor:not-allowed
+}
+.metric-con .metric-l .table .row a.disabled:hover{
+color:#738293
+}
+.metric-con .metric-l .table .row a.disabled:active{
+color:#738293
+}
+.metric-con .metric-l .table .table-content i {
+margin-right: 5px !important;
+margin-top: -2px;
+}
+.metric-con .metric-l .row {
+cursor: pointer;
+}
+
+.metric-con .metric-l .table-header {
+margin: 0 0 0 0;
+}
+.metric-con .metric-l .table-header {
+display: flex;
+flex: 1;
+height: 36px;
+min-height: 36px;
+max-height: 36px;
+overflow: hidden;
+font-weight: bold;
+}
+.metric-con .metric-l .table-header>div {
+flex: 1;
+overflow: hidden;
+height: 36px;
+line-height: 36px;
+padding-left: 16px;
+background-color: #ecf0f2;
+color: #626f7e;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+border-right: 1px solid #fff;
+font-size: 13px;
+white-space: nowrap;
+}
+
+.metric-con .metric-l .table .row>div {
+flex: 1;
+overflow: hidden;
+height: 40px;
+line-height: 40px;
+padding-left: 16px;
+color: #252f3d;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+float: left;
+}
+.metric-con .metric-r .chart-wp {
+position: relative;
+width: 100%;
+height: 290px;
+min-height: 290px;
+max-height: 290px;
+background-color: #f6fbfc;
+overflow: hidden;
+}
+.metric-con .metric-r .chart-wp .J-alarm-chart {
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+height: 290px;
+width: 100%;
+}
+.metric-con .metric-r .time-wp {
+margin-top: 20px;
+}
+.metric-con .btn-group {
+display: inline-block;
+}
+.metric-con .btn-group>.btn:first-child {
+border-bottom-right-radius: 0;
+border-top-right-radius: 0;
+}
+.metric-con .btn-group>.btn {
+float: left;
+margin-right: 1px;
+}
+.metric-con .btn-status:hover, .metric-con .btn-status:active {
+color: #738293;
+background-color: #b9f1f9;
+border-color: #b9f1f9;
+}
+.metric-con .btn:hover {
+color: #ffffff;
+background-color:#5cd0e0 ;
+border-color: #ffffff;
+}
+.metric-con .btn-status.selected {
+color: #252f3d;
+background-color:#00a5bd;
+border-color: #ffffff;
+}
+.metric-con .btn {
+display: inline-block;
+min-width: 80px;
+border: 1px solid transparent;
+font-weight: normal;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+white-space: nowrap;
+padding: 0 10px;
+font-size: 13px;
+height: 32px;
+line-height: 32px;
+border-radius: 2px;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+color: #252f3d;
+background-color: gray;
+border-color: #ffffff;
+user-select: none;
+}
+.metric-con .btn-status {
+height: 30px;
+line-height: 30px;
+color: #738293;
+background-color: #ecf0f2;
+border-color: #ecf0f2;
+}
+a:focus, a:hover, a:active {
+outline: 0;
+}
+a:hover, a:focus, a:active {
+color: #00a5c1;
+text-decoration: none;
+}
+a {
+color: #00afc8;
+text-decoration: none;
+}

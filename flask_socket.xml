@@ -1,0 +1,8 @@
+<uwsgi>
+    <pythonpath>/opt/projects/mana_api/</pythonpath>
+    <callable>app</callable>
+    <socket>:8066</socket>
+    <module>runserver</module>
+    <processes>4</processes> <!-- 进程数 -->
+    <daemonize>uwsgi.log</daemonize>
+</uwsgi>
