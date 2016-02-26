@@ -3,7 +3,9 @@ import httplib
 import urlparse
 import json
 from mana_api.config import AUTH_PUBLIC_URI
+from mana_api.config import logging
 
+logger = logging.getLogger(__name__)
 
 def http_request(url, body=None, headers=None, method="POST"):
     url_list = urlparse.urlparse(url)
@@ -36,5 +38,20 @@ def nova_list(token, endpoint, f, t):
     url = endpoint + '/servers/detail'
     res = http_request(url, headers=headers, method='GET')
     dd = json.loads(res.read())
-    return {"code": 200, "msg": "", "vm_servers": dd["servers"][f:t]}
+    logger.info('scloudm response: %s' % dd)
+    vm_servers = []
+    for item in dd["servers"]:
+        instance = {
+            "instance_name": item["name"],
+            "instance_id": item["id"],
+            "cpu_num": item.get('cpu', None),
+            "mem_size": item.get('mem', None),
+            "lan_ip": item["addresses"],
+            "wan_ip_set": item["accessIPv4"],
+            "status": item["status"],
+            "create_at": item["created"],
+            "update_at": item["updated"]
+        }
+        vm_servers.append(instance)
+    return {"code": 200, "msg": "", "vm_servers": vm_servers[f:t]}
 
