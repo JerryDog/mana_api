@@ -8,9 +8,10 @@ from mana_api.config import logging
 
 logger = logging.getLogger(__name__)
 
+
 def http_request(url, body=None, headers=None, method="POST"):
     url_list = urlparse.urlparse(url)
-    con = httplib.HTTPConnection(url_list.netloc, timeout = 15)
+    con = httplib.HTTPConnection(url_list.netloc, timeout=15)
     path = url_list.path
     if url_list.query:
         path = path + "?" + url_list.query
@@ -35,7 +36,7 @@ def get_new_token(token, tenant_id):
 
 # endpoint 为 api 访问的地址，以 region 过滤出来的
 def nova_list(token, endpoint, f, t):
-    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json" }
+    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json"}
     url = endpoint + '/servers/detail'
     res = http_request(url, headers=headers, method='GET')
     dd = json.loads(res.read())
@@ -69,14 +70,15 @@ def nova_list(token, endpoint, f, t):
 def get_flavor(token, endpoint, flavor_id):
     if not flavor_id:
         return None, None, None
-    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json" }
-    url = endpoint + '/flavors/​%s​' % flavor_id
+    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json"}
+    url = endpoint + '/flavors/​​' + flavor_id
     res = http_request(url, headers=headers, method='GET')
     dd = json.loads(res.read())
     disk = dd["flavor"]["disk"]
     mem = dd["flavor"]["ram"]
     cpu = dd["flavor"]["vcpus"]
     return disk, mem, cpu
+
 
 # 区分外网 ip 和内网 ip, 返回列表形式
 def addresses_to_wan_lan(addresses):
@@ -105,14 +107,21 @@ def addresses_to_wan_lan(addresses):
     if not addresses:
         return None, None
 
-    lan_ip = []
-    wan_ip = []
-    for v in addresses.values():
-        for i in v:
+    lan_ip = {}
+    wan_ip = {}
+    for key in addresses:
+        lan_ip[key] = []
+        wan_ip[key] = []
+        for i in addresses[key]:
             ip = i.get('addr', None)
             if re.match('10\.', ip) or re.match('172\.', ip):
-                lan_ip.append(ip)
+                lan_ip[key].append(ip)
             else:
-                wan_ip.append(ip)
-
+                wan_ip[key].append(ip)
+    for k, v in lan_ip.items():
+        if not v:
+            lan_ip.pop(k)
+    for k, v in wan_ip.items():
+        if not v:
+            wan_ip.pop(k)
     return lan_ip, wan_ip
