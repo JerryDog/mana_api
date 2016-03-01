@@ -71,7 +71,7 @@ def get_flavor(token, endpoint, flavor_id):
     if not flavor_id:
         return None, None, None
     headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json"}
-    url = endpoint + '/flavors/​​' + flavor_id
+    url = endpoint + '/flavors' + '/' + flavor_id
     res = http_request(url, headers=headers, method='GET')
     dd = json.loads(res.read())
     disk = dd["flavor"]["disk"]
