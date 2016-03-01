@@ -2,6 +2,7 @@
 import httplib
 import urlparse
 import json
+import re
 from mana_api.config import AUTH_PUBLIC_URI
 from mana_api.config import logging
 
@@ -41,17 +42,77 @@ def nova_list(token, endpoint, f, t):
     logger.info('scloudm response: %s' % dd)
     vm_servers = []
     for item in dd["servers"]:
+        lan_ip, wan_ip = addresses_to_wan_lan(item["addresses"])
+        flavor = item.get('flavor', None)
+        if flavor:
+            flavor_id = flavor.get('id', None)
+        else:
+            flavor_id = None
+        disk, mem, cpu = get_flavor(token, endpoint, flavor_id)
         instance = {
             "instance_name": item["name"],
             "instance_id": item["id"],
-            "cpu_num": item.get('cpu', None),
-            "mem_size": item.get('mem', None),
-            "lan_ip": item["addresses"],
-            "wan_ip_set": item["accessIPv4"],
-            "status": item["status"],
-            "create_at": item["created"],
-            "update_at": item["updated"]
+            "cpu_num": cpu,
+            "mem_size": mem,
+            "disk_size": disk,
+            "lan_ip_set": lan_ip,
+            "wan_ip_set": wan_ip,
+            "status": item["status"].lower(),
+            "create_at": item["created"].replace('T', ' ').replace('Z', ''),
+            "update_at": item["updated"].replace('T', ' ').replace('Z', '')
         }
         vm_servers.append(instance)
     return {"code": 200, "msg": "", "vm_servers": vm_servers[f:t]}
 
+
+# 获取主机类型明细
+def get_flavor(token, endpoint, flavor_id):
+    if not flavor_id:
+        return None, None, None
+    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json" }
+    url = endpoint + '/flavors/​%s​' % flavor_id
+    res = http_request(url, headers=headers, method='GET')
+    dd = json.loads(res.read())
+    disk = dd["flavor"]["disk"]
+    mem = dd["flavor"]["ram"]
+    cpu = dd["flavor"]["vcpus"]
+    return disk, mem, cpu
+
+# 区分外网 ip 和内网 ip, 返回列表形式
+def addresses_to_wan_lan(addresses):
+    '''
+    u'addresses': {
+                u'test': [
+                    {
+                        u'OS-EXT-IPS-MAC: mac_addr': u'fa: 16: 3e: 13: 69: 95',
+                        u'version': 4,
+                        u'addr': u'10.240.2.26',
+                        u'OS-EXT-IPS: type': u'fixed'
+                    }
+                ],
+                u'ZR-WT-604': [
+                    {
+                        u'OS-EXT-IPS-MAC: mac_addr': u'fa: 16: 3e: be: c6: 11',
+                        u'version': 4,
+                        u'addr': u'210.51.35.93',
+                        u'OS-EXT-IPS: type': u'fixed'
+                    }
+                ]
+            }
+    :param addresses:
+    :return:
+    '''
+    if not addresses:
+        return None, None
+
+    lan_ip = []
+    wan_ip = []
+    for v in addresses.values():
+        for i in v:
+            ip = i.get('addr', None)
+            if re.match('10\.', ip) or re.match('172\.', ip):
+                lan_ip.append(ip)
+            else:
+                wan_ip.append(ip)
+
+    return lan_ip, wan_ip
