@@ -80,6 +80,7 @@ def pm_act():
         result = {"code": 200, "msg": "success", "detail": []}
         for a in all_pm_info:
             res = os.system('ipmitool -I lanplus -U %s -P %s -H %s power %s' % (a[0], a[1], a[2], act))
+            logger.info('ipmitool -I lanplus -U %s -P %s -H %s power %s' % (a[0], a[1], a[2], act))
             if res != 0:
                 result["code"] = 400
                 result["msg"] = "failed"
