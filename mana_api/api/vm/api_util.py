@@ -75,7 +75,7 @@ def get_flavor(token, endpoint, flavor_id):
     res = http_request(url, headers=headers, method='GET')
     dd = json.loads(res.read())
     disk = dd["flavor"]["disk"]
-    mem = dd["flavor"]["ram"]
+    mem = int(dd["flavor"]["ram"]/1024)
     cpu = dd["flavor"]["vcpus"]
     return disk, mem, cpu
 
