@@ -33,6 +33,30 @@ def get_new_token(token, tenant_id):
     except Exception, e:
         return 'ConnError, %s' % e
 
+# 虚拟机状态统一
+STATUS = {
+    "ACTIVE": "active",
+    "BUILD": "building",
+    "DELETED": "deleted",
+    "ERROR": "error",
+    "HARD_REBOOT": "initialized",
+    "MIGRATING": "initialized",
+    "PASSWORD": "initialized",
+    "PAUSED": "paused",
+    "REBOOT": "initialized",
+    "REBUILD": "building",
+    "RESCUE": "rescued",
+    "RESIZE": "resized",
+    "REVERT_RESIZE": "resized",
+    "VERIFY_RESIZE": "resized",
+    "SHELVED": "paused",
+    "SHELVED_OFFLOADED": "paused",
+    "SHUTOFF": "stopped",
+    "SOFT_DELETED": "soft-delete",
+    "SUSPENDED": "suspend",
+    "UNKNOWN": "error"
+}
+
 
 # endpoint 为 api 访问的地址，以 region 过滤出来的
 def nova_list(token, endpoint, f, t):
@@ -58,7 +82,7 @@ def nova_list(token, endpoint, f, t):
             "disk_size": disk,
             "lan_ip_set": lan_ip,
             "wan_ip_set": wan_ip,
-            "status": item["status"].lower(),
+            "status": STATUS[item["status"]],
             "create_at": item["created"].replace('T', ' ').replace('Z', ''),
             "update_at": item["updated"].replace('T', ' ').replace('Z', '')
         }
