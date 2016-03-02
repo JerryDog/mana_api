@@ -107,21 +107,24 @@ def addresses_to_wan_lan(addresses):
     if not addresses:
         return None, None
 
-    lan_ip = {}
-    wan_ip = {}
+    lan_ip_set = []
+    wan_ip_set = []
     for key in addresses:
-        lan_ip[key] = []
-        wan_ip[key] = []
+        lan_ip = {}
+        wan_ip = {}
+        lan_ip["name"] = key
+        lan_ip["ip_set"] = []
+        wan_ip["name"] = key
+        wan_ip["ip_set"] = []
         for i in addresses[key]:
             ip = i.get('addr', None)
             if re.match('10\.', ip) or re.match('172\.', ip):
-                lan_ip[key].append(ip)
+                lan_ip["ip_set"].append(ip)
             else:
-                wan_ip[key].append(ip)
-    for k, v in lan_ip.items():
-        if not v:
-            lan_ip.pop(k)
-    for k, v in wan_ip.items():
-        if not v:
-            wan_ip.pop(k)
-    return lan_ip, wan_ip
+                wan_ip["ip_set"].append(ip)
+        if lan_ip["ip_set"]:
+            lan_ip_set.append(lan_ip)
+        if wan_ip["ip_set"]:
+            wan_ip_set.append(wan_ip)
+
+    return lan_ip_set, wan_ip_set
