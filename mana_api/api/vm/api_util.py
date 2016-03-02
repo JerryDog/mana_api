@@ -123,8 +123,10 @@ def addresses_to_wan_lan(addresses):
             else:
                 wan_ip["ip_set"].append(ip)
         if lan_ip["ip_set"]:
+            lan_ip["ip_set"] = ','.join(lan_ip["ip_set"])
             lan_ip_set.append(lan_ip)
         if wan_ip["ip_set"]:
+            wan_ip["ip_set"] = ','.join(wan_ip["ip_set"])
             wan_ip_set.append(wan_ip)
 
     return lan_ip_set, wan_ip_set
