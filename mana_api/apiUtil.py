@@ -154,18 +154,21 @@ def get_pm(tenant_id, region, f, t):
     if tenant_id and not region:
         db_query = pm_servers.query.filter(
             pm_servers.tenant_id == tenant_id
-        ).all()[f:t]
+        ).all()
     elif region and not tenant_id:
         db_query = pm_servers.query.filter(
             pm_servers.region == region
-        ).all()[f:t]
+        ).all()
     elif not region and not tenant_id:
-        db_query = pm_servers.query.all()[f:t]
+        db_query = pm_servers.query.all()
     else:
         db_query = pm_servers.query.filter(
             pm_servers.tenant_id == tenant_id,
             pm_servers.region == region
-        ).all()[f:t]
+        ).all()
+
+    total_count = len(db_query)
+    db_query = db_query[f:t]
 
     pm = []
     for i in db_query:
@@ -193,7 +196,7 @@ def get_pm(tenant_id, region, f, t):
         })
         del status, available, create_at, update_at
 
-    return {"code": 200, "msg": "", "pm_servers": pm}
+    return {"code": 200, "msg": "", "total_count": total_count, "pm_servers": pm}
 
 
 # 根据系统序列号获取物理机状态和可用状态

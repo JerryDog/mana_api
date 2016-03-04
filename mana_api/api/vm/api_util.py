@@ -66,7 +66,9 @@ def nova_list(token, endpoint, f, t):
     dd = json.loads(res.read())
     logger.info('scloudm response: %s' % dd)
     vm_servers = []
-    for item in dd["servers"]:
+    servers_list = dd["servers"]
+    total_count = len(servers_list)
+    for item in servers_list[f:t]:
         lan_ip, wan_ip = addresses_to_wan_lan(item["addresses"])
         flavor = item.get('flavor', None)
         if flavor:
@@ -87,7 +89,7 @@ def nova_list(token, endpoint, f, t):
             "update_at": item["updated"].replace('T', ' ').replace('Z', '')
         }
         vm_servers.append(instance)
-    return {"code": 200, "msg": "", "vm_servers": vm_servers[f:t]}
+    return {"code": 200, "msg": "", "total_count": total_count,"vm_servers": vm_servers}
 
 
 # 获取主机类型明细
@@ -131,26 +133,16 @@ def addresses_to_wan_lan(addresses):
     if not addresses:
         return None, None
 
-    lan_ip_set = []
-    wan_ip_set = []
+    lan_ip = []
+    wan_ip = []
     for key in addresses:
-        lan_ip = {}
-        wan_ip = {}
-        lan_ip["name"] = key
-        lan_ip["ip_set"] = []
-        wan_ip["name"] = key
-        wan_ip["ip_set"] = []
         for i in addresses[key]:
             ip = i.get('addr', None)
             if re.match('10\.', ip) or re.match('172\.', ip):
-                lan_ip["ip_set"].append(ip)
+                lan_ip.append(ip)
             else:
-                wan_ip["ip_set"].append(ip)
-        if lan_ip["ip_set"]:
-            lan_ip["ip_set"] = ','.join(lan_ip["ip_set"])
-            lan_ip_set.append(lan_ip)
-        if wan_ip["ip_set"]:
-            wan_ip["ip_set"] = ','.join(wan_ip["ip_set"])
-            wan_ip_set.append(wan_ip)
+                wan_ip.append(ip)
 
-    return lan_ip_set, wan_ip_set
+    lan_ip_str = ','.join(lan_ip)
+    wan_ip_str = ','.join(wan_ip)
+    return lan_ip_str, wan_ip_str

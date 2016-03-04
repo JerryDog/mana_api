@@ -36,3 +36,9 @@ Wed, 02 Mar 2016 16:45:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Wed, 02 Mar 2016 16:45:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Wed, 02 Mar 2016 16:45:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
 Wed, 02 Mar 2016 16:45:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 04 Mar 2016 10:36:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 04 Mar 2016 10:36:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 04 Mar 2016 10:39:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Fri, 04 Mar 2016 10:39:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 04 Mar 2016 10:42:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Fri, 04 Mar 2016 10:42:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
