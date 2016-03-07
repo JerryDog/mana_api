@@ -9,6 +9,14 @@ from mana_api.config import logging
 logger = logging.getLogger(__name__)
 
 
+# 自定义异常
+class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)
+
+
 def http_request(url, body=None, headers=None, method="POST"):
     url_list = urlparse.urlparse(url)
     con = httplib.HTTPConnection(url_list.netloc, timeout=15)
@@ -61,6 +69,8 @@ STATUS = {
 # endpoint 为 api 访问的地址，以 region 过滤出来的
 def nova_list(token, endpoint, f, t):
     headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json"}
+    if not endpoint:
+        raise MyError('无效的区域'.decode('utf-8'))
     url = endpoint + '/servers/detail'
     res = http_request(url, headers=headers, method='GET')
     dd = json.loads(res.read())

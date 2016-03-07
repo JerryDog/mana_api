@@ -5,7 +5,7 @@ from flask import request
 from mana_api.api import zt_api
 from mana_api.config import logging
 from mana_api.apiUtil import getUserProjByToken
-from mana_api.api.vm.api_util import nova_list, get_new_token
+from mana_api.api.vm.api_util import nova_list, get_new_token, MyError
 import sys
 
 reload(sys)
@@ -49,6 +49,9 @@ def vm():
     try:
         result = nova_list(new_token, user.get_endpoint(region, "nova"), f, t)
         return jsonify(result)
+    except MyError, e:
+        logger.exception('MyError raised')
+        return jsonify({"code": 400, "msg": '%s' % e.value}), 400
     except:
         logger.exception('Error with get vm_servers')
         return jsonify({"code": 400, "msg": "Error with get vm_servers"}), 400

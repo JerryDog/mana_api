@@ -99,3 +99,20 @@ class pm_monitors(db.Model):
 
     def __repr__(self):
         return '<Project(Detail) %r>' % self.system_snid
+
+# 虚拟机计费表
+class expense_virtual(db.Model):
+    __bind_key__ = 'cloud'
+    __tablename__ = 'expense_virtual'
+    id = db.Column(db.Integer, primary_key=True)
+    locationID = db.Column(db.String(64))
+    projectID = db.Column(db.String(64))
+    serverID = db.Column(db.String(64))
+    year = db.Column(db.Integer)
+    month = db.Column(db.Integer)
+    day = db.Column(db.Integer)
+    value = db.Column(db.Float)
+    personID = db.Column(db.String(32))
+    display_name = db.Column(db.String(128))
+
+

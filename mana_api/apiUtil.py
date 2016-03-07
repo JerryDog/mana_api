@@ -3,7 +3,8 @@ from __future__ import division
 
 __author__ = 'liujiahua'
 
-from mana_api.models import netflow, netrate_project, pm_servers, pm_ilo_list, pm_accounts, pm_monitors
+from mana_api.models import netflow, netrate_project, pm_servers, pm_ilo_list, \
+    pm_accounts, pm_monitors, expense_virtual
 from config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ
 from mana_api import db
 import datetime
@@ -244,28 +245,94 @@ def update_stat_after_act(act, snid):
 
 # 根据 tenant_id 获取这个项目所有的每个月的计费
 def get_pm_accounts(tenant_id):
-    db_query = pm_accounts.query.filter(
+    # 获取物理机的 dict
+    db_query_pm = pm_accounts.query.filter(
         pm_accounts.tenant_id == tenant_id
     ).all()
-    if not db_query:
-        return {"accounts": []}
-    daily_list = []
-    for i in db_query:
+    daily_list_pm = []
+    for i in db_query_pm:
         daily_dict = {"month": i.update_at.strftime('%Y-%m'),
                       "price": i.price,
                       "region": i.region}
-        daily_list.append(daily_dict)
+        daily_list_pm.append(daily_dict)
         del daily_dict
-    # 将每天的数据按月按区域分类
-    month_dict = {}
-    for d in daily_list:
-        if month_dict.has_key(d.get('month') + d.get('region')):
-            month_dict[d.get('month') + d.get('region')]["price"] += d.get('price')
+    # 将物理机每天的数据按月按区域分类
+    pm_month_dict = {}
+    for d in daily_list_pm:
+        if pm_month_dict.has_key(d.get('month') + '#' + d.get('region')):
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_price"] += d.get('price')
         else:
-            month_dict[d.get('month') + d.get('region')] = {}
-            month_dict[d.get('month') + d.get('region')]["price"] = d.get('price')
-            month_dict[d.get('month') + d.get('region')]["month"] = d.get('month')
-            month_dict[d.get('month') + d.get('region')]["region"] = d.get('region')
+            pm_month_dict[d.get('month') + '#' + d.get('region')] = {}
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_price"] = d.get('price')
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["month"] = d.get('month')
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["region"] = d.get('region')
+
+
+    # 获取虚拟机的 dict
+    db_query_vm = expense_virtual.query.filter(
+        expense_virtual.projectID == tenant_id
+    ).all()
+    daily_list_vm = []
+    for i in db_query_vm:
+        daily_dict = {"month": '%s-%s' % (i.year, i.month),
+                      "price": i.value,
+                      "region": i.locationID}
+        daily_list_vm.append(daily_dict)
+        del daily_dict
+    # 将虚拟机每天的数据按月按区域分类
+    vm_month_dict = {}
+    for d in daily_list_vm:
+        if vm_month_dict.has_key(d.get('month') + '#' + d.get('region')):
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_price"] += d.get('price')
+        else:
+            vm_month_dict[d.get('month') + '#' + d.get('region')] = {}
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_price"] = d.get('price')
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["month"] = d.get('month')
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["region"] = d.get('region')
+
+
+    # 获取带宽的 dict
+    flow = get_monthly_flow(tenant_id).get('monthly_data')
+    if flow:
+        flow_dict = {}
+        for f in flow:
+            flow_dict[f.get('date') + '#' + f.get('region')] = f
+    else:
+        flow_dict = {}
+
+    # 将 pm_month_dict vm_month_dict flow_dict 汇总
+    month_dict = {}
+    for i in vm_month_dict:
+        if pm_month_dict.has_key(i):
+            month_dict[i]['pm_price'] = pm_month_dict[i]['pm_price']
+        else:
+            month_dict[i]['pm_price'] = 0
+
+        if flow_dict.has_key(i):
+            month_dict[i]['max_in_rate'] = flow_dict[i]['max_in_rate']
+            month_dict[i]['max_out_rate'] = flow_dict[i]['max_out_rate']
+        else:
+            month_dict[i]['max_in_rate'] = 0
+            month_dict[i]['max_out_rate'] = 0
+        month_dict[i]['vm_price'] = vm_month_dict[i]['vm_price']
+        month_dict[i]['month'] = vm_month_dict[i]['month']
+        month_dict[i]['region'] = vm_month_dict[i]['region']
+
+    # 补上物理机有的虚拟机没有的 key
+    for p in pm_month_dict:
+        if not month_dict.has_key(p):
+            month_dict[p] = {}
+            month_dict[p]['month'] = pm_month_dict[p]['month']
+            month_dict[p]['region'] = pm_month_dict[p]['region']
+            month_dict[p]['pm_price'] = pm_month_dict[p]['pm_price']
+            month_dict[p]['vm_price'] = 0
+            if flow_dict.has_key(p):
+                month_dict[p]['max_in_rate'] = flow_dict[p]['max_in_rate']
+                month_dict[p]['max_out_rate'] = flow_dict[p]['max_out_rate']
+            else:
+                month_dict[p]['max_in_rate'] = 0
+                month_dict[p]['max_out_rate'] = 0
+
 
     month_list = []
     for key in month_dict:
@@ -279,7 +346,6 @@ def get_pm_accounts(tenant_id):
 # 返回一个月的第一天和最后一天的时间
 def get_time(month):
     import calendar
-
     y, m = month.split('-')
     week, last_day = calendar.monthrange(int(y), int(m))
     start = '%s-01 00:00:00' % month

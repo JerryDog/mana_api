@@ -30,7 +30,7 @@ def pm():
     # 禁止跨项目操作
     user = getUserProjByToken(token)
     if tenant_id not in user.proj_dict.keys():
-        return jsonify({"code": 403, "msg": "project is not yours"}), 403
+        return jsonify({"code": 403, "msg": "无权限操作该项目".decode('utf-8')}), 403
 
     region = request.args.get('region', None)
     f = request.args.get('f', None)
@@ -98,7 +98,7 @@ def pm_act():
 def pm_bill():
     tenant_id = request.args.get('tenant_id', None)
     if not tenant_id:
-         return jsonify({"code": 400, "msg": "Bad request, tenant_id not found"}), 400
+         return jsonify({"code": 400, "msg": "Bad request, tenant_id required"}), 400
 
     # 禁止跨项目操作
     token = request.headers.get("X-Auth-Token")
