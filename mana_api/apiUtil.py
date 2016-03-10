@@ -288,7 +288,11 @@ def get_pm_accounts(tenant_id):
     ).all()
     daily_list_vm = []
     for i in db_query_vm:
-        daily_dict = {"month": '%s-%s' % (i.year, i.month),
+        if i.month < 10:
+            m = '0%s' % i.month
+        else:
+            m = i.month
+        daily_dict = {"month": '%s-%s' % (i.year, m),
                       "price": i.value,
                       "region": i.locationID}
         daily_list_vm.append(daily_dict)
@@ -319,6 +323,7 @@ def get_pm_accounts(tenant_id):
     # 将 pm_month_dict vm_month_dict flow_dict 汇总
     month_dict = {}
     for i in vm_month_dict:
+        month_dict[i] = {}
         if pm_month_dict.has_key(i):
             month_dict[i]['pm_price'] = pm_month_dict[i]['pm_price']
             month_dict[i]['pm_counts'] = pm_month_dict[i]['pm_counts']
@@ -332,7 +337,7 @@ def get_pm_accounts(tenant_id):
         else:
             month_dict[i]['max_in_rate'] = 0
             month_dict[i]['max_out_rate'] = 0
-        month_dict[i]['vm_price'] = vm_month_dict[i]['vm_price']
+        month_dict[i]['vm_price'] = float(vm_month_dict[i]['vm_price'])  # decimal转float
         month_dict[i]['vm_counts'] = vm_month_dict[i]['vm_counts']
         month_dict[i]['month'] = vm_month_dict[i]['month']
         month_dict[i]['region'] = vm_month_dict[i]['region']
@@ -365,7 +370,7 @@ def get_pm_accounts(tenant_id):
     try:
         nearest_month = month_list[0]["month"]
         months = [nearest_month]
-        farthest_month = month_list[-1:]["month"]
+        farthest_month = month_list[-1:][0]["month"]
         delta = datetime.timedelta(days=10)
         cursor_month = datetime.datetime.strptime(nearest_month+'-01', '%Y-%m-%d')
         while cursor_month.strftime('%Y-%m-%d')[:7] != farthest_month:
