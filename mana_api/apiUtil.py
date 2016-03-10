@@ -31,6 +31,15 @@ class User(object):
                     if i["region"] == region:
                         return i["publicURL"]
 
+    def get_regions(self):
+        regions = []
+        try:
+            for e in self.endpoints:
+                if e["endpoints"]["region"] not in regions:
+                    regions.append(e["endpoints"]["region"])
+        except:
+            regions = []
+        return regions
 
 def getUserProjByToken(token):
     headers = {"X-Auth-Token": "%s" % ADMIN_TOKEN}
@@ -263,8 +272,10 @@ def get_pm_accounts(tenant_id):
     for d in daily_list_pm:
         if pm_month_dict.has_key(d.get('month') + '#' + d.get('region')):
             pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_price"] += d.get('price')
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_counts"] += 1
         else:
             pm_month_dict[d.get('month') + '#' + d.get('region')] = {}
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_counts"] = 1
             pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_price"] = d.get('price')
             pm_month_dict[d.get('month') + '#' + d.get('region')]["month"] = d.get('month')
             pm_month_dict[d.get('month') + '#' + d.get('region')]["region"] = d.get('region')
@@ -286,8 +297,10 @@ def get_pm_accounts(tenant_id):
     for d in daily_list_vm:
         if vm_month_dict.has_key(d.get('month') + '#' + d.get('region')):
             vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_price"] += d.get('price')
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_counts"] += 1
         else:
             vm_month_dict[d.get('month') + '#' + d.get('region')] = {}
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_counts"] = 1
             vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_price"] = d.get('price')
             vm_month_dict[d.get('month') + '#' + d.get('region')]["month"] = d.get('month')
             vm_month_dict[d.get('month') + '#' + d.get('region')]["region"] = d.get('region')
@@ -307,8 +320,10 @@ def get_pm_accounts(tenant_id):
     for i in vm_month_dict:
         if pm_month_dict.has_key(i):
             month_dict[i]['pm_price'] = pm_month_dict[i]['pm_price']
+            month_dict[i]['pm_counts'] = pm_month_dict[i]['pm_counts']
         else:
             month_dict[i]['pm_price'] = 0
+            month_dict[i]['pm_counts'] = 0
 
         if flow_dict.has_key(i):
             month_dict[i]['max_in_rate'] = flow_dict[i]['max_in_rate']
@@ -317,6 +332,7 @@ def get_pm_accounts(tenant_id):
             month_dict[i]['max_in_rate'] = 0
             month_dict[i]['max_out_rate'] = 0
         month_dict[i]['vm_price'] = vm_month_dict[i]['vm_price']
+        month_dict[i]['vm_counts'] = vm_month_dict[i]['vm_counts']
         month_dict[i]['month'] = vm_month_dict[i]['month']
         month_dict[i]['region'] = vm_month_dict[i]['region']
 
@@ -327,7 +343,9 @@ def get_pm_accounts(tenant_id):
             month_dict[p]['month'] = pm_month_dict[p]['month']
             month_dict[p]['region'] = pm_month_dict[p]['region']
             month_dict[p]['pm_price'] = pm_month_dict[p]['pm_price']
+            month_dict[p]['pm_counts'] = pm_month_dict[p]['pm_counts']
             month_dict[p]['vm_price'] = 0
+            month_dict[p]['vm_counts'] = 0
             if flow_dict.has_key(p):
                 month_dict[p]['max_in_rate'] = flow_dict[p]['max_in_rate']
                 month_dict[p]['max_out_rate'] = flow_dict[p]['max_out_rate']
