@@ -106,8 +106,8 @@ def pm_bill():
     if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
-    logger.info('Request: get pm accounts '
-                'tenant_id => %s ' % tenant_id)
+    logger.info('Request: curl -i -H "X-Auth-Token: %s" '
+                '-X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=%s"' % (token, tenant_id))
 
     try:
         result = get_pm_accounts(tenant_id)
