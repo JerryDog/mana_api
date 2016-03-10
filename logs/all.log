@@ -473,3 +473,7 @@ Mon, 07 Mar 2016 17:40:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Mon, 07 Mar 2016 17:40:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Mon, 07 Mar 2016 17:40:50 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Request: get pm accounts tenant_id => 74d4bda6aa1c466d8cb1f2b8eac79567 
 Mon, 07 Mar 2016 17:40:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.170 - - [07/Mar/2016 17:40:50] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -
+Mon, 07 Mar 2016 17:42:18 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Request: get pm accounts tenant_id => 74d4bda6aa1c466d8cb1f2b8eac79567 
+Mon, 07 Mar 2016 17:42:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.170 - - [07/Mar/2016 17:42:19] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -
+Tue, 08 Mar 2016 10:52:44 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Request: get pm accounts tenant_id => 74d4bda6aa1c466d8cb1f2b8eac79567 
+Tue, 08 Mar 2016 10:52:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.170 - - [08/Mar/2016 10:52:45] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -
