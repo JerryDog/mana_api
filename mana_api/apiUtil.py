@@ -5,15 +5,14 @@ __author__ = 'liujiahua'
 
 from mana_api.models import netflow, netrate_project, pm_servers, pm_ilo_list, \
     pm_accounts, pm_monitors, expense_virtual
-from config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ
+from config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ, logging
 from mana_api import db
 import datetime
 import base64
 import json
 import httplib
-import traceback
-import sys
 
+logger = logging.getLogger(__name__)
 
 class User(object):
     def __init__(self, token=None, username=None, proj_dict=None, endpoints=None):
@@ -35,9 +34,11 @@ class User(object):
         regions = []
         try:
             for e in self.endpoints:
-                if e["endpoints"]["region"] not in regions:
-                    regions.append(e["endpoints"]["region"])
+                for i in e["endpoints"]:
+                    if i["region"] not in regions:
+                        regions.append(i["region"])
         except:
+            logger.exception('Error with get_regions')
             regions = []
         return regions
 
@@ -360,7 +361,21 @@ def get_pm_accounts(tenant_id):
     month_list.sort(key=lambda todayListSort: todayListSort['month'])
     month_list.reverse()
 
-    return {"accounts": month_list}
+    # 给2比杉杉返回一个连续月份的 list，方便她循环
+    try:
+        nearest_month = month_list[0]["month"]
+        months = [nearest_month]
+        farthest_month = month_list[-1:]["month"]
+        delta = datetime.timedelta(days=10)
+        cursor_month = datetime.datetime.strptime(nearest_month+'-01', '%Y-%m-%d')
+        while cursor_month.strftime('%Y-%m-%d')[:7] != farthest_month:
+            cursor_month -= delta
+            if cursor_month.strftime('%Y-%m-%d')[:7] not in months:
+                months.append(cursor_month.strftime('%Y-%m-%d')[:7])
+    except:
+        logger.exception('Error with get months list')
+        months = []
+    return {"accounts": month_list, "code": 200, "msg": "", "months": months}
 
 
 # 返回一个月的第一天和最后一天的时间
