@@ -98,13 +98,15 @@ def get_monthly_flow(project_id, region=None, month=None):
 
     monthly_data = []
     for i in db_query:
+        max_in_rate_date = i.max_in_rate_date.strftime('%Y-%m-%d %H:%M:%S') if i.max_in_rate_date else ''
+        max_out_rate_date =  i.max_out_rate_date.strftime('%Y-%m-%d %H:%M:%S') if i.max_out_rate_date else ''
         monthly_data.append({"date": i.date,
                              "total_in": i.total_in,
                              "total_out": i.total_out,
                              "max_in_rate": i.max_in_rate,
-                             "max_in_rate_date": i.max_in_rate_date.strftime('%Y-%m-%d %H:%M:%S'),
+                             "max_in_rate_date": max_in_rate_date,
                              "max_out_rate": i.max_out_rate,
-                             "max_out_rate_date": i.max_out_rate_date.strftime('%Y-%m-%d %H:%M:%S'),
+                             "max_out_rate_date": max_out_rate_date,
                              "region": i.region,
                              "project_id": i.project_id
         })
