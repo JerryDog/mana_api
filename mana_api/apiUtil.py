@@ -321,6 +321,7 @@ def get_pm_accounts(tenant_id):
         flow_dict = {}
 
     # 将 pm_month_dict vm_month_dict flow_dict 汇总
+    unit_fmt = lambda x: x/1024/1024*8
     month_dict = {}
     for i in vm_month_dict:
         month_dict[i] = {}
@@ -332,8 +333,8 @@ def get_pm_accounts(tenant_id):
             month_dict[i]['pm_counts'] = 0
 
         if flow_dict.has_key(i):
-            month_dict[i]['max_in_rate'] = flow_dict[i]['max_in_rate']
-            month_dict[i]['max_out_rate'] = flow_dict[i]['max_out_rate']
+            month_dict[i]['max_in_rate'] = round(unit_fmt(flow_dict[i]['max_in_rate']), 2)
+            month_dict[i]['max_out_rate'] = round(unit_fmt(flow_dict[i]['max_out_rate']), 2)
         else:
             month_dict[i]['max_in_rate'] = 0
             month_dict[i]['max_out_rate'] = 0
@@ -353,8 +354,8 @@ def get_pm_accounts(tenant_id):
             month_dict[p]['vm_price'] = 0
             month_dict[p]['vm_counts'] = 0
             if flow_dict.has_key(p):
-                month_dict[p]['max_in_rate'] = flow_dict[p]['max_in_rate']
-                month_dict[p]['max_out_rate'] = flow_dict[p]['max_out_rate']
+                month_dict[p]['max_in_rate'] = round(unit_fmt(flow_dict[p]['max_in_rate']), 2)
+                month_dict[p]['max_out_rate'] = round(unit_fmt(flow_dict[p]['max_out_rate']), 2)
             else:
                 month_dict[p]['max_in_rate'] = 0
                 month_dict[p]['max_out_rate'] = 0
