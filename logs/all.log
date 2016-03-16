@@ -35,3 +35,11 @@ Fri, 11 Mar 2016 10:05:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Fri, 11 Mar 2016 10:05:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Fri, 11 Mar 2016 10:12:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
 Fri, 11 Mar 2016 10:12:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 16 Mar 2016 11:22:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 16 Mar 2016 11:22:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 16 Mar 2016 11:24:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 16 Mar 2016 11:24:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 16 Mar 2016 11:25:51 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Request: curl -i -H "X-Auth-Token: 60feb5797e974a89af19e9a40f04ac07" -X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567"
+Wed, 16 Mar 2016 11:25:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.171 - - [16/Mar/2016 11:25:52] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -
+Wed, 16 Mar 2016 11:27:21 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Request: curl -i -H "X-Auth-Token: 60feb5797e974a89af19e9a40f04ac07" -X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567"
+Wed, 16 Mar 2016 11:27:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.171 - - [16/Mar/2016 11:27:21] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -

@@ -265,7 +265,8 @@ def get_pm_accounts(tenant_id):
     for i in db_query_pm:
         daily_dict = {"month": i.update_at.strftime('%Y-%m'),
                       "price": i.price,
-                      "region": i.region}
+                      "region": i.region,
+                      "pm_id": i.system_snid}
         daily_list_pm.append(daily_dict)
         del daily_dict
     # 将物理机每天的数据按月按区域分类
@@ -273,14 +274,17 @@ def get_pm_accounts(tenant_id):
     for d in daily_list_pm:
         if pm_month_dict.has_key(d.get('month') + '#' + d.get('region')):
             pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_price"] += d.get('price')
-            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_counts"] += 1
+            if d.get('pm_id') not in pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_ids"]:
+                pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_ids"].append(d.get('pm_id'))
         else:
             pm_month_dict[d.get('month') + '#' + d.get('region')] = {}
-            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_counts"] = 1
+            pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_ids"] = [d.get('pm_id')]
             pm_month_dict[d.get('month') + '#' + d.get('region')]["pm_price"] = d.get('price')
             pm_month_dict[d.get('month') + '#' + d.get('region')]["month"] = d.get('month')
             pm_month_dict[d.get('month') + '#' + d.get('region')]["region"] = d.get('region')
 
+    for k in pm_month_dict:
+        pm_month_dict[k]["pm_counts"] = len(pm_month_dict[k]["pm_ids"])
 
     # 获取虚拟机的 dict
     db_query_vm = expense_virtual.query.filter(
@@ -294,7 +298,8 @@ def get_pm_accounts(tenant_id):
             m = i.month
         daily_dict = {"month": '%s-%s' % (i.year, m),
                       "price": i.value,
-                      "region": i.locationID}
+                      "region": i.locationID,
+                      "vm_id": i.serverID}
         daily_list_vm.append(daily_dict)
         del daily_dict
     # 将虚拟机每天的数据按月按区域分类
@@ -302,14 +307,17 @@ def get_pm_accounts(tenant_id):
     for d in daily_list_vm:
         if vm_month_dict.has_key(d.get('month') + '#' + d.get('region')):
             vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_price"] += d.get('price')
-            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_counts"] += 1
+            if d.get('vm_id') not in vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_ids"]:
+                vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_ids"].append(d.get('vm_id'))
         else:
             vm_month_dict[d.get('month') + '#' + d.get('region')] = {}
-            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_counts"] = 1
+            vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_ids"] = [d.get('vm_id')]
             vm_month_dict[d.get('month') + '#' + d.get('region')]["vm_price"] = d.get('price')
             vm_month_dict[d.get('month') + '#' + d.get('region')]["month"] = d.get('month')
             vm_month_dict[d.get('month') + '#' + d.get('region')]["region"] = d.get('region')
 
+    for k in vm_month_dict:
+        vm_month_dict[k]["vm_counts"] = len(vm_month_dict[k]["vm_ids"])
 
     # 获取带宽的 dict
     flow = get_monthly_flow(tenant_id).get('monthly_data')
