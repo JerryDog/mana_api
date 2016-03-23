@@ -1,18 +1,35 @@
 # -*- coding: utf-8 -*-
 from __future__ import division
-
-__author__ = 'liujiahua'
-
 from mana_api.models import netflow, netrate_project, pm_servers, pm_ilo_list, \
     pm_accounts, pm_monitors, expense_virtual
-from config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ, logging
+from config import logging
 from mana_api import db
+from flask import g
 import datetime
 import base64
 import json
 import httplib
+import urlparse
 
 logger = logging.getLogger(__name__)
+
+
+def http_request(url, body=None, headers=None, method="POST"):
+    url_list = urlparse.urlparse(url)
+    con = httplib.HTTPConnection(url_list.netloc, timeout=15)
+    path = url_list.path
+    if url_list.query:
+        path = path + "?" + url_list.query
+    logger.debug("REQ: ")
+    logger.debug("url: " + str(path))
+    logger.debug("header:" + str(headers))
+    logger.debug("method: " + method)
+    logger.debug("body: " + str(body))
+    con.request(method, path, body, headers)
+    res = con.getresponse()
+    logger.debug("RESP: status:" + str(res.status) + ", reason:" + res.reason)
+    return res
+
 
 class User(object):
     def __init__(self, token=None, username=None, proj_dict=None, endpoints=None):
@@ -42,46 +59,47 @@ class User(object):
             regions = []
         return regions
 
+
 def getUserProjByToken(token):
-    headers = {"X-Auth-Token": "%s" % ADMIN_TOKEN}
-    KEYSTONE = AUTH_PUBLIC_URI
-    if token == ADMIN_TOKEN:
-        user = User(token, 'admin', {ADMIN_PROJ: 'admin'})
+    if token == g.admin_token:
+        user = User(token, 'admin', {g.admin_proj: 'admin'})
         return user
+
+    # 获取项目字典
+    headers1 = {"X-Auth-Token": token}
+    url1 = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tenants')
+    project_dict = {}
     try:
-        conn = httplib.HTTPConnection(KEYSTONE)
+        res = http_request(url1, headers=headers1, method="GET")
+        tenants = json.loads(res.read())
+        for p in tenants["tenants"]:
+            project_dict[p["id"]] = p["name"]
     except:
-        return 'ConnError'
+        logger.exception('Error with get_tenants')
+        return None
+
+    # 获取新的 token
+    headers2 = {"Content-type": "application/json"}
+    url2 = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens')
+    body2 = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (project_dict.keys()[0], token)
     try:
-        conn.request("GET", "/v2.0/tokens/%s" % token, '', headers)
-    except:
-        return 'ConnError'
-    response = conn.getresponse()
-    data = response.read()
-    dd = json.loads(data)
-    try:
+        res = http_request(url2, body=body2, headers=headers2)
+        dd = json.loads(res.read())
         apitoken = dd['access']['token']['id']
-        user_id = dd['access']['user']['id']
+        #user_id = dd['access']['user']['id']
         username = dd['access']['user']['username']
         endpoints = dd['access']['serviceCatalog']
+        user = User(apitoken, username, project_dict, endpoints)
+        return user
     except Exception, e:
-        #traceback.print_exc(file=sys.stdout)
+        logger.exception('Error with get new token')
         return None
-    rq_headers = {"X-Auth-Token": "%s" % apitoken}
-    conn.request('GET', '/v3/users/%s/projects' % user_id, '', rq_headers)
-    resp = conn.getresponse().read()
-    result = json.loads(resp)
-    project_dict = {}
-    for p in result["projects"]:
-        project_dict[p["id"]] = p["name"]
-    conn.close()
-    user = User(apitoken, username, project_dict, endpoints)
-    return user
+
 
 
 def today():
-    today = datetime.datetime.now().strftime('%Y-%m-%d %%H:%M:%S')
-    return today
+    _today = datetime.datetime.now().strftime('%Y-%m-%d %%H:%M:%S')
+    return _today
 
 
 def get_monthly_flow(project_id, region=None, month=None):
@@ -109,7 +127,7 @@ def get_monthly_flow(project_id, region=None, month=None):
     monthly_data = []
     for i in db_query:
         max_in_rate_date = i.max_in_rate_date.strftime('%Y-%m-%d %H:%M:%S') if i.max_in_rate_date else ''
-        max_out_rate_date =  i.max_out_rate_date.strftime('%Y-%m-%d %H:%M:%S') if i.max_out_rate_date else ''
+        max_out_rate_date = i.max_out_rate_date.strftime('%Y-%m-%d %H:%M:%S') if i.max_out_rate_date else ''
         monthly_data.append({"date": i.date,
                              "total_in": i.total_in,
                              "total_out": i.total_out,
@@ -119,7 +137,7 @@ def get_monthly_flow(project_id, region=None, month=None):
                              "max_out_rate_date": max_out_rate_date,
                              "region": i.region,
                              "project_id": i.project_id
-        })
+                             })
 
     return {"monthly_data": monthly_data}
 
@@ -329,7 +347,7 @@ def get_pm_accounts(tenant_id):
         flow_dict = {}
 
     # 将 pm_month_dict vm_month_dict flow_dict 汇总
-    unit_fmt = lambda x: x/1024/1024*8
+    unit_fmt = lambda x: x / 1024 / 1024 * 8
     month_dict = {}
     for i in vm_month_dict:
         month_dict[i] = {}
@@ -368,7 +386,6 @@ def get_pm_accounts(tenant_id):
                 month_dict[p]['max_in_rate'] = 0
                 month_dict[p]['max_out_rate'] = 0
 
-
     month_list = []
     for key in month_dict:
         month_list.append(month_dict[key])
@@ -381,7 +398,7 @@ def get_pm_accounts(tenant_id):
         months = [nearest_month]
         farthest_month = month_list[-1:][0]["month"]
         delta = datetime.timedelta(days=10)
-        cursor_month = datetime.datetime.strptime(nearest_month+'-01', '%Y-%m-%d')
+        cursor_month = datetime.datetime.strptime(nearest_month + '-01', '%Y-%m-%d')
         while cursor_month.strftime('%Y-%m-%d')[:7] != farthest_month:
             cursor_month -= delta
             if cursor_month.strftime('%Y-%m-%d')[:7] not in months:
@@ -457,10 +474,10 @@ def get_pm_monitor_statics(metric, system_snid, duration):
     now = datetime.datetime.now()
 
     DUR = {
-       '3h': (now - datetime.timedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S'),
-       '1d': (now - datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S'),
-       '7d': (now - datetime.timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S'),
-       '30d': (now - datetime.timedelta(days=30)).strftime('%Y-%m-%d %H:%M:%S')
+        '3h': (now - datetime.timedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S'),
+        '1d': (now - datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S'),
+        '7d': (now - datetime.timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S'),
+        '30d': (now - datetime.timedelta(days=30)).strftime('%Y-%m-%d %H:%M:%S')
     }
 
     UNIT = {
@@ -523,4 +540,3 @@ def get_pm_monitor_statics(metric, system_snid, duration):
                 "name": ip
             })
         return result
-

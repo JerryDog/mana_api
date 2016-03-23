@@ -19,9 +19,9 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask import abort
 from flask import request
 from flask import jsonify
-from config import AUTH_PUBLIC_URI, ADMIN_TOKEN, DATABASE, DATABASE_CLOUD
-import json
-import httplib
+from flask import g
+from config import KEYSTONE, DATABASE, DATABASE_CLOUD
+from apiUtil import http_request, getUserProjByToken
 import re
 
 app = Flask(__name__)
@@ -40,40 +40,25 @@ def page_not_found(error):
 @app.before_request
 def before_request():
     token = request.headers.get("X-Auth-Token")
-
+    g.party = request.headers.get("Sp-Agent", "default")
+    g.admin_token = KEYSTONE[g.party]['admin_token']
+    g.uri = KEYSTONE[g.party]['uri']
+    g.admin_proj = KEYSTONE[g.party]['admin_proj']
     # 静态文件和监控数据不用验证，直接通过
     if re.match('/mana_api/pm_monitor', request.path):
-        token = ADMIN_TOKEN
+        token = g.token = g.admin_token
     if re.match('/static', request.path):
-        token = ADMIN_TOKEN
+        token = g.token = g.admin_token
+    if re.match('/mana_api/tokens', request.path):
+        token = g.token = g.admin_token
     if not token:
         abort(401)
     else:
-        if validatedToken(token):
-            pass
+        if getUserProjByToken(token):
+            g.user = getUserProjByToken(token)
+            g.token = g.user.token
         else:
             return jsonify({"error": "invalid token"}), 400
-
-def validatedToken(token):
-    headers = {"X-Auth-Token": "%s" % ADMIN_TOKEN}
-    KEYSTONE = AUTH_PUBLIC_URI
-    try:
-        conn = httplib.HTTPConnection(KEYSTONE)
-    except:
-        return 'ConnError'
-    try:
-        if token == ADMIN_TOKEN:
-            return True
-        conn.request("GET", "/v2.0/tokens/%s" % token, '', headers)
-    except:
-        return 'ConnError'
-    response = conn.getresponse()
-    data = response.read()
-    dd = json.loads(data)
-    if dd.has_key('access'):
-        return True
-    else:
-        return False
 
 from mana_api import models
 #api = Api(app)

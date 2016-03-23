@@ -18,10 +18,15 @@ import logging
 # Identity Service Endpoint
 #############################################################################
 
+KEYSTONE = {
+    "default": {
+        "uri": "222.73.243.57:5000",
+        "admin_token": "c8442ce938bb8b0b4267",
+        "admin_proj": "e58c78fe826f4f0b890767a3e0781019"
+    },
+}
 
-AUTH_PUBLIC_URI = '192.168.39.170:5000'
-ADMIN_TOKEN = '60feb5797e974a89af19e9a40f04ac07'
-ADMIN_PROJ = '74d4bda6aa1c466d8cb1f2b8eac79567'
+
 DATABASE = 'mysql://root:@localhost/netflow'
 DATABASE_CLOUD = 'mysql://root:@localhost/cloud'
 
@@ -32,4 +37,9 @@ logging.basicConfig(level=logging.DEBUG,
                     filename='E:/mana_api/logs/all.log',
                     filemode='a')
 
+
+
+# change password
+C2_CHANGE_VIR_WINDOWS_PWD_SCRIPT = "python /opt/minion/extmods/modules/chg_win_pwd"
+C2_CHANGE_VIR_PWD_SCRIPT="python /opt/minion/extmods/modules/chg_pwd"
 

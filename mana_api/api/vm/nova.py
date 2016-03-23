@@ -2,10 +2,11 @@
 __author__ = 'liujiahua'
 from flask import jsonify
 from flask import request
+from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
-from mana_api.apiUtil import getUserProjByToken
-from mana_api.api.vm.api_util import nova_list, get_new_token, MyError
+from mana_api.api.vm.api_util import get_new_token, MyError
+from .tools.compute import InstanceManager
 import sys
 
 reload(sys)
@@ -23,17 +24,13 @@ def vm():
     :param  t: 结束位置
     :return: 返回虚拟机列表
     """
-    token = request.headers.get("X-Auth-Token")
     tenant_id = request.args.get('tenant_id', None)
     region = request.args.get('region', None)
 
     if not tenant_id or not region:
         return jsonify({"code": 400, "msg": "Could not find tenant_id or region"}), 400
 
-    new_token = get_new_token(token, tenant_id)
-    # 禁止跨项目操作
-    user = getUserProjByToken(new_token)
-    if not user or tenant_id not in user.proj_dict.keys():
+    if not g.user or tenant_id not in g.user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     f = request.args.get('f', None)
@@ -47,8 +44,25 @@ def vm():
                 'to => %s' % (tenant_id, region, f, t))
 
     try:
-        result = nova_list(new_token, user.get_endpoint(region, "nova"), f, t)
-        return jsonify(result)
+        client = InstanceManager(token=g.token, endpoint=g.user.get_endpoint(region, "nova"))
+        instance_collection = client.nova_list(f, t)
+        total_count = len(instance_collection)
+        vm_servers = []
+        for i in instance_collection:
+            instance = {
+                "instance_name": i.name,
+                "instance_id": i.id,
+                "cpu_num": i.cpu,
+                "mem_size": i.mem,
+                "disk_size": i.disk,
+                "lan_ip_set": i.lan_ip,
+                "wan_ip_set": i.wan_ip,
+                "status": i.status,
+                "create_at": i.create_at,
+                "update_at": i.update_at
+            }
+            vm_servers.append(instance)
+        return jsonify({"code": 200, "msg": "", "total_count": total_count, "vm_servers": vm_servers})
     except MyError, e:
         logger.exception('MyError raised')
         return jsonify({"code": 400, "msg": '%s' % e.value}), 400

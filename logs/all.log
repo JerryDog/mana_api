@@ -43,3 +43,590 @@ Wed, 16 Mar 2016 11:25:51 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Req
 Wed, 16 Mar 2016 11:25:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.171 - - [16/Mar/2016 11:25:52] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -
 Wed, 16 Mar 2016 11:27:21 E:\mana_api\mana_api\api\pm_mana.py[line:110] INFO Request: curl -i -H "X-Auth-Token: 60feb5797e974a89af19e9a40f04ac07" -X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567"
 Wed, 16 Mar 2016 11:27:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.171 - - [16/Mar/2016 11:27:21] "GET /mana_api/pm_bill?tenant_id=74d4bda6aa1c466d8cb1f2b8eac79567 HTTP/1.1" 200 -
+Tue, 22 Mar 2016 16:03:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 22 Mar 2016 16:03:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 16:12:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Tue, 22 Mar 2016 16:12:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 16:12:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Tue, 22 Mar 2016 16:12:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 16:12:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Tue, 22 Mar 2016 16:12:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 16:13:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 16:13:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 16:14:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] ERROR 192.168.39.115 - - [22/Mar/2016 16:14:26] code 400, message Bad request syntax ('\xff\xf4\xff\xfd\x06')
+Tue, 22 Mar 2016 16:14:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:14:26] "����" 400 -
+Tue, 22 Mar 2016 16:15:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:15:56] "GET /mana_api/regions HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:16:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:16:10] "GET /mana_api/regions HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:23:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:23:49] "GET /mana_api/regions?tenent_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:23:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:23:59] "GET /mana_api/regions?teneat_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:24:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:24:07] "GET /mana_api/regions?tenean_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:24:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:24:17] "GET /mana_api/regions?teneant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:24:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:24:21] "GET /mana_api/regions?tenent_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:24:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:24:27] "GET /mana_api/regions?teneant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:24:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:24:43] "GET /mana_api/regions?teneant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:24:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:24:51] "GET /mana_api/regions?tenent_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:25:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:25:12] "GET /mana_api/regions?teneat_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:25:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:25:19] "GET /mana_api/regions?teneant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 16:25:40 E:\mana_api\mana_api\api\vm\identity.py[line:25] INFO Request: get regions list tenant_id => e58c78fe826f4f0b890767a3e0781019 
+Tue, 22 Mar 2016 16:25:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 16:25:40] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 200 -
+Tue, 22 Mar 2016 16:32:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 16:32:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:45:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Tue, 22 Mar 2016 17:45:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:49:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Tue, 22 Mar 2016 17:49:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:51:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Tue, 22 Mar 2016 17:51:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:52:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\compute.py', reloading
+Tue, 22 Mar 2016 17:52:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:52:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 17:52:45] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 17:53:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 17:53:00] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 400 -
+Tue, 22 Mar 2016 17:53:33 E:\mana_api\mana_api\api\vm\identity.py[line:26] INFO Request: get regions list tenant_id => e58c78fe826f4f0b890767a3e0781019 
+Tue, 22 Mar 2016 17:53:33 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 17:53:33] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 200 -
+Tue, 22 Mar 2016 17:56:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\compute.py', reloading
+Tue, 22 Mar 2016 17:56:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:57:43 E:\mana_api\mana_api\api\vm\nova.py[line:47] INFO Request: get vm servers list tenant_id => e58c78fe826f4f0b890767a3e0781019 region => zhenru from => None to => None
+Tue, 22 Mar 2016 17:57:58 E:\mana_api\mana_api\api\vm\nova.py[line:73] ERROR Error with get vm_servers
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 51, in vm
+    instance_collection = client.nova_list(f, t)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 108, in nova_list
+    res = http_request(url, headers=self.headers, method='GET')
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 18, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 829, in _send_output
+    self.send(msg)
+  File "C:\Python27\lib\httplib.py", line 791, in send
+    self.connect()
+  File "C:\Python27\lib\httplib.py", line 772, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\lib\socket.py", line 571, in create_connection
+    raise err
+timeout: timed out
+Tue, 22 Mar 2016 17:57:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 17:57:58] "GET /mana_api/vm?tenant_id=e58c78fe826f4f0b890767a3e0781019&region=zhenru HTTP/1.1" 400 -
+Tue, 22 Mar 2016 17:59:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\compute.py', reloading
+Tue, 22 Mar 2016 17:59:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 17:59:12 E:\mana_api\mana_api\api\vm\nova.py[line:47] INFO Request: get vm servers list tenant_id => e58c78fe826f4f0b890767a3e0781019 region => zhenru from => None to => None
+Tue, 22 Mar 2016 17:59:27 E:\mana_api\mana_api\api\vm\nova.py[line:73] ERROR Error with get vm_servers
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 51, in vm
+    instance_collection = client.nova_list(f, t)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 109, in nova_list
+    res = http_request(url, headers=self.headers, method='GET')
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 18, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 829, in _send_output
+    self.send(msg)
+  File "C:\Python27\lib\httplib.py", line 791, in send
+    self.connect()
+  File "C:\Python27\lib\httplib.py", line 772, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\lib\socket.py", line 571, in create_connection
+    raise err
+timeout: timed out
+Tue, 22 Mar 2016 17:59:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 17:59:27] "GET /mana_api/vm?tenant_id=e58c78fe826f4f0b890767a3e0781019&region=zhenru HTTP/1.1" 400 -
+Tue, 22 Mar 2016 17:59:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\compute.py', reloading
+Tue, 22 Mar 2016 17:59:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:04:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Tue, 22 Mar 2016 18:04:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:06:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:06:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:07:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 22 Mar 2016 18:07:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:09:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:09:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:13:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:13:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:16:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:16:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:17:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:17:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:17:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:17:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:22:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:22:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:23:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:23:07] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:25:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:25:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:25:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:25:49] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:26:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:26:12] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:26:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:26:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:26:29] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:26:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:26:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:26:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:26:56] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:27:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:27:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:27:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:27:23] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:27:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:27:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:27:38] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:28:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:28:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:28:03 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:28:03] "POST /mana_api/tokens HTTP/1.1" 401 -
+Tue, 22 Mar 2016 18:28:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:28:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:35:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:35:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:35:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Tue, 22 Mar 2016 18:35:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:36:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:36:11] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 18:37:03 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:37:03 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:37:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:37:05] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 18:37:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:37:14] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 18:37:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:37:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:39:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:39:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:39:11 E:\mana_api\mana_api\api\vm\identity.py[line:28] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 24, in get_tokens
+    res = http_request(url, body=body, headers=headers, method=method)
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 30, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 994, in _send_request
+    header_names = dict.fromkeys([k.lower() for k in headers])
+AttributeError: 'tuple' object has no attribute 'lower'
+Tue, 22 Mar 2016 18:39:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:39:11] "POST /mana_api/tokens HTTP/1.1" 400 -
+Tue, 22 Mar 2016 18:39:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:39:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:39:43 E:\mana_api\mana_api\api\vm\identity.py[line:28] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 24, in get_tokens
+    res = http_request(url, body=body, headers=headers, method=method)
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 30, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 994, in _send_request
+    header_names = dict.fromkeys([k.lower() for k in headers])
+AttributeError: 'tuple' object has no attribute 'lower'
+Tue, 22 Mar 2016 18:39:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:39:43] "POST /mana_api/tokens HTTP/1.1" 400 -
+Tue, 22 Mar 2016 18:40:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:40:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:40:09 E:\mana_api\mana_api\api\vm\identity.py[line:28] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 24, in get_tokens
+    res = http_request(url, body=body, headers=headers, method=method)
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 30, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 994, in _send_request
+    header_names = dict.fromkeys([k.lower() for k in headers])
+AttributeError: 'tuple' object has no attribute 'lower'
+Tue, 22 Mar 2016 18:40:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:40:09] "POST /mana_api/tokens HTTP/1.1" 400 -
+Tue, 22 Mar 2016 18:40:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:40:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:40:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:40:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:40:55 E:\mana_api\mana_api\api\vm\identity.py[line:27] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 23, in get_tokens
+    res = http_request(url, body=body, headers=headers, method=method)
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 30, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 833, in _send_output
+    self.send(message_body)
+  File "C:\Python27\lib\httplib.py", line 805, in send
+    self.sock.sendall(data)
+  File "C:\Python27\lib\socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+TypeError: must be string or buffer, not dict
+Tue, 22 Mar 2016 18:40:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:40:55] "POST /mana_api/tokens HTTP/1.1" 400 -
+Tue, 22 Mar 2016 18:41:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:41:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:41:18 E:\mana_api\mana_api\api\vm\identity.py[line:28] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 24, in get_tokens
+    res = http_request(url, body=body, headers=headers, method=method)
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 30, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 833, in _send_output
+    self.send(message_body)
+  File "C:\Python27\lib\httplib.py", line 805, in send
+    self.sock.sendall(data)
+  File "C:\Python27\lib\socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+TypeError: must be string or buffer, not dict
+Tue, 22 Mar 2016 18:41:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:41:18] "POST /mana_api/tokens HTTP/1.1" 400 -
+Tue, 22 Mar 2016 18:41:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:41:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:41:28 E:\mana_api\mana_api\api\vm\identity.py[line:28] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 24, in get_tokens
+    res = http_request(url, body=body, headers=headers, method=method)
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 30, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 833, in _send_output
+    self.send(message_body)
+  File "C:\Python27\lib\httplib.py", line 805, in send
+    self.sock.sendall(data)
+  File "C:\Python27\lib\socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+TypeError: must be string or buffer, not dict
+Tue, 22 Mar 2016 18:41:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:41:28] "POST /mana_api/tokens HTTP/1.1" 400 -
+Tue, 22 Mar 2016 18:41:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 18:41:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 18:41:46 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:41:46] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 18:43:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:43:27] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 18:44:15 E:\mana_api\mana_api\api\vm\identity.py[line:46] INFO Request: get regions list tenant_id => e58c78fe826f4f0b890767a3e0781019 
+Tue, 22 Mar 2016 18:44:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 18:44:15] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:00:21 E:\mana_api\mana_api\api\vm\identity.py[line:46] INFO Request: get regions list tenant_id => e58c78fe826f4f0b890767a3e0781019 
+Tue, 22 Mar 2016 19:00:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:00:21] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:00:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:00:38] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:01:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:01:07] "POST /mana_api/tokens HTTP/1.1" 500 -
+Tue, 22 Mar 2016 19:01:38 E:\mana_api\mana_api\api\vm\identity.py[line:46] INFO Request: get regions list tenant_id => e58c78fe826f4f0b890767a3e0781019 
+Tue, 22 Mar 2016 19:01:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [22/Mar/2016 19:01:38] "GET /mana_api/regions?tenant_id=e58c78fe826f4f0b890767a3e0781019 HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:01:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:01:55] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:02:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [22/Mar/2016 19:02:40] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:03:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:03:37] "GET /mana_api/vm?tenant_id=e58c78fe826f4f0b890767a3e0781019&region=zhenru HTTP/1.1" 400 -
+Tue, 22 Mar 2016 19:03:59 E:\mana_api\mana_api\api\vm\nova.py[line:47] INFO Request: get vm servers list tenant_id => e58c78fe826f4f0b890767a3e0781019 region => zhenru from => None to => None
+Tue, 22 Mar 2016 19:04:14 E:\mana_api\mana_api\api\vm\nova.py[line:73] ERROR Error with get vm_servers
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 51, in vm
+    instance_collection = client.nova_list(f, t)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 108, in nova_list
+    res = http_request(url, headers=self.headers, method='GET')
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 18, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 829, in _send_output
+    self.send(msg)
+  File "C:\Python27\lib\httplib.py", line 791, in send
+    self.connect()
+  File "C:\Python27\lib\httplib.py", line 772, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\lib\socket.py", line 571, in create_connection
+    raise err
+timeout: timed out
+Tue, 22 Mar 2016 19:04:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:04:14] "GET /mana_api/vm?tenant_id=e58c78fe826f4f0b890767a3e0781019&region=zhenru HTTP/1.1" 400 -
+
+Tue, 22 Mar 2016 19:08:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 19:08:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 19:10:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 19:10:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 19:12:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Tue, 22 Mar 2016 19:12:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 19:16:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 22 Mar 2016 19:16:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 19:17:07 E:\mana_api\mana_api\api\vm\identity.py[line:39] INFO Request: get regions list tenant_id => 86f3fbcb0da34ae28da8b59d6c1231fd 
+Tue, 22 Mar 2016 19:17:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:17:07] "GET /mana_api/region_tenant HTTP/1.1" 200 -
+Tue, 22 Mar 2016 19:17:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Tue, 22 Mar 2016 19:17:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 22 Mar 2016 19:17:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:17:45] "GET /mana_api/region_tenant HTTP/1.1" 400 -
+Tue, 22 Mar 2016 19:17:48 E:\mana_api\mana_api\api\vm\identity.py[line:39] INFO Request: get regions list tenant_id => 86f3fbcb0da34ae28da8b59d6c1231fd 
+Tue, 22 Mar 2016 19:17:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [22/Mar/2016 19:17:48] "GET /mana_api/region_tenant HTTP/1.1" 200 -
+Wed, 23 Mar 2016 09:33:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 09:33:20] "POST /mana_api/tokens HTTP/1.1" 200 -
+Wed, 23 Mar 2016 10:18:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Wed, 23 Mar 2016 10:18:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:22:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 23 Mar 2016 10:22:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:23:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 23 Mar 2016 10:23:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:26:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 23 Mar 2016 10:26:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:27:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:27:25] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:27:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:27:54] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:29:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Wed, 23 Mar 2016 10:29:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:30:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Wed, 23 Mar 2016 10:30:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:31:01 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:31:01 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:31:01 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:31:01 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:31:01 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "passport": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:31:01 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:400, reason:Bad Request
+Wed, 23 Mar 2016 10:31:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:31:01] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:34:18 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:34:18 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:34:18 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:34:18 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:34:18 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "passport": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:34:18 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:400, reason:Bad Request
+Wed, 23 Mar 2016 10:34:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:34:18] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:34:42 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:34:42 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:34:42 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:34:42 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:34:42 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "passport": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:34:42 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:400, reason:Bad Request
+Wed, 23 Mar 2016 10:34:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:34:42] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:37:06 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:37:06 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:37:06 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:37:06 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:37:06 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "passport": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:37:06 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:400, reason:Bad Request
+Wed, 23 Mar 2016 10:37:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:37:06] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:38:34 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:38:34 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:38:34 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:38:34 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:38:34 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "passport": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:38:34 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:400, reason:Bad Request
+Wed, 23 Mar 2016 10:38:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:38:34] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:40:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 23 Mar 2016 10:40:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:40:58 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:40:58 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:40:58 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:40:58 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:40:58 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "passport": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:40:58 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:400, reason:Bad Request
+Wed, 23 Mar 2016 10:40:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:40:58] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:42:08 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:42:08 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:42:08 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:42:08 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:42:08 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:42:09 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:42:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:42:09] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:42:20 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:42:20 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:42:20 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:42:20 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:42:20 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:42:20 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:42:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:42:20] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 10:43:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 23 Mar 2016 10:43:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:50:17 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:50:17 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:50:17 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:50:17 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:50:17 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:50:17 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:50:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 10:50:17] "POST /mana_api/tokens HTTP/1.1" 200 -
+Wed, 23 Mar 2016 10:51:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Wed, 23 Mar 2016 10:51:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:51:59 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:51:59 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:51:59 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:51:59 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:51:59 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:51:59 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:51:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:51:59] "POST /mana_api/tokens HTTP/1.1" 200 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wed, 23 Mar 2016 10:53:00 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:53:00 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:53:00 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:53:00 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:53:00 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 10:53:00 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:53:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:53:00] "POST /mana_api/tokens HTTP/1.1" 200 -
+Wed, 23 Mar 2016 10:54:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:54:12] "GET /mana_api/region_tenant HTTP/1.1" 400 -
+Wed, 23 Mar 2016 10:54:38 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:54:38 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 10:54:38 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'd1fb6895374b4c13a265182f663ab560'}
+Wed, 23 Mar 2016 10:54:38 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:54:38 E:\mana_api\mana_api\api\vm\api_util.py[line:46] ERROR Error with get_tenants
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 42, in get_tenants
+    res = http_request(url, headers=headers, method="GET")
+  File "E:\mana_api\mana_api\apiUtil.py", line 27, in http_request
+    logger.debug("body: " + body)
+TypeError: cannot concatenate 'str' and 'NoneType' objects
+Wed, 23 Mar 2016 10:54:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:54:38] "GET /mana_api/region_tenant HTTP/1.1" 500 -
+Wed, 23 Mar 2016 10:55:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Wed, 23 Mar 2016 10:55:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:55:20 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:55:20 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 10:55:20 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'd1fb6895374b4c13a265182f663ab560'}
+Wed, 23 Mar 2016 10:55:20 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:55:20 E:\mana_api\mana_api\api\vm\api_util.py[line:46] ERROR Error with get_tenants
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 42, in get_tenants
+    res = http_request(url, headers=headers, method="GET")
+  File "E:\mana_api\mana_api\apiUtil.py", line 27, in http_request
+    logger.debug("body: " + body)
+TypeError: cannot concatenate 'str' and 'NoneType' objects
+Wed, 23 Mar 2016 10:55:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:55:20] "GET /mana_api/region_tenant HTTP/1.1" 500 -
+Wed, 23 Mar 2016 10:56:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 23 Mar 2016 10:56:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'd1fb6895374b4c13a265182f663ab560'}
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "86f3fbcb0da34ae28da8b59d6c1231fd", "token": {"id": "d1fb6895374b4c13a265182f663ab560"}}}
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens/16c1cc8e250e417f994473bfcd015cc5
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': 'c8442ce938bb8b0b4267'}
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v3/users/87a6929dd9b34388ad9f36aa511b2bb0/projects
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'16c1cc8e250e417f994473bfcd015cc5'}
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 10:56:27 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:56:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:56:27] "GET /mana_api/region_tenant HTTP/1.1" 500 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'd1fb6895374b4c13a265182f663ab560'}
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "86f3fbcb0da34ae28da8b59d6c1231fd", "token": {"id": "d1fb6895374b4c13a265182f663ab560"}}}
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens/24f741c33fdb4061b613abf7c9c79767
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': 'c8442ce938bb8b0b4267'}
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v3/users/87a6929dd9b34388ad9f36aa511b2bb0/projects
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'24f741c33fdb4061b613abf7c9c79767'}
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 10:57:52 E:\mana_api\mana_api\api\vm\identity.py[line:40] INFO Request: get regions list tenant_id => 86f3fbcb0da34ae28da8b59d6c1231fd 
+Wed, 23 Mar 2016 10:57:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 10:57:52] "GET /mana_api/region_tenant HTTP/1.1" 200 -
+
+
+Wed, 23 Mar 2016 10:59:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Wed, 23 Mar 2016 10:59:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wed, 23 Mar 2016 11:09:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Wed, 23 Mar 2016 11:09:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+
+
+
+
+
+
+
+
+

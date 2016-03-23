@@ -2,10 +2,11 @@
 __author__ = 'liujiahua'
 from flask import jsonify
 from flask import request
+from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
 from mana_api.apiUtil import get_pm, get_info_by_snid, update_stat_after_act, \
-    get_pm_accounts, get_pm_accounts_detail, getUserProjByToken
+    get_pm_accounts, get_pm_accounts_detail
 import sys
 import os
 
@@ -24,12 +25,10 @@ def pm():
     :param  t: 结束位置
     :return: 返回物理机列表
     """
-    token = request.headers.get("X-Auth-Token")
     tenant_id = request.args.get('tenant_id', None)
 
     # 禁止跨项目操作
-    user = getUserProjByToken(token)
-    if tenant_id not in user.proj_dict.keys():
+    if tenant_id not in g.user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "无权限操作该项目".decode('utf-8')}), 403
 
     region = request.args.get('region', None)
@@ -55,7 +54,6 @@ def pm():
 def pm_act():
     if not request.json:
         return jsonify({"error": "Bad request, no json data"}), 400
-    token = request.headers.get("X-Auth-Token")
     tenant_id = request.json.get('tenant_id', None)
     act = request.json.get('act', None)  # act 只能是 on  off  reset
     username = request.json.get('username', None)
@@ -64,8 +62,7 @@ def pm_act():
         return jsonify({"code": 400, "msg": "Bad request, no json data"}), 400
 
     # 禁止跨项目操作
-    user = getUserProjByToken(token)
-    if tenant_id not in user.proj_dict.keys():
+    if tenant_id not in g.user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     all_pm_info = get_info_by_snid(snid=system_snid)
@@ -101,13 +98,11 @@ def pm_bill():
          return jsonify({"code": 400, "msg": "Bad request, tenant_id required"}), 400
 
     # 禁止跨项目操作
-    token = request.headers.get("X-Auth-Token")
-    user = getUserProjByToken(token)
-    if tenant_id not in user.proj_dict.keys():
+    if tenant_id not in g.user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     logger.info('Request: curl -i -H "X-Auth-Token: %s" '
-                '-X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=%s"' % (token, tenant_id))
+                '-X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=%s"' % (g.token, tenant_id))
 
     try:
         result = get_pm_accounts(tenant_id)
@@ -126,9 +121,7 @@ def pm_bill_detail():
         return jsonify({"code": 400, "msg": "Bad request, lost params"}), 400
 
     # 禁止跨项目操作
-    token = request.headers.get("X-Auth-Token")
-    user = getUserProjByToken(token)
-    if tenant_id not in user.proj_dict.keys():
+    if tenant_id not in g.user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     logger.info('Request: get pm accounts detail'

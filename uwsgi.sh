@@ -1,6 +1,6 @@
 #!/bin/bash
 
-proj_name = 'mana_api'
+proj_name='mana_api'
 
 if [ ! -n "$1" ]
 then
@@ -17,6 +17,7 @@ then
         exit 0
     else
         /usr/bin/uwsgi -x flask_${proj_name}.xml
+        nginx -s reload
         echo "Start ${proj_name} service [OK]"
     fi
     
@@ -27,6 +28,7 @@ elif [ $1 = stop ];then
 elif [ $1 = restart ];then
     ps aux | grep "flask_${proj_name}" | grep -v "grep" |awk '{print $2}'|xargs kill -9
     /usr/bin/uwsgi -x flask_${proj_name}.xml
+    nginx -s reload
     echo "Restart ${proj_name} service [OK]"
 
 else

@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 __author__ = 'liujiahua'
-from flask import jsonify
-from flask import request
 from mana_api.api import zt_api
 from mana_api.config import logging
 from flask import render_template

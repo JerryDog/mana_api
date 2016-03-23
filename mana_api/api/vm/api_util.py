@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
-import httplib
 import urlparse
 import json
-import re
-from mana_api.config import AUTH_PUBLIC_URI
+import base64
+import random
+import string
+from flask import g
+from mana_api.config import C2_CHANGE_VIR_WINDOWS_PWD_SCRIPT
 from mana_api.config import logging
+from mana_api.apiUtil import http_request
 
 logger = logging.getLogger(__name__)
 
@@ -17,22 +20,11 @@ class MyError(Exception):
         return repr(self.value)
 
 
-def http_request(url, body=None, headers=None, method="POST"):
-    url_list = urlparse.urlparse(url)
-    con = httplib.HTTPConnection(url_list.netloc, timeout=15)
-    path = url_list.path
-    if url_list.query:
-        path = path + "?" + url_list.query
-    con.request(method, path, body, headers)
-    res = con.getresponse()
-    return res
-
-
 # 由星云过来的 token 再去获取一个有 endpoint 的token
-def get_new_token(token, tenant_id):
+def get_new_token(tenant_id):
     headers = {"Content-type": "application/json"}
-    url = urlparse.urljoin('http://' + AUTH_PUBLIC_URI + '/', '/v2.0/tokens')
-    body = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (tenant_id, token)
+    url = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens')
+    body = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (tenant_id, g.token)
     try:
         res = http_request(url, body=body, headers=headers)
         dd = json.loads(res.read())
@@ -40,6 +32,20 @@ def get_new_token(token, tenant_id):
         return apitoken
     except Exception, e:
         return 'ConnError, %s' % e
+
+
+# 获取项目列表
+def get_tenants():
+    headers = {"X-Auth-Token": g.token}
+    url = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tenants')
+    try:
+        res = http_request(url, headers=headers, method="GET")
+        dd = json.loads(res.read())
+        return dd
+    except Exception, e:
+        logger.exception('Error with get_tenants')
+        return None
+
 
 # 虚拟机状态统一
 STATUS = {
@@ -66,93 +72,56 @@ STATUS = {
 }
 
 
-# endpoint 为 api 访问的地址，以 region 过滤出来的
-def nova_list(token, endpoint, f, t):
-    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json"}
-    if not endpoint:
-        raise MyError('无效的区域'.decode('utf-8'))
-    url = endpoint + '/servers/detail'
-    res = http_request(url, headers=headers, method='GET')
-    dd = json.loads(res.read())
-    logger.info('scloudm response: %s' % dd)
-    vm_servers = []
-    servers_list = dd["servers"]
-    total_count = len(servers_list)
-    for item in servers_list[f:t]:
-        lan_ip, wan_ip = addresses_to_wan_lan(item["addresses"])
-        flavor = item.get('flavor', None)
-        if flavor:
-            flavor_id = flavor.get('id', None)
-        else:
-            flavor_id = None
-        disk, mem, cpu = get_flavor(token, endpoint, flavor_id)
-        instance = {
-            "instance_name": item["name"],
-            "instance_id": item["id"],
-            "cpu_num": cpu,
-            "mem_size": mem,
-            "disk_size": disk,
-            "lan_ip_set": lan_ip,
-            "wan_ip_set": wan_ip,
-            "status": STATUS[item["status"]],
-            "create_at": item["created"].replace('T', ' ').replace('Z', ''),
-            "update_at": item["updated"].replace('T', ' ').replace('Z', '')
-        }
-        vm_servers.append(instance)
-    return {"code": 200, "msg": "", "total_count": total_count,"vm_servers": vm_servers}
+# 更改 windows 密码
+def chg_win_pwd(uuid, instance_name, pwd, host_ip, region):
+    pwd_str = base64.urlsafe_b64decode(pwd.encode())
+    result, user_data = update_user_data(uuid, pwd_str, region)
+    if not result:
+        LOG = "Failed %s" % user_data
+        return False, LOG
+    script_name = C2_CHANGE_VIR_WINDOWS_PWD_SCRIPT
+    exe = "%s %s %s" %(script_name, instance_name, user_data)
+    print "runScript--->host_ip:%s,exe:%s" % (host_ip, exe)
+    try:
+        LOG=c2_ssh.conn(host_ip,exe)
+    except Exception,ex:
+        print Exception, ":", ex
+        LOG = "SSH exception:%s" % str(ex)
+        return False, LOG
+    return True, LOG
 
+def update_user_data(uuid, pwd, region):
+    data_base64 = InstanceManager().getUserdata(NOVA_DB(region), uuid)
+    if data_base64 == 'NULL':
+        LOG = "can not get userdata by uuid"
+        return False, LOG
+    #sudo: can't use yaml dump to reserve load file,so create new!!!
+    #if data_base64 == 'NULL':
+    #    data_new_base64 = createNewUserdata(pwd)
+    #else:
+    #    data_str = base64.base64.urlsafe_b64encode(data_base64)
+    #    try:
+    #        data_yaml = yaml.load(data_str)
+    #    except Exception,ex:
+    #        LOG = "can not analyze userdata with a yaml file by uuid"
+    #        return False, LOG
+    #    if data_yaml.has_key('chpasswd'):
+    #        data_new_base64 = setPwdToUserdata(data_yaml, pwd)
+    #    else:
+    #        data_new_base64_ = addPwdToUserdata(data_yaml, pwd)
+    data_new_base64 = create_new_user_data(pwd)
+    InstanceManager().setUserdata(NOVA_DB(region), uuid, data_new_base64, region)
+    return True, data_new_base64
 
-# 获取主机类型明细
-def get_flavor(token, endpoint, flavor_id):
-    if not flavor_id:
-        return None, None, None
-    headers = {"X-Auth-Token": '%s' % token, "Content-type": "application/json"}
-    url = endpoint + '/flavors' + '/' + flavor_id
-    res = http_request(url, headers=headers, method='GET')
-    dd = json.loads(res.read())
-    disk = dd["flavor"]["disk"]
-    mem = int(dd["flavor"]["ram"]/1024)
-    cpu = dd["flavor"]["vcpus"]
-    return disk, mem, cpu
-
-
-# 区分外网 ip 和内网 ip, 返回列表形式
-def addresses_to_wan_lan(addresses):
-    '''
-    u'addresses': {
-                u'test': [
-                    {
-                        u'OS-EXT-IPS-MAC: mac_addr': u'fa: 16: 3e: 13: 69: 95',
-                        u'version': 4,
-                        u'addr': u'10.240.2.26',
-                        u'OS-EXT-IPS: type': u'fixed'
-                    }
-                ],
-                u'ZR-WT-604': [
-                    {
-                        u'OS-EXT-IPS-MAC: mac_addr': u'fa: 16: 3e: be: c6: 11',
-                        u'version': 4,
-                        u'addr': u'210.51.35.93',
-                        u'OS-EXT-IPS: type': u'fixed'
-                    }
-                ]
-            }
-    :param addresses:
-    :return:
-    '''
-    if not addresses:
-        return None, None
-
-    lan_ip = []
-    wan_ip = []
-    for key in addresses:
-        for i in addresses[key]:
-            ip = i.get('addr', None)
-            if re.match('10\.', ip) or re.match('172\.', ip):
-                lan_ip.append(ip)
-            else:
-                wan_ip.append(ip)
-
-    lan_ip_str = ','.join(lan_ip)
-    wan_ip_str = ','.join(wan_ip)
-    return lan_ip_str, wan_ip_str
+def create_new_user_data(pwd):
+    serialNum = "".join(random.sample(string.ascii_letters + string.digits, 8))
+    sample = """
+        #cloud-config
+        chpasswd:
+            list: |
+                Administrator: %s
+            SerialNum: %s
+        """
+    data = sample % (pwd, serialNum)
+    data_base64 = base64.urlsafe_b64encode(data)
+    return data_base64
