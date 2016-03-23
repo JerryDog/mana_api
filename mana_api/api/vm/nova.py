@@ -5,7 +5,7 @@ from flask import request
 from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
-from mana_api.api.vm.api_util import get_new_token, MyError
+from mana_api.api.vm.api_util import MyError, openstack_error
 from .tools.compute import InstanceManager
 import sys
 
@@ -71,5 +71,27 @@ def vm():
         return jsonify({"code": 400, "msg": "Error with get vm_servers"}), 400
 
 
+@zt_api.route('/vm_action', methods=['POST'])
+def vm_action():
+    tenant_id = request.args.get('tenant_id', None)
+    region = request.args.get('region', None)
+    server_id = request.args.get('server_id', None)
+
+    if not tenant_id or not region or not server_id:
+        return jsonify({"code": 400, "msg": "Could not find tenant_id or region or server_id"}), 400
+
+    if not g.user or tenant_id not in g.user.proj_dict.keys():
+        return jsonify({"code": 403, "msg": "project is not yours"}), 403
+    body = request.json
+    try:
+        instance = InstanceManager(token=g.token, endpoint=g.user.get_endpoint(region, 'nova'))
+        resp = instance.do(body, server_id)
+        if resp.status == 202:
+            return jsonify({"code": 200, "msg": "success"})
+        else:
+            return jsonify(openstack_error(resp))
+    except:
+        logger.exception('Error with vm action')
+        return jsonify({"code": 400, "msg": "Error with vm action"}), 400
 
 

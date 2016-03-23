@@ -13,22 +13,20 @@ __author__ = 'liujiahua'
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
-
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask import abort
 from flask import request
 from flask import jsonify
-from flask import g
 from config import KEYSTONE, DATABASE, DATABASE_CLOUD
-from apiUtil import http_request, getUserProjByToken
+from flask import g
 import re
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
 app.config['SQLALCHEMY_BINDS'] = {
     'cloud': DATABASE_CLOUD
 }
+
 db = SQLAlchemy(app)
 
 
@@ -36,6 +34,7 @@ db = SQLAlchemy(app)
 def page_not_found(error):
     return 'Unauthorized', 401
 
+from apiUtil import getUserProjByToken
 
 @app.before_request
 def before_request():
@@ -54,13 +53,14 @@ def before_request():
     if not token:
         abort(401)
     else:
-        if getUserProjByToken(token):
-            g.user = getUserProjByToken(token)
+        user = getUserProjByToken(token)
+        if user:
+            g.user = user
             g.token = g.user.token
         else:
             return jsonify({"error": "invalid token"}), 400
 
-from mana_api import models
+#from mana_api import models
 #api = Api(app)
 #
 #class HelloWorld(Resource):

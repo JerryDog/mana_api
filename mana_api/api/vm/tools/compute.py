@@ -109,7 +109,6 @@ class InstanceManager(Base):
         instance = Instance(dd, token=self.token, endpoint=self.endpoint)
         return instance
 
-
     # 获取主机类型明细
     def get_flavor(self, flavor_id):
         if not flavor_id:
@@ -121,3 +120,9 @@ class InstanceManager(Base):
         mem = int(dd["flavor"]["ram"]/1024)
         cpu = dd["flavor"]["vcpus"]
         return disk, mem, cpu
+
+    #开关机重启
+    def do(self, body, uuid):
+        url = self.endpoint + '/servers' + '/' + uuid + '/action'
+        res = http_request(url, headers=self.headers, body=body, method='POST')
+        return res

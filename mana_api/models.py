@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-__author__ = 'liujiahua'
 from mana_api import db
 
 # 流量主表

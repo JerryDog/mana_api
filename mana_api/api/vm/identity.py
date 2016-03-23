@@ -5,8 +5,7 @@ from flask import request
 from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
-from mana_api.apiUtil import getUserProjByToken, http_request
-from mana_api.api.vm.api_util import get_new_token, get_tenants
+from mana_api.apiUtil import http_request
 import urlparse
 import json
 
@@ -30,6 +29,6 @@ def get_tokens():
 
 @zt_api.route('/region_tenant', methods=['GET'])
 def get_region_tenant():
-    result = {"code": 200, "msg": "", "regions": g.user.get_regions(), "tenants": g.user.proj_dict}
+    result = {"code": 200, "msg": "", "regions": g.user.get_regions(), "tenants": g.user.get_tenants()}
     return jsonify(result), 200
 

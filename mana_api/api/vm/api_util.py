@@ -19,33 +19,15 @@ class MyError(Exception):
     def __str__(self):
         return repr(self.value)
 
-
-# 由星云过来的 token 再去获取一个有 endpoint 的token
-def get_new_token(tenant_id):
-    headers = {"Content-type": "application/json"}
-    url = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens')
-    body = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (tenant_id, g.token)
-    try:
-        res = http_request(url, body=body, headers=headers)
-        dd = json.loads(res.read())
-        apitoken = dd['access']['token']['id']
-        return apitoken
-    except Exception, e:
-        return 'ConnError, %s' % e
-
-
-# 获取项目列表
-def get_tenants():
-    headers = {"X-Auth-Token": g.token}
-    url = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tenants')
-    try:
-        res = http_request(url, headers=headers, method="GET")
-        dd = json.loads(res.read())
-        return dd
-    except Exception, e:
-        logger.exception('Error with get_tenants')
-        return None
-
+# 处理 openstack 错误返回, 参数为 resp 对象，返回结果为字典
+def openstack_error(resp):
+    # {"conflictingRequest": {"message": "Cannot 'reboot' while instance is in task_state powering-off", "code": 409}}
+    result = {"code": resp.status, "reason": resp.reason}
+    if resp.read():
+        dd = json.loads(resp.read())
+        msg = dd.values()[0]["message"]
+        result["msg"] = msg
+    return result
 
 # 虚拟机状态统一
 STATUS = {

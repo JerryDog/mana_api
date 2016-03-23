@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import division
+from flask import g
+from mana_api import db
 from mana_api.models import netflow, netrate_project, pm_servers, pm_ilo_list, \
     pm_accounts, pm_monitors, expense_virtual
 from config import logging
-from mana_api import db
-from flask import g
 import datetime
 import base64
 import json
@@ -47,6 +47,12 @@ class User(object):
                     if i["region"] == region:
                         return i["publicURL"]
 
+    def get_tenants(self):
+        tenants = []
+        for k,v in self.proj_dict.items():
+            tenants.append({"id": k, "name": v})
+        return tenants
+
     def get_regions(self):
         regions = []
         try:
@@ -83,8 +89,8 @@ def getUserProjByToken(token):
     url2 = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens')
     body2 = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (project_dict.keys()[0], token)
     try:
-        res = http_request(url2, body=body2, headers=headers2)
-        dd = json.loads(res.read())
+        resp = http_request(url2, body=body2, headers=headers2)
+        dd = json.loads(resp.read())
         apitoken = dd['access']['token']['id']
         #user_id = dd['access']['user']['id']
         username = dd['access']['user']['username']
