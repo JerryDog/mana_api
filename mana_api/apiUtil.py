@@ -66,13 +66,14 @@ class User(object):
         return regions
 
 
-def getUserProjByToken(token):
-    if token == g.admin_token:
-        user = User(token, 'admin', {g.admin_proj: 'admin'})
+def getUserProjByToken(tenant_id=None):
+    # 获取 user 对象，必须要指定 tenant_id 是为了拿正确的 endpoint
+    if g.token == g.admin_token:
+        user = User(g.token, 'admin', {g.admin_proj: 'admin'})
         return user
 
     # 获取项目字典
-    headers1 = {"X-Auth-Token": token}
+    headers1 = {"X-Auth-Token": g.token}
     url1 = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tenants')
     project_dict = {}
     try:
@@ -87,7 +88,9 @@ def getUserProjByToken(token):
     # 获取新的 token
     headers2 = {"Content-type": "application/json"}
     url2 = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens')
-    body2 = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (project_dict.keys()[0], token)
+    if not tenant_id:
+        tenant_id = project_dict.keys()[0]
+    body2 = '{"auth": {"tenantId": "%s", "token": {"id": "%s"}}}' % (tenant_id, g.token)
     try:
         resp = http_request(url2, body=body2, headers=headers2)
         dd = json.loads(resp.read())

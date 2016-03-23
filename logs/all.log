@@ -856,3 +856,296 @@ Wed, 23 Mar 2016 15:55:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Wed, 23 Mar 2016 15:55:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Wed, 23 Mar 2016 16:00:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
 Wed, 23 Mar 2016 16:00:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:43:08] "POST /mana_api/tokens HTTP/1.0" 200 -
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:43:08 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:43:08] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 16:43:31 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:31 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:43:31 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:43:31 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:43:31 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:43:32] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:43:32 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:43:32] "GET /mana_api/vmparty=pbs&f=0&t=10 HTTP/1.0" 404 -
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:43:42 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:43:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:43:42] "GET /mana_api/vmparty=pbs&f=0&t=10&tenant_id=86&region=RegionOne HTTP/1.0" 404 -
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:48:17 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:48:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:48:17] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:48:18 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:48:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:48:18] "GET /mana_api/vm?=party=pbs&f=0&t=10 HTTP/1.0" 400 -
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:48:59 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:48:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:48:59] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:49:00 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:49:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:49:00] "GET /mana_api/vm?party=pbs&f=0&t=10 HTTP/1.0" 400 -
+Wed, 23 Mar 2016 16:49:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:49:51] "GET /mana_api/vm HTTP/1.1" 401 -
+Wed, 23 Mar 2016 16:49:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:49:52] "GET /favicon.ico HTTP/1.1" 401 -
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:51:46 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:51:46 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:51:46] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 16:51:47 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 16:51:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 16:51:47] "GET /mana_api/vm?party=pbs&f=0&t=10 HTTP/1.0" 400 -
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:04:21 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:04:21] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:04:22 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:22 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:04:22] "GET /mana_api/vm?party=pbs&f=0&t=10 HTTP/1.0" 400 -
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:04:40 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:04:40] "GET /mana_api/vm?party=pbs&f=0&t=10&tenant_id=86&region=RegionOne HTTP/1.0" 403 -
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:04:53 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:04:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:04:53] "GET /mana_api/vm?party=pbs&f=0&t=10&tenant_id=86&region=zhenru HTTP/1.0" 403 -
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:05:02 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:05:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:05:02] "GET /mana_api/vm?party=pbs&f=0&t=10&tenant_id=0&region=zhenru HTTP/1.0" 403 -
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:09:41 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:09:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:09:41] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:09:42 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:09:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:09:42] "GET /mana_api/vm?party=pbs&f=0&t=10&tenant_id=0&region=RegionOne HTTP/1.0" 403 -
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:11:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:11:04] "GET /mana_api/region_tenant HTTP/1.0" 200 -
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tenants
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'X-Auth-Token': u'0ff8d2eee9af4fdcb4581351263c2c32'}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantId": "d804ee140e714c8e9061fb0b0ae3ce42", "token": {"id": "0ff8d2eee9af4fdcb4581351263c2c32"}}}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\api\vm\nova.py[line:44] INFO Request: get vm servers list tenant_id => d804ee140e714c8e9061fb0b0ae3ce42 region => RegionOne from => 0 to => 10
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2/d804ee140e714c8e9061fb0b0ae3ce42/servers/detail
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'3a6ac8f3d329429e97394f6d046c296e'}
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: GET
+Wed, 23 Mar 2016 17:11:04 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: None
+Wed, 23 Mar 2016 17:11:19 E:\mana_api\mana_api\api\vm\nova.py[line:70] ERROR Error with get vm_servers
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 48, in vm
+    instance_collection = client.nova_list(f, t)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 96, in nova_list
+    res = http_request(url, headers=self.headers, method='GET')
+  File "E:\mana_api\mana_api\apiUtil.py", line 28, in http_request
+    con.request(method, path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1007, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 829, in _send_output
+    self.send(msg)
+  File "C:\Python27\lib\httplib.py", line 791, in send
+    self.connect()
+  File "C:\Python27\lib\httplib.py", line 772, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\lib\socket.py", line 571, in create_connection
+    raise err
+timeout: timed out
+Wed, 23 Mar 2016 17:11:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.83.175 - - [23/Mar/2016 17:11:19] "GET /mana_api/vm?party=pbs&f=0&t=10&tenant_id=d804ee140e714c8e9061fb0b0ae3ce42&region=RegionOne HTTP/1.0" 400 -
+Wed, 23 Mar 2016 17:28:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Wed, 23 Mar 2016 17:28:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 17:35:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Wed, 23 Mar 2016 17:35:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 17:39:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Wed, 23 Mar 2016 17:39:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 17:41:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Wed, 23 Mar 2016 17:41:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat

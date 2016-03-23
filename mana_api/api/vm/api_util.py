@@ -4,7 +4,6 @@ import json
 import base64
 import random
 import string
-from flask import g
 from mana_api.config import C2_CHANGE_VIR_WINDOWS_PWD_SCRIPT
 from mana_api.config import logging
 from mana_api.apiUtil import http_request

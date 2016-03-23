@@ -2,11 +2,11 @@
 __author__ = 'liujiahua'
 from flask import jsonify
 from flask import request
-from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
 from mana_api.api.vm.api_util import MyError, openstack_error
 from .tools.compute import InstanceManager
+from mana_api.apiUtil import getUserProjByToken
 import sys
 
 reload(sys)
@@ -30,7 +30,9 @@ def vm():
     if not tenant_id or not region:
         return jsonify({"code": 400, "msg": "Could not find tenant_id or region"}), 400
 
-    if not g.user or tenant_id not in g.user.proj_dict.keys():
+    # 禁止跨项目操作
+    user = getUserProjByToken(tenant_id)
+    if not user or tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     f = request.args.get('f', None)
@@ -44,7 +46,7 @@ def vm():
                 'to => %s' % (tenant_id, region, f, t))
 
     try:
-        client = InstanceManager(token=g.token, endpoint=g.user.get_endpoint(region, "nova"))
+        client = InstanceManager(token=user.token, endpoint=user.get_endpoint(region, "nova"))
         instance_collection = client.nova_list(f, t)
         total_count = len(instance_collection)
         vm_servers = []
@@ -80,11 +82,13 @@ def vm_action():
     if not tenant_id or not region or not server_id:
         return jsonify({"code": 400, "msg": "Could not find tenant_id or region or server_id"}), 400
 
-    if not g.user or tenant_id not in g.user.proj_dict.keys():
+    # 禁止跨项目操作
+    user = getUserProjByToken(tenant_id)
+    if not user or tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
     body = request.json
     try:
-        instance = InstanceManager(token=g.token, endpoint=g.user.get_endpoint(region, 'nova'))
+        instance = InstanceManager(token=user.token, endpoint=user.get_endpoint(region, 'nova'))
         resp = instance.do(body, server_id)
         if resp.status == 202:
             return jsonify({"code": 200, "msg": "success"})

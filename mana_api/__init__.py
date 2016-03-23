@@ -20,6 +20,8 @@ from flask import request
 from flask import jsonify
 from config import KEYSTONE, DATABASE, DATABASE_CLOUD
 from flask import g
+import urlparse
+import json
 import re
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
@@ -34,7 +36,7 @@ db = SQLAlchemy(app)
 def page_not_found(error):
     return 'Unauthorized', 401
 
-from apiUtil import getUserProjByToken
+from apiUtil import http_request
 
 @app.before_request
 def before_request():
@@ -53,12 +55,28 @@ def before_request():
     if not token:
         abort(401)
     else:
-        user = getUserProjByToken(token)
-        if user:
-            g.user = user
-            g.token = g.user.token
+        if validatedToken(token):
+            g.token = token  # 不带 tenant_id 的 token
+            pass
         else:
             return jsonify({"error": "invalid token"}), 400
+
+
+def validatedToken(token):
+    try:
+        if token == g.admin_token:
+            return True
+        headers = {"X-Auth-Token": "%s" % g.admin_token}
+        url = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens/%s' % token)
+        res = http_request(url, headers=headers, method='GET')
+        dd = json.loads(res.read())
+        if dd.has_key('access'):
+            return True
+        else:
+            return False
+    except:
+        return False
+
 
 #from mana_api import models
 #api = Api(app)
