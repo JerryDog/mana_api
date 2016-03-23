@@ -93,7 +93,7 @@ def vm_action():
         if resp.status == 202:
             return jsonify({"code": 200, "msg": "success"})
         else:
-            return jsonify(openstack_error(resp))
+            return jsonify(openstack_error(resp)), resp.status
     except:
         logger.exception('Error with vm action')
         return jsonify({"code": 400, "msg": "Error with vm action"}), 400

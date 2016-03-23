@@ -22,8 +22,9 @@ class MyError(Exception):
 def openstack_error(resp):
     # {"conflictingRequest": {"message": "Cannot 'reboot' while instance is in task_state powering-off", "code": 409}}
     result = {"code": resp.status, "reason": resp.reason}
-    if resp.read():
-        dd = json.loads(resp.read())
+    data = resp.read()
+    if data:
+        dd = json.loads(data)
         msg = dd.values()[0]["message"]
         result["msg"] = msg
     return result

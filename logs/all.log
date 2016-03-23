@@ -1149,3 +1149,88 @@ Wed, 23 Mar 2016 17:39:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Wed, 23 Mar 2016 17:39:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Wed, 23 Mar 2016 17:41:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
 Wed, 23 Mar 2016 17:41:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:09:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Wed, 23 Mar 2016 18:09:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:09:37 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:09:37 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:09:37 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:09:37 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:09:37 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 18:09:37 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 18:09:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:09:37] "POST /mana_api/tokens HTTP/1.1" 200 -
+Wed, 23 Mar 2016 18:09:40 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:09:40 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:09:40 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:09:40 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:09:40 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a1"}}}
+Wed, 23 Mar 2016 18:09:40 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:401, reason:Unauthorized
+Wed, 23 Mar 2016 18:09:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:09:40] "POST /mana_api/tokens HTTP/1.1" 200 -
+Wed, 23 Mar 2016 18:10:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Wed, 23 Mar 2016 18:10:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:15:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Wed, 23 Mar 2016 18:15:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a1"}}}
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:401, reason:Unauthorized
+Wed, 23 Mar 2016 18:15:53 E:\mana_api\mana_api\api\vm\identity.py[line:30] ERROR Error with get token
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\identity.py", line 28, in get_tokens
+    return jsonify(openstack_error(res)), res.status
+  File "E:\mana_api\mana_api\api\vm\api_util.py", line 26, in openstack_error
+    dd = json.loads(resp.read())
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 365, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 383, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+Wed, 23 Mar 2016 18:15:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:15:53] "POST /mana_api/tokens HTTP/1.1" 400 -
+Wed, 23 Mar 2016 18:17:01 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:17:01 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:17:01 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:17:01 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:17:01 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a18"}}}
+Wed, 23 Mar 2016 18:17:02 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:200, reason:OK
+Wed, 23 Mar 2016 18:17:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:17:02] "POST /mana_api/tokens HTTP/1.1" 200 -
+Wed, 23 Mar 2016 18:17:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Wed, 23 Mar 2016 18:17:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:17:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Wed, 23 Mar 2016 18:17:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:17:46 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:17:46 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:17:46 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:17:46 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:17:46 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a1"}}}
+Wed, 23 Mar 2016 18:17:46 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:401, reason:Unauthorized
+Wed, 23 Mar 2016 18:17:46 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:17:46] "POST /mana_api/tokens HTTP/1.1" 401 -
+Wed, 23 Mar 2016 18:18:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Wed, 23 Mar 2016 18:18:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:18:42 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:18:42 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:18:42 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:18:42 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:18:42 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a1"}}}
+Wed, 23 Mar 2016 18:18:42 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:401, reason:Unauthorized
+Wed, 23 Mar 2016 18:18:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:18:42] "POST /mana_api/tokens HTTP/1.1" 401 -
+Wed, 23 Mar 2016 18:18:50 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:18:50 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:18:50 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:18:50 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:18:50 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a1ss"}}}
+Wed, 23 Mar 2016 18:18:50 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:401, reason:Unauthorized
+Wed, 23 Mar 2016 18:18:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:18:50] "POST /mana_api/tokens HTTP/1.1" 401 -
+Wed, 23 Mar 2016 18:20:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\identity.py', reloading
+Wed, 23 Mar 2016 18:20:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 23 Mar 2016 18:20:35 E:\mana_api\mana_api\apiUtil.py[line:23] DEBUG REQ: 
+Wed, 23 Mar 2016 18:20:35 E:\mana_api\mana_api\apiUtil.py[line:24] DEBUG url: /v2.0/tokens
+Wed, 23 Mar 2016 18:20:35 E:\mana_api\mana_api\apiUtil.py[line:25] DEBUG header:{'Content-type': 'application/json'}
+Wed, 23 Mar 2016 18:20:35 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG method: POST
+Wed, 23 Mar 2016 18:20:35 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG body: {"auth": {"tenantName": "", "passwordCredentials": {"username": "admin", "password": "93b22a60dcc94a1ss"}}}
+Wed, 23 Mar 2016 18:20:35 E:\mana_api\mana_api\apiUtil.py[line:30] DEBUG RESP: status:401, reason:Unauthorized
+Wed, 23 Mar 2016 18:20:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [23/Mar/2016 18:20:35] "POST /mana_api/tokens HTTP/1.1" 401 -
+Wed, 23 Mar 2016 18:26:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Wed, 23 Mar 2016 18:26:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat

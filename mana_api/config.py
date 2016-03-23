@@ -24,6 +24,11 @@ KEYSTONE = {
         "admin_token": "c8442ce938bb8b0b4267",
         "admin_proj": "e58c78fe826f4f0b890767a3e0781019"
     },
+    "scloudm": {
+        "uri": "222.73.243.57:5000",
+        "admin_token": "c8442ce938bb8b0b4267",
+        "admin_proj": "e58c78fe826f4f0b890767a3e0781019"
+    }
 }
 
 
