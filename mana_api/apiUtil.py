@@ -13,20 +13,31 @@ import urlparse
 
 logger = logging.getLogger(__name__)
 
+class Resp(object):
+    def __init__(self, status, msg, reason=None):
+        self.status = status
+        self.reason = reason
+        self.msg = msg
+
+    def read(self):
+        return self.msg
 
 def http_request(url, body=None, headers=None, method="POST"):
     url_list = urlparse.urlparse(url)
-    con = httplib.HTTPConnection(url_list.netloc, timeout=15)
-    path = url_list.path
-    if url_list.query:
-        path = path + "?" + url_list.query
-    logger.debug("REQ: ")
-    logger.debug("url: " + str(path))
-    logger.debug("header:" + str(headers))
-    logger.debug("method: " + method)
-    logger.debug("body: " + str(body))
-    con.request(method, path, body, headers)
-    res = con.getresponse()
+    try:
+        con = httplib.HTTPConnection(url_list.netloc, timeout=15)
+        path = url_list.path
+        if url_list.query:
+            path = path + "?" + url_list.query
+        logger.debug("REQ: ")
+        logger.debug("url: " + str(path))
+        logger.debug("header:" + str(headers))
+        logger.debug("method: " + method)
+        logger.debug("body: " + str(body))
+        con.request(method, path, body, headers)
+        res = con.getresponse()
+    except Exception, e:
+        res = Resp(500, e)
     logger.debug("RESP: status:" + str(res.status) + ", reason:" + res.reason)
     return res
 

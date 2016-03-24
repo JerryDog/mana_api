@@ -73,27 +73,37 @@ def vm():
         return jsonify({"code": 400, "msg": "Error with get vm_servers"}), 400
 
 
-@zt_api.route('/vm_act', methods=['POST'])
-def vm_action():
-    tenant_id = request.args.get('tenant_id', None)
-    region = request.args.get('region', None)
-    server_id = request.args.get('server_id', None)
-
-    if not tenant_id or not region or not server_id:
+@zt_api.route('/vm_act/<tenant_id>/<region>', methods=['POST'])
+def vm_action(tenant_id, region):
+    if not tenant_id or not region:
         return jsonify({"code": 400, "msg": "Could not find tenant_id or region or server_id"}), 400
 
     # 禁止跨项目操作
     user = getUserProjByToken(tenant_id)
     if not user or tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
+
     body = request.json
+    server_ids = body.get('servers')
     try:
         instance = InstanceManager(token=user.token, endpoint=user.get_endpoint(region, 'nova'))
-        resp = instance.do(body, server_id)
-        if resp.status == 202:
-            return jsonify({"code": 200, "msg": "success"})
-        else:
-            return jsonify(openstack_error(resp)), resp.status
+        code = 200
+        message = 'success'
+        detail = []
+        for i in server_ids.split(','):
+            resp = instance.do(body, i)
+            if resp.status != 202:
+                _result = {"code": 200, "msg": "success", "server_id": i}
+            else:
+                code = 400
+                message = 'failed'
+                _result = openstack_error(resp)
+                _result['server_id'] = i
+            detail.append(_result)
+        return jsonify({"code": code, "msg": message, "detail": detail}), code
+    except MyError, e:
+        logger.exception('MyError raised')
+        return jsonify({"code": 400, "msg": '%s' % e.value}), 400
     except:
         logger.exception('Error with vm action')
         return jsonify({"code": 400, "msg": "Error with vm action"}), 400
