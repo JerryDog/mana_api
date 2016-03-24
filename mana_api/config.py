@@ -20,9 +20,9 @@ import logging
 
 KEYSTONE = {
     "default": {
-        "uri": "222.73.243.57:5000",
-        "admin_token": "c8442ce938bb8b0b4267",
-        "admin_proj": "e58c78fe826f4f0b890767a3e0781019"
+        "uri": "192.168.39.115:5000",
+        "admin_token": "8fb30fe54e3a44658bda97ab18a0eb1d",
+        "admin_proj": "d40f594067e548148084be98dd48f9ed"
     },
     "scloudm": {
         "uri": "222.73.243.57:5000",

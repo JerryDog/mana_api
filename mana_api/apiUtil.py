@@ -14,9 +14,9 @@ import urlparse
 logger = logging.getLogger(__name__)
 
 class Resp(object):
-    def __init__(self, status, msg, reason=None):
+    def __init__(self, status, msg):
         self.status = status
-        self.reason = reason
+        self.reason = msg
         self.msg = msg
 
     def read(self):
@@ -37,7 +37,7 @@ def http_request(url, body=None, headers=None, method="POST"):
         con.request(method, path, body, headers)
         res = con.getresponse()
     except Exception, e:
-        res = Resp(500, e)
+        res = Resp(500, str(e))
     logger.debug("RESP: status:" + str(res.status) + ", reason:" + res.reason)
     return res
 

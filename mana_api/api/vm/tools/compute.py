@@ -149,8 +149,10 @@ class InstanceManager(Base):
 
     #开关机重启
     def do(self, body, uuid):
+        # body 是 request.json, 需要删除我添加的 servers 字段
+        body.pop('servers')
         url = self.endpoint + '/servers' + '/' + uuid + '/action'
-        res = http_request(url, headers=self.headers, body=body, method='POST')
+        res = http_request(url, headers=self.headers, body=json.dumps(body), method='POST')
         if res.status == 500:
             raise MyError('Error with server action, reason: %s' % res.read())
         return res

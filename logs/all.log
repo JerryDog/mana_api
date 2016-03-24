@@ -1279,3 +1279,355 @@ Thu, 24 Mar 2016 11:09:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Thu, 24 Mar 2016 11:09:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Thu, 24 Mar 2016 11:17:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
 Thu, 24 Mar 2016 11:17:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 15:01:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Thu, 24 Mar 2016 15:01:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:36:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Thu, 24 Mar 2016 16:36:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:36:57 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Thu, 24 Mar 2016 16:36:57 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:37:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Thu, 24 Mar 2016 16:37:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:38:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Thu, 24 Mar 2016 16:38:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:38:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Thu, 24 Mar 2016 16:38:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\api\vm\nova.py[line:46] INFO Request: get vm servers list tenant_id => d40f594067e548148084be98dd48f9ed region => kilo from => None to => None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/detail
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'ea960699bda54072be0352288bbb8d85'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\api\vm\tools\compute.py[line:120] INFO scloudm response: {u'servers': [{u'OS-EXT-STS:task_state': None, u'addresses': {u'test2': [{u'OS-EXT-IPS-MAC:mac_addr': u'fa:16:3e:3b:8c:34', u'version': 4, u'addr': u'192.168.0.40', u'OS-EXT-IPS:type': u'fixed'}]}, u'links': [{u'href': u'http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/0a725c69-0e33-49c4-ad2b-817d54206a93', u'rel': u'self'}, {u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/servers/0a725c69-0e33-49c4-ad2b-817d54206a93', u'rel': u'bookmark'}], u'image': u'', u'OS-EXT-STS:vm_state': u'active', u'OS-EXT-SRV-ATTR:instance_name': u'instance-00000065', u'OS-SRV-USG:launched_at': u'2016-03-24T08:34:46.000000', u'flavor': {u'id': u'0867a43b-3c58-4246-99ce-b316045563d9', u'links': [{u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9', u'rel': u'bookmark'}]}, u'id': u'0a725c69-0e33-49c4-ad2b-817d54206a93', u'security_groups': [{u'name': u'default'}], u'user_id': u'07c1d92374a54135b949a2461891e274', u'OS-DCF:diskConfig': u'AUTO', u'accessIPv4': u'', u'accessIPv6': u'', u'progress': 0, u'OS-EXT-STS:power_state': 1, u'OS-EXT-AZ:availability_zone': u'test', u'config_drive': u'', u'status': u'ACTIVE', u'updated': u'2016-03-24T08:34:46Z', u'hostId': u'0c7c4632660bc6e58cc084b48614fbb2c5a722fea245c4ab345f76dc', u'OS-EXT-SRV-ATTR:host': u'SJ-E15-Cloud6', u'OS-SRV-USG:terminated_at': None, u'key_name': None, u'OS-EXT-SRV-ATTR:hypervisor_hostname': u'SJ-E15-Cloud6', u'name': u'test_jiahua-3', u'created': u'2016-03-24T08:34:32Z', u'tenant_id': u'd40f594067e548148084be98dd48f9ed', u'os-extended-volumes:volumes_attached': [{u'id': u'f184489c-4d8d-4c7a-b7fe-c3e3957c40dd'}], u'metadata': {}}, {u'OS-EXT-STS:task_state': None, u'addresses': {u'test2': [{u'OS-EXT-IPS-MAC:mac_addr': u'fa:16:3e:55:49:bb', u'version': 4, u'addr': u'192.168.0.39', u'OS-EXT-IPS:type': u'fixed'}]}, u'links': [{u'href': u'http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/31ea778a-572c-44dc-a0ce-c392c9b49baa', u'rel': u'self'}, {u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/servers/31ea778a-572c-44dc-a0ce-c392c9b49baa', u'rel': u'bookmark'}], u'image': u'', u'OS-EXT-STS:vm_state': u'active', u'OS-EXT-SRV-ATTR:instance_name': u'instance-00000064', u'OS-SRV-USG:launched_at': u'2016-03-24T08:34:46.000000', u'flavor': {u'id': u'0867a43b-3c58-4246-99ce-b316045563d9', u'links': [{u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9', u'rel': u'bookmark'}]}, u'id': u'31ea778a-572c-44dc-a0ce-c392c9b49baa', u'security_groups': [{u'name': u'default'}], u'user_id': u'07c1d92374a54135b949a2461891e274', u'OS-DCF:diskConfig': u'AUTO', u'accessIPv4': u'', u'accessIPv6': u'', u'progress': 0, u'OS-EXT-STS:power_state': 1, u'OS-EXT-AZ:availability_zone': u'test', u'config_drive': u'', u'status': u'ACTIVE', u'updated': u'2016-03-24T08:34:46Z', u'hostId': u'0c7c4632660bc6e58cc084b48614fbb2c5a722fea245c4ab345f76dc', u'OS-EXT-SRV-ATTR:host': u'SJ-E15-Cloud6', u'OS-SRV-USG:terminated_at': None, u'key_name': None, u'OS-EXT-SRV-ATTR:hypervisor_hostname': u'SJ-E15-Cloud6', u'name': u'test_jiahua-2', u'created': u'2016-03-24T08:34:32Z', u'tenant_id': u'd40f594067e548148084be98dd48f9ed', u'os-extended-volumes:volumes_attached': [{u'id': u'969c9534-ceab-4610-8050-24145f41a2d3'}], u'metadata': {}}, {u'OS-EXT-STS:task_state': None, u'addresses': {u'test2': [{u'OS-EXT-IPS-MAC:mac_addr': u'fa:16:3e:8c:e5:83', u'version': 4, u'addr': u'192.168.0.38', u'OS-EXT-IPS:type': u'fixed'}]}, u'links': [{u'href': u'http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def', u'rel': u'self'}, {u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def', u'rel': u'bookmark'}], u'image': u'', u'OS-EXT-STS:vm_state': u'active', u'OS-EXT-SRV-ATTR:instance_name': u'instance-00000063', u'OS-SRV-USG:launched_at': u'2016-03-24T08:34:42.000000', u'flavor': {u'id': u'0867a43b-3c58-4246-99ce-b316045563d9', u'links': [{u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9', u'rel': u'bookmark'}]}, u'id': u'717c6169-4994-4498-9bd1-ad3323266def', u'security_groups': [{u'name': u'default'}], u'user_id': u'07c1d92374a54135b949a2461891e274', u'OS-DCF:diskConfig': u'AUTO', u'accessIPv4': u'', u'accessIPv6': u'', u'progress': 0, u'OS-EXT-STS:power_state': 1, u'OS-EXT-AZ:availability_zone': u'test', u'config_drive': u'', u'status': u'ACTIVE', u'updated': u'2016-03-24T08:34:42Z', u'hostId': u'0c7c4632660bc6e58cc084b48614fbb2c5a722fea245c4ab345f76dc', u'OS-EXT-SRV-ATTR:host': u'SJ-E15-Cloud6', u'OS-SRV-USG:terminated_at': None, u'key_name': None, u'OS-EXT-SRV-ATTR:hypervisor_hostname': u'SJ-E15-Cloud6', u'name': u'test_jiahua-1', u'created': u'2016-03-24T08:34:32Z', u'tenant_id': u'd40f594067e548148084be98dd48f9ed', u'os-extended-volumes:volumes_attached': [{u'id': u'474be2a9-7fa3-4b49-9709-9f9b77d6a62f'}], u'metadata': {}}, {u'OS-EXT-STS:task_state': None, u'addresses': {u'test2': [{u'OS-EXT-IPS-MAC:mac_addr': u'fa:16:3e:17:9c:d3', u'version': 4, u'addr': u'192.168.0.37', u'OS-EXT-IPS:type': u'fixed'}]}, u'links': [{u'href': u'http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3', u'rel': u'self'}, {u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3', u'rel': u'bookmark'}], u'image': u'', u'OS-EXT-STS:vm_state': u'active', u'OS-EXT-SRV-ATTR:instance_name': u'instance-00000062', u'OS-SRV-USG:launched_at': u'2016-03-24T07:47:08.000000', u'flavor': {u'id': u'0867a43b-3c58-4246-99ce-b316045563d9', u'links': [{u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9', u'rel': u'bookmark'}]}, u'id': u'1fa07011-61d5-4c6e-afd9-a107129501b3', u'security_groups': [{u'name': u'default'}], u'user_id': u'07c1d92374a54135b949a2461891e274', u'OS-DCF:diskConfig': u'AUTO', u'accessIPv4': u'', u'accessIPv6': u'', u'progress': 0, u'OS-EXT-STS:power_state': 1, u'OS-EXT-AZ:availability_zone': u'test', u'config_drive': u'', u'status': u'ACTIVE', u'updated': u'2016-03-24T07:47:08Z', u'hostId': u'0c7c4632660bc6e58cc084b48614fbb2c5a722fea245c4ab345f76dc', u'OS-EXT-SRV-ATTR:host': u'SJ-E15-Cloud6', u'OS-SRV-USG:terminated_at': None, u'key_name': None, u'OS-EXT-SRV-ATTR:hypervisor_hostname': u'SJ-E15-Cloud6', u'name': u'test', u'created': u'2016-03-24T07:47:00Z', u'tenant_id': u'd40f594067e548148084be98dd48f9ed', u'os-extended-volumes:volumes_attached': [{u'id': u'14596e1c-6a8e-41bc-9241-7e5e3ab2ec3c'}], u'metadata': {}}]}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'ea960699bda54072be0352288bbb8d85'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'ea960699bda54072be0352288bbb8d85'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'ea960699bda54072be0352288bbb8d85'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'ea960699bda54072be0352288bbb8d85'}
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:40:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:40:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:40:54] "GET /mana_api/vm?tenant_id=d40f594067e548148084be98dd48f9ed&region=kilo HTTP/1.1" 200 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'9746ff4fb27542b5b4196d9b00b031a1'}
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {u'os-stop': None, u'servers': u'717c6169-4994-4498-9bd1-ad3323266def'}
+Thu, 24 Mar 2016 16:44:19 E:\mana_api\mana_api\api\vm\nova.py[line:108] ERROR Error with vm action
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 94, in vm_action
+    resp = instance.do(body, i)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 153, in do
+    res = http_request(url, headers=self.headers, body=body, method='POST')
+  File "E:\mana_api\mana_api\apiUtil.py", line 41, in http_request
+    logger.debug("RESP: status:" + str(res.status) + ", reason:" + res.reason)
+TypeError: cannot concatenate 'str' and 'NoneType' objects
+Thu, 24 Mar 2016 16:44:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:44:19] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 400 -
+Thu, 24 Mar 2016 16:47:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 24 Mar 2016 16:47:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:47:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'dd0e02727a3147de9e7e232caeaf1379'}
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {u'os-stop': None, u'servers': u'717c6169-4994-4498-9bd1-ad3323266def'}
+Thu, 24 Mar 2016 16:47:37 E:\mana_api\mana_api\api\vm\nova.py[line:108] ERROR Error with vm action
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 94, in vm_action
+    resp = instance.do(body, i)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 153, in do
+    res = http_request(url, headers=self.headers, body=body, method='POST')
+  File "E:\mana_api\mana_api\apiUtil.py", line 41, in http_request
+    logger.debug("RESP: status:" + str(res.status) + ", reason:" + res.reason)
+TypeError: cannot concatenate 'str' and 'exceptions.TypeError' objects
+Thu, 24 Mar 2016 16:47:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:47:37] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 400 -
+Thu, 24 Mar 2016 16:48:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 24 Mar 2016 16:48:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'7d42184e6d9a4b82b7d03c6817ddbdab'}
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {u'os-stop': None, u'servers': u'717c6169-4994-4498-9bd1-ad3323266def'}
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:500, reason:must be string or buffer, not dict
+Thu, 24 Mar 2016 16:48:32 E:\mana_api\mana_api\api\vm\nova.py[line:105] ERROR MyError raised
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\nova.py", line 94, in vm_action
+    resp = instance.do(body, i)
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 155, in do
+    raise MyError('Error with server action, reason: %s' % res.read())
+MyError: 'Error with server action, reason: must be string or buffer, not dict'
+Thu, 24 Mar 2016 16:48:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:48:32] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 400 -
+Thu, 24 Mar 2016 16:49:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Thu, 24 Mar 2016 16:49:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:50:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Thu, 24 Mar 2016 16:50:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:50:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\compute.py', reloading
+Thu, 24 Mar 2016 16:50:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:50:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'002130fd901a4515b447faa80c7e5538'}
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"os-stop": null, "servers": "717c6169-4994-4498-9bd1-ad3323266def"}
+Thu, 24 Mar 2016 16:50:52 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:400, reason:Bad Request
+Thu, 24 Mar 2016 16:50:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:50:52] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 200 -
+
+
+
+
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'148dedacadd245ecb8a7269d30b09b69'}
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"os-stop": null, "servers": "717c6169-4994-4498-9bd1-ad3323266def"}
+Thu, 24 Mar 2016 16:52:28 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:400, reason:Bad Request
+Thu, 24 Mar 2016 16:52:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:52:28] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 200 -
+Thu, 24 Mar 2016 16:53:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Thu, 24 Mar 2016 16:53:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'22aaaf0dbdbe400d867ea78c1f504619'}
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"os-stop": null, "servers": "717c6169-4994-4498-9bd1-ad3323266def"}
+Thu, 24 Mar 2016 16:53:36 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:400, reason:Bad Request
+Thu, 24 Mar 2016 16:53:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:53:36] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 400 -
+Thu, 24 Mar 2016 16:54:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\api_util.py', reloading
+Thu, 24 Mar 2016 16:54:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'a9701c472b5544c692144caebfb6215d'}
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"os-stop": null, "servers": "717c6169-4994-4498-9bd1-ad3323266def"}
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:400, reason:Bad Request
+Thu, 24 Mar 2016 16:54:44 E:\mana_api\mana_api\api\vm\api_util.py[line:28] DEBUG Openstack Resp: {"badRequest": {"message": "Malformed request body", "code": 400}}
+Thu, 24 Mar 2016 16:54:44 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:54:44] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 400 -
+Thu, 24 Mar 2016 16:56:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\compute.py', reloading
+Thu, 24 Mar 2016 16:56:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+
+
+
+
+
+
+
+
+
+
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens/c64f2860a23749509fe08228a609f37a
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tenants
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'X-Auth-Token': u'c64f2860a23749509fe08228a609f37a'}
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: GET
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: None
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2.0/tokens
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json'}
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "c64f2860a23749509fe08228a609f37a"}}}
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:200, reason:OK
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: /v2/d40f594067e548148084be98dd48f9ed/servers/717c6169-4994-4498-9bd1-ad3323266def/action
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'63944bad5ff04bb5abc55327e9ee5420'}
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG method: POST
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG body: {"os-stop": null}
+Thu, 24 Mar 2016 16:57:06 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG RESP: status:202, reason:Accepted
+Thu, 24 Mar 2016 16:57:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 16:57:06] "POST /mana_api/vm_act/d40f594067e548148084be98dd48f9ed/kilo HTTP/1.1" 200 -

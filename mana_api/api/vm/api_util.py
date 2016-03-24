@@ -25,6 +25,7 @@ def openstack_error(resp):
     result = {"code": resp.status, "reason": resp.reason}
     data = resp.read()
     if data:
+        logger.debug('Openstack Resp: %s' % data)
         dd = json.loads(data)
         msg = dd.values()[0]["message"]
         result["msg"] = msg

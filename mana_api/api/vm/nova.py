@@ -92,7 +92,7 @@ def vm_action(tenant_id, region):
         detail = []
         for i in server_ids.split(','):
             resp = instance.do(body, i)
-            if resp.status != 202:
+            if resp.status == 202:
                 _result = {"code": 200, "msg": "success", "server_id": i}
             else:
                 code = 400
