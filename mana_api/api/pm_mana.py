@@ -6,7 +6,7 @@ from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
 from mana_api.apiUtil import get_pm, get_info_by_snid, update_stat_after_act, \
-    get_pm_accounts, get_pm_accounts_detail
+    get_pm_accounts, get_pm_accounts_detail, getUserProjByToken
 import sys
 import os
 
@@ -28,7 +28,8 @@ def pm():
     tenant_id = request.args.get('tenant_id', None)
 
     # 禁止跨项目操作
-    if tenant_id not in g.user.proj_dict.keys():
+    user = getUserProjByToken(tenant_id)
+    if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "无权限操作该项目".decode('utf-8')}), 403
 
     region = request.args.get('region', None)
@@ -62,7 +63,8 @@ def pm_act():
         return jsonify({"code": 400, "msg": "Bad request, no json data"}), 400
 
     # 禁止跨项目操作
-    if tenant_id not in g.user.proj_dict.keys():
+    user = getUserProjByToken(tenant_id)
+    if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     all_pm_info = get_info_by_snid(snid=system_snid)
@@ -98,7 +100,8 @@ def pm_bill():
          return jsonify({"code": 400, "msg": "Bad request, tenant_id required"}), 400
 
     # 禁止跨项目操作
-    if tenant_id not in g.user.proj_dict.keys():
+    user = getUserProjByToken(tenant_id)
+    if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     logger.info('Request: curl -i -H "X-Auth-Token: %s" '
@@ -121,7 +124,8 @@ def pm_bill_detail():
         return jsonify({"code": 400, "msg": "Bad request, lost params"}), 400
 
     # 禁止跨项目操作
-    if tenant_id not in g.user.proj_dict.keys():
+    user = getUserProjByToken(tenant_id)
+    if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
     logger.info('Request: get pm accounts detail'

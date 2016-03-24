@@ -73,7 +73,7 @@ def vm():
         return jsonify({"code": 400, "msg": "Error with get vm_servers"}), 400
 
 
-@zt_api.route('/vm_action', methods=['POST'])
+@zt_api.route('/vm_act', methods=['POST'])
 def vm_action():
     tenant_id = request.args.get('tenant_id', None)
     region = request.args.get('region', None)
