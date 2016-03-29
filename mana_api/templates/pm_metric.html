@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+            <title>ceilometer chart</title>
+            <script src="/static/jquery-1.8.3.min.js"></script>
+            <script src="/static/highcharts.js"></script>
+            <link href="/static/chart.css"  rel="stylesheet">
+            <script src="/static/jquery.json-2.3.js"></script>
+    </head>
+    <body>
+        
+        <div class="vmPage" id="J_metric">
+            
+            <div class="metric-menu tabs">
+                <a class="selected tab" wp-type="link" href="javascript:;" >监控指标</a>
+              <!--  <a class="tab" wp-type="link" href="javascript:;" >报警</a> -->
+               <!-- <a class="tab" wp-type="link" href="javascript:;" >组合报警</a> -->
+            </div>
+            
+            <div class="metric-con">
+                <div class="metric-wp">
+                    <div class="metric-l">
+                        <div class="table-header">
+                            <div>指标</div>
+                       <!--     <div>资源名称</div>  -->
+                        </div>
+                        
+                        <div class="table">
+                            <div class="table-content">
+                                <!--  ms-repeat-start
+                                 <div class="row">
+                                 <div>内存使用率</div>
+                                 <div><i class="icon-instance"></i>demo1</div>
+                                 </div>
+                                 -->
+                                <div class="row selected" id="cpu_util">
+                                    <div>CPU使用率</div>
+                                   <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+                                <div class="row" id="network_incoming_bytes_rate">
+                                    <div>网络进流量</div>
+                                  <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+                                <div class="row" id="network_outgoing_bytes_rate">
+                                    <div>网络出流量</div>
+                                    <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+                                <div class="row" id="disk_write_bytes_rate">
+                                    <div>磁盘写速率</div>
+                                    <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+                                <div class="row" id="disk_read_bytes_rate">
+                                    <div>磁盘读速率</div>
+                                   <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+
+                                
+                                <!--ms-repeat-end-->
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="metric-r">
+                        <div class="chart-wp">
+                            <div class="J-alarm-chart">数据加载中...</div>
+                        </div>
+                        
+                        <div class="time-wp">
+                            <div>
+                                <div class="btn-group">
+                                    <!--ms-repeat-start-->
+                                    <a href="javascript:;" class="btn btn-status selected">最近三小时</a>
+                                    <a href="javascript:;" class="btn btn-status">最近一天</a>
+                                    <a href="javascript:;" class="btn btn-status">最近一周</a>
+                                    <a href="javascript:;" class="btn btn-status">最近一个月</a>
+                                    <!--ms-repeat-end-->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+<script>
+Highcharts.wrap(Highcharts.Chart.prototype, 'getContainer', function (proceed) {
+        proceed.call(this);
+        this.container.style.background = 'url(http://m.scloudm.com/media/sand.png)';
+});
+Highcharts.theme = {
+    colors: ["#f45b5b", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+             "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+             chart: {
+                 backgroundColor: null,
+                 style: {
+                     fontFamily: "Signika, serif"
+                 }
+             },
+             title: {
+                 style: {
+                     color: 'black',
+                     fontSize: '16px',
+                     fontWeight: 'bold'
+                 }
+             },
+             subtitle: {
+                 style: {
+                     color: 'black'
+                 }
+             },
+             tooltip: {
+                 borderWidth: 0
+             },
+             legend: {
+                 itemStyle: {
+                     fontWeight: 'bold',
+                     fontSize: '13px'
+                 }
+             },
+             xAxis: {
+                 labels: {
+                     style: {
+                         color: '#6e6e70'
+                     }
+                 }
+             },
+             yAxis: {
+                 labels: {
+                     style: {
+                         color: '#6e6e70'
+                     }
+                 }
+             },
+             plotOptions: {
+                 series: {
+                     shadow: true
+                 },
+                 candlestick: {
+                     lineColor: '#404048'
+                 },
+                 map: {
+                     shadow: false
+                 }
+             },
+             navigator: {
+                 xAxis: {
+                     gridLineColor: '#D0D0D8'
+                 }
+             },
+             rangeSelector: {
+                 buttonTheme: {
+                     fill: 'white',
+                     stroke: '#C0C0C8',
+                     'stroke-width': 1,
+                     states: {
+                         select: {
+                             fill: '#D0D0D8'
+                         }
+                     }
+                 }
+             },
+             scrollbar: {
+                 trackBorderColor: '#C0C0C8'
+             },
+             background2: '#E0E0E8'
+             
+};
+
+Highcharts.setOptions(Highcharts.theme);
+</script>
+        
+        
+<script>
+    
+$(function(){
+    $(".btn-group>a").click(function(e)
+    {
+        var i= $(this).index();
+        duration=["3h","1d","7d","30d"][i];
+        $(".btn-group>a").removeClass("selected");
+        $(this).addClass("selected");
+        e.preventDefault();
+        getData();
+    });
+      
+    $(".table-content>div").click(function(e)
+    {
+        var i= $(this).index();
+        pm_metric=["cpu_util","network_in","network_out","disk_write","disk_read"][i];
+        $(".table-content>div").removeClass("selected");
+        $(this).addClass("selected");
+        e.preventDefault();
+        getData();
+     });
+});
+
+var titles={"cpu_util":"CPU使用率","network_in":"网络进流量","network_out":"网络出流量","disk_write":"磁盘写速率","disk_read":"磁盘读速率"}
+    
+var metric="cpu_util";
+var UUID="{{ system_snid }}";
+var duration="3h";
+var mx=[],display=[],Unit,Period,ceilodata;
+
+function initChart(){
+	display=[];
+	firstNode=ceilodata[0]["data"][0];
+	Unit=firstNode["unit"];
+	Period=firstNode["period"];
+	mx=[];
+	for(var i=0;i<ceilodata.length;i++)
+	{
+		display[i]={};
+		display[i]["name"]=ceilodata[i]["name"];
+		chartShow=ceilodata[i]["data"];
+		var chartShow_data=[];
+		var chart_obj=[];
+		for(var j=0;j<chartShow.length;j++)
+		{
+			chartShow_data.push([new Date(chartShow[j]["period_start"]).getTime(),chartShow[j]["avg"]]);
+			chart_obj.push([""+new Date(chartShow[j]["period_start"]).getTime(),chartShow[j]]);
+		}
+		display[i]["data"]=chartShow_data;
+		mx[i]=chart_obj;
+	}
+}
+
+function getData(){
+    $.post("/mana_api/pm_monitor/statics/"+pm_metric+"/"+UUID+"/"+duration+"/",
+            null,
+            function(data)
+            {
+                if(data)
+                {
+                    ceilodata=$.evalJSON(data);
+                    initChart();
+                    draw();
+                }
+            });
+}
+        
+getData();
+        
+function dateStr(date){
+    day2=new Date(date);
+    return (day2.getMonth()+1)+"-"+day2.getDate()+" "+day2.getHours()+":"+day2.getMinutes();
+}
+
+function chartVal(key,attr,index){
+	key=key-8*3600000;
+	objs=mx[index];
+	for(var i=0;i<objs.length;i++)
+	{
+		if(key==objs[i][0]){
+			return objs[i][1][""+attr];
+		}
+	}
+	return key;
+}
+        
+function utcDisplay(str){
+    return dateStr(new Date(str).getTime());
+}
+        
+function draw()
+{
+   $('.J-alarm-chart').highcharts({
+                                  chart: {
+                                  type: 'spline'
+                                  },
+                                  title: {
+                                  text: titles[""+pm_metric]+" ("+Unit+")"
+                                  },
+                                  credits:{
+                                  enabled:false
+                                  },
+                                  subtitle: {
+                                  text: '单位（'+Unit+'）,间隔'+Period+'s'
+                                  },
+                                  xAxis: {
+                                  type: 'datetime',
+                                  labels: {
+                                  overflow: 'justify'
+                                  },
+                                  gridLineWidth: 1,
+                                  gridLineDashStyle:'ShortDot',
+                                  labels: {
+                                  align: 'left',
+                                  }
+                                  },
+                                  yAxis: {
+                                  title: {
+                                  text: ''
+                                  },
+                                  min: 0,
+                                  gridLineWidth: 1,
+                                  gridLineDashStyle:'ShortDot',
+                                  labels: {
+                                  align: 'right',
+                                  x:3,
+                                  y:16,
+                                  },
+                                  },
+                                  tooltip: {
+                                  shared: true,
+                                  useHTML: true,
+                                  
+                                  formatter: function () {
+                                  var X=this.x;
+                                  //var s = '<small style="color:#333333"><b>统计周期数据</b></small><table>';
+                                  var s="<table>";
+                                  var pointFormat="";
+                                  $.each(this.points, function (index) {
+                                         pointFormat+='<tr><td colspan="2" align="center" style="color:'+this.series.color+';">'+this.series.name +'</td></tr>';
+                                         pointFormat+='<tr><td style="color:#333333">Avg: </td><td style="text-align: right">'+this.y.toFixed(2)+''+Unit+'</td></tr>' +
+                                         '<tr><td style="color:#333333">Start: </td><td style="text-align: right;color:#333333;">'+utcDisplay(chartVal(this.x,"period_start",index))+'</td></tr>'+
+                                         '<tr><td style="color:#333333">End: </td><td style="text-align: right;color:#333333;">'+utcDisplay(chartVal(this.x,"period_end",index))+'</td></tr>'+
+                                         '<tr><td style="color:#333333">Max: </td><td style="text-align: right;color:#333333;">'+chartVal(this.x,"max",index).toFixed(2)+''+Unit+'</td></tr>'+
+                                         '<tr><td style="color:#333333">Min: </td><td style="text-align: right;color:#333333;">'+chartVal(this.x,"min",index).toFixed(2)+''+Unit+'</td></tr>';
+                                         });
+                                  return s+pointFormat+"</table>";
+                                  },
+                                  },
+                                  plotOptions: {
+                                  spline: {
+                                  lineWidth: 2,
+                                  states: {
+                                  hover: {
+                                  lineWidth: 3
+                                  }
+                                  },
+                                  marker: {
+                                  enabled: false
+                                  },
+                                  // pointInterval: Period,
+                                  // pointStart: new Date(ceilodata[0]["period_start"]).getTime()+8*3600000
+                                  }
+                                  },
+                                  series:display,
+   });
+
+}
+</script>
+        
+        
+    </body>
+</html>

@@ -18,7 +18,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask import abort
 from flask import request
 from flask import jsonify
-from config import KEYSTONE, DATABASE, DATABASE_CLOUD
+from config import KEYSTONE, DATABASE, DATABASE_CLOUD, logging
 from flask import g
 import urlparse
 import json
@@ -30,7 +30,7 @@ app.config['SQLALCHEMY_BINDS'] = {
 }
 
 db = SQLAlchemy(app)
-
+logger = logging.getLogger(__name__)
 
 @app.errorhandler(401)
 def page_not_found(error):
@@ -47,12 +47,14 @@ def before_request():
     g.admin_proj = KEYSTONE[g.party]['admin_proj']
     # 静态文件和监控数据不用验证，直接通过
     if re.match('/mana_api/pm_monitor', request.path):
-        token = g.token = g.admin_token
-    if re.match('/static', request.path):
-        token = g.token = g.admin_token
-    if re.match('/mana_api/tokens', request.path):
-        token = g.token = g.admin_token
-    if not token:
+        g.token = get_admin_token()
+    elif re.match('/mana_api/vm_monitor', request.path):
+        g.token = get_admin_token()
+    elif re.match('/static', request.path):
+        pass
+    elif re.match('/mana_api/tokens', request.path):
+        pass
+    elif not token:
         abort(401)
     else:
         if validatedToken(token):
@@ -76,6 +78,24 @@ def validatedToken(token):
             return False
     except:
         return False
+
+
+def get_admin_token():
+    try:
+        headers = {"Content-type": "application/json"}
+        url = urlparse.urljoin('http://' + g.uri + '/', '/v2.0/tokens')
+        body = '{"auth": {"tenantId": "%s", "passwordCredentials": ' \
+               '{"username": "%s", "password": "%s"}}}' % \
+               (KEYSTONE[g.party]['admin_proj'],
+                KEYSTONE[g.party]['ks_user'],
+                KEYSTONE[g.party]['ks_pass'])
+        resp = http_request(url, body=body, headers=headers)
+        dd = json.loads(resp.read())
+        apitoken = dd['access']['token']['id']
+        return apitoken
+    except:
+        logger.exception('Error with get admin token')
+        return None
 
 
 #from mana_api import models

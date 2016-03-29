@@ -42,3 +42,4 @@ from mana_api.api import pm_mana
 from mana_api.api import pm_monitor
 from mana_api.api.vm import nova
 from mana_api.api.vm import identity
+from mana_api.api.vm import vm_monitor

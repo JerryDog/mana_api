@@ -9,15 +9,15 @@
             <script src="/static/jquery.json-2.3.js"></script>
     </head>
     <body>
-        
+
         <div class="vmPage" id="J_metric">
-            
+
             <div class="metric-menu tabs">
                 <a class="selected tab" wp-type="link" href="javascript:;" >监控指标</a>
               <!--  <a class="tab" wp-type="link" href="javascript:;" >报警</a> -->
                <!-- <a class="tab" wp-type="link" href="javascript:;" >组合报警</a> -->
             </div>
-            
+
             <div class="metric-con">
                 <div class="metric-wp">
                     <div class="metric-l">
@@ -25,7 +25,7 @@
                             <div>指标</div>
                        <!--     <div>资源名称</div>  -->
                         </div>
-                        
+
                         <div class="table">
                             <div class="table-content">
                                 <!--  ms-repeat-start
@@ -55,18 +55,26 @@
                                    <!-- <div><i class="icon-instance"></i>demo1</div>  -->
                                 </div>
 
-                                
+                                <div class="row" id="network_incoming_bytes">
+                                    <div>网络进流量（累积）</div>
+                                    <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+                                <div class="row" id="network_outgoing_bytes">
+                                    <div>网络出流量（累积）</div>
+                                   <!-- <div><i class="icon-instance"></i>demo1</div>  -->
+                                </div>
+
                                 <!--ms-repeat-end-->
                             </div>
                         </div>
-                        
+
                     </div>
-                    
+
                     <div class="metric-r">
                         <div class="chart-wp">
                             <div class="J-alarm-chart">数据加载中...</div>
                         </div>
-                        
+
                         <div class="time-wp">
                             <div>
                                 <div class="btn-group">
@@ -79,14 +87,14 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
+
 <script>
 Highcharts.wrap(Highcharts.Chart.prototype, 'getContainer', function (proceed) {
         proceed.call(this);
@@ -168,15 +176,15 @@ Highcharts.theme = {
                  trackBorderColor: '#C0C0C8'
              },
              background2: '#E0E0E8'
-             
+
 };
 
 Highcharts.setOptions(Highcharts.theme);
 </script>
-        
-        
+
+
 <script>
-    
+
 $(function(){
     $(".btn-group>a").click(function(e)
     {
@@ -187,11 +195,11 @@ $(function(){
         e.preventDefault();
         getData();
     });
-      
+
     $(".table-content>div").click(function(e)
     {
         var i= $(this).index();
-        metric=["cpu_util","network_in","network_out","disk_write","disk_read"][i];
+        metric=["cpu_util","network_incoming_bytes_rate","network_outgoing_bytes_rate","disk_write_bytes_rate","disk_read_bytes_rate","network_incoming_bytes","network_outgoing_bytes"][i];
         $(".table-content>div").removeClass("selected");
         $(this).addClass("selected");
         e.preventDefault();
@@ -199,11 +207,12 @@ $(function(){
      });
 });
 
-var titles={"cpu_util":"CPU使用率","network_in":"网络进流量","network_out":"网络出流量","disk_write":"磁盘写速率","disk_read":"磁盘读速率"}
-    
+var titles={"cpu_util":"CPU使用率","network_incoming_bytes_rate":"网络进流量","network_outgoing_bytes_rate":"网络出流量","disk_write_bytes_rate":"磁盘写速率","disk_read_bytes_rate":"磁盘读速率","network_incoming_bytes":"网络进流量（累积）","network_outgoing_bytes":"网络出流量（累积）"}
+
 var metric="cpu_util";
-var UUID="{{ system_snid }}";
+var UUID="{{ uuid }}";
 var duration="3h";
+var region="{{ region }}";
 var mx=[],display=[],Unit,Period,ceilodata;
 
 function initChart(){
@@ -221,7 +230,7 @@ function initChart(){
 		var chart_obj=[];
 		for(var j=0;j<chartShow.length;j++)
 		{
-			chartShow_data.push([new Date(chartShow[j]["period_start"]).getTime(),chartShow[j]["avg"]]);
+			chartShow_data.push([new Date(chartShow[j]["period_start"]).getTime()+8*3600000,chartShow[j]["avg"]]);
 			chart_obj.push([""+new Date(chartShow[j]["period_start"]).getTime(),chartShow[j]]);
 		}
 		display[i]["data"]=chartShow_data;
@@ -230,21 +239,22 @@ function initChart(){
 }
 
 function getData(){
-    $.post("/mana_api/pm_monitor/statics/"+metric+"/"+UUID+"/"+duration+"/",
+    $.post("/mana_api/vm_monitor/statics/"+region+"/"+metric+"/"+UUID+"/"+duration+"/",
             null,
             function(data)
             {
                 if(data)
                 {
+                    alert(data);
                     ceilodata=$.evalJSON(data);
                     initChart();
                     draw();
                 }
             });
 }
-        
+
 getData();
-        
+
 function dateStr(date){
     day2=new Date(date);
     return (day2.getMonth()+1)+"-"+day2.getDate()+" "+day2.getHours()+":"+day2.getMinutes();
@@ -261,11 +271,11 @@ function chartVal(key,attr,index){
 	}
 	return key;
 }
-        
+
 function utcDisplay(str){
     return dateStr(new Date(str).getTime());
 }
-        
+
 function draw()
 {
    $('.J-alarm-chart').highcharts({
@@ -308,7 +318,7 @@ function draw()
                                   tooltip: {
                                   shared: true,
                                   useHTML: true,
-                                  
+
                                   formatter: function () {
                                   var X=this.x;
                                   //var s = '<small style="color:#333333"><b>统计周期数据</b></small><table>';
@@ -345,7 +355,7 @@ function draw()
 
 }
 </script>
-        
-        
+
+
     </body>
 </html>

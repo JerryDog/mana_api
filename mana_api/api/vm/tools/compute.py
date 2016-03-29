@@ -72,8 +72,8 @@ class Instance(Base):
         self.flavor_id = flavor.get('id', None) if flavor else None
         self.disk, self.mem, self.cpu = self.get_flavor()
         self.lan_ip, self.wan_ip = addresses_to_wan_lan(info['addresses'])
-        self.host_ip = info['OS-EXT-SRV-ATTR:host']
-        self.instance_name = info['OS-EXT-SRV-ATTR:instance_name']
+        self.host_ip = info.get('OS-EXT-SRV-ATTR:host', None)
+        self.instance_name = info.get('OS-EXT-SRV-ATTR:instance_name', None)
 
     # 获取主机类型明细
     def get_flavor(self):
@@ -130,7 +130,7 @@ class InstanceManager(Base):
             raise MyError('Error with show server, reason: %s' % res.read())
         dd = json.loads(res.read())
         logger.info('scloudm response: %s' % dd)
-        instance = Instance(dd, token=self.token, endpoint=self.endpoint)
+        instance = Instance(dd['server'], token=self.token, endpoint=self.endpoint)
         return instance
 
     # 获取主机类型明细

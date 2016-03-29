@@ -23,17 +23,19 @@ class Resp(object):
         return self.msg
 
 def http_request(url, body=None, headers=None, method="POST"):
+    logger.debug("REQ: ")
+    logger.debug("url: " + str(url))
     url_list = urlparse.urlparse(url)
     try:
         con = httplib.HTTPConnection(url_list.netloc, timeout=15)
         path = url_list.path
         if url_list.query:
             path = path + "?" + url_list.query
-        logger.debug("REQ: ")
-        logger.debug("url: " + str(path))
+
         logger.debug("header:" + str(headers))
         logger.debug("method: " + method)
         logger.debug("body: " + str(body))
+        logger.debug("")
         con.request(method, path, body, headers)
         res = con.getresponse()
     except Exception, e:

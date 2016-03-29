@@ -7,7 +7,9 @@ import string
 from mana_api.config import C2_CHANGE_VIR_WINDOWS_PWD_SCRIPT, C2_CHANGE_VIR_PWD_SCRIPT
 from mana_api.config import logging
 import paramiko
-from mana_api.apiUtil import http_request
+
+
+
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +20,8 @@ class MyError(Exception):
         self.value = value
     def __str__(self):
         return repr(self.value)
+
+
 
 # 处理 openstack 错误返回, 参数为 resp 对象，返回结果为字典
 def openstack_error(resp):
@@ -88,6 +92,7 @@ def chg_linux_pwd(instance, pwd):
         return False, LOG
     return True, LOG
 
+
 # ssh 链接
 def conn(host,command,user="root",pwd=None,port=22):
     ssh=paramiko.SSHClient()
@@ -105,6 +110,7 @@ def conn(host,command,user="root",pwd=None,port=22):
         errot_list=json.dumps(error)
         print "An error happened by:%s" % errot_list
         return error
+
 
 def update_user_data(instance, pwd):
     data_base64 = instance.get_user_data()
@@ -128,6 +134,7 @@ def update_user_data(instance, pwd):
     data_new_base64 = create_new_user_data(pwd)
     instance.set_user_data(data_new_base64)
     return True, data_new_base64
+
 
 def create_new_user_data(pwd):
     serialNum = "".join(random.sample(string.ascii_letters + string.digits, 8))

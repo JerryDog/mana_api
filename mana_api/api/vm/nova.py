@@ -5,7 +5,7 @@ from flask import request
 from mana_api.api import zt_api
 from mana_api.config import logging
 from mana_api.api.vm.api_util import MyError, openstack_error
-from .tools.compute import InstanceManager
+from mana_api.api.vm.tools.compute import InstanceManager
 from mana_api.apiUtil import getUserProjByToken
 import sys
 
