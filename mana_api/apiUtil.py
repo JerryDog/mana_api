@@ -11,7 +11,9 @@ import datetime
 import json
 import httplib
 import urlparse
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 logger = logging.getLogger(__name__)
 
@@ -741,11 +743,12 @@ def sendmail(subject, mailto, msg):
     from email.mime.text import MIMEText
     sender = 'pm_order@ztgame.com'
     #邮件信息
-    _msg =MIMEText(msg)
-    _msg['Subject'] = subject
-    _msg['to'] = ';'.join(mailto)
-    _msg['From'] = sender
     try:
+        _msg =MIMEText(msg)
+        _msg['Subject'] = subject
+        _msg['to'] = ';'.join(mailto)
+        _msg['From'] = sender
+
         #连接发送服务器
         smtp = smtplib.SMTP('localhost')
         #发送
@@ -842,7 +845,6 @@ def _add_order(tenant_id, data):
         db.session.query(pm_firmware).filter(pm_firmware.snid == i).update({
             pm_firmware.state: "changing"
         })
-    db.session.commit()
 
     # order表插入新的订单
     now = datetime.datetime.now()
@@ -859,7 +861,7 @@ def _add_order(tenant_id, data):
     请求用户：%s, \n
     请登陆云上云系统接收或拒绝该订单
     """ % (snids, g.username)
-    send_result = sendmail(subject, mailto, msg)
+    send_result = sendmail(subject, mailto, msg.decode('utf-8'))
     return {"code": 200, "msg": "add success", "sendmail": send_result}
 
 
@@ -889,6 +891,9 @@ def _process_orders(tenant_id, data):
             continue
         try:
             for s in order_obj.snids.split(','):
+                db.session.query(pm_firmware).filter(pm_firmware.snid == s).update({
+                    pm_firmware.state: 'active'
+                })
                 db.session.query(pm_relation).filter(pm_relation.snid == s).update({
                     pm_relation.tenant_id: tenant_id
                 })
@@ -903,12 +908,13 @@ def _process_orders(tenant_id, data):
             ).all()
             contact_list = [i.email for i in contact_obj]
             mailto = ','.join(contact_list)
-            subject = '物理机转移订单确认通知' if accept == 1 else '物理机转移订单拒收通知'
+            subject = '物理机转移订单确认通知'.decode('utf-8') if accept == 1 \
+                else '物理机转移订单拒收通知'.decode('utf-8')
             msg = """
             订单号：%s,
             订单状态：%s
             """ % (i, _state)
-            mail_result = sendmail(subject, mailto, msg)
+            mail_result = sendmail(subject, mailto, msg.decode('utf-8'))
 
             detail.append({
                 "order_id": i,
