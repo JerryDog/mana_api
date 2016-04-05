@@ -18,7 +18,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask import abort
 from flask import request
 from flask import jsonify
-from config import KEYSTONE, DATABASE, DATABASE_CLOUD, logging
+from config import KEYSTONE, DATABASE, DATABASE_CMDB, logging
 from flask import g
 import urlparse
 import json
@@ -26,7 +26,7 @@ import re
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
 app.config['SQLALCHEMY_BINDS'] = {
-    'cloud': DATABASE_CLOUD
+    'cmdb': DATABASE_CMDB
 }
 
 db = SQLAlchemy(app)
@@ -73,6 +73,7 @@ def validatedToken(token):
         res = http_request(url, headers=headers, method='GET')
         dd = json.loads(res.read())
         if dd.has_key('access'):
+            g.username = dd['access']['user']['username']
             return True
         else:
             return False

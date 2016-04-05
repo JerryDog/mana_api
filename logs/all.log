@@ -2738,3 +2738,891 @@ Tue, 29 Mar 2016 18:18:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Tue, 29 Mar 2016 18:18:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [29/Mar/2016 18:18:19] "GET /favicon.ico HTTP/1.1" 401 -
 Tue, 29 Mar 2016 18:19:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\tools\\telemetry.py', reloading
 Tue, 29 Mar 2016 18:19:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG REQ: 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG header:{'Content-type': 'application/json'}
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG method: POST
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:37] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:38] DEBUG 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG RESP: status:200, reason:OK
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\api\vm\vm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 1fa07011-61d5-4c6e-afd9-a107129501b3 duration => 3h 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG REQ: 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG url: http://192.168.39.115:5000/v2.0/tenants
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG header:{'X-Auth-Token': u'329d7288a56f45c3ae63a5b02ca23af4'}
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG method: GET
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:37] DEBUG body: None
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:38] DEBUG 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG RESP: status:200, reason:OK
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG REQ: 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG header:{'Content-type': 'application/json'}
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG method: POST
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:37] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "329d7288a56f45c3ae63a5b02ca23af4"}}}
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:38] DEBUG 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG RESP: status:200, reason:OK
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG REQ: 
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG url: http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'e032cddc3e794431a983edebcd2500a6'}
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG method: GET
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:37] DEBUG body: None
+Tue, 29 Mar 2016 18:48:51 E:\mana_api\mana_api\apiUtil.py[line:38] DEBUG 
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG RESP: status:200, reason:OK
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\api\vm\tools\compute.py[line:132] INFO scloudm response: {u'server': {u'OS-EXT-STS:task_state': None, u'addresses': {u'test2': [{u'OS-EXT-IPS-MAC:mac_addr': u'fa:16:3e:17:9c:d3', u'version': 4, u'addr': u'192.168.0.37', u'OS-EXT-IPS:type': u'fixed'}]}, u'links': [{u'href': u'http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3', u'rel': u'self'}, {u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3', u'rel': u'bookmark'}], u'image': u'', u'OS-EXT-STS:vm_state': u'active', u'OS-EXT-SRV-ATTR:instance_name': u'instance-00000062', u'OS-SRV-USG:launched_at': u'2016-03-24T07:47:08.000000', u'flavor': {u'id': u'0867a43b-3c58-4246-99ce-b316045563d9', u'links': [{u'href': u'http://192.168.39.115:8774/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9', u'rel': u'bookmark'}]}, u'id': u'1fa07011-61d5-4c6e-afd9-a107129501b3', u'security_groups': [{u'name': u'default'}], u'user_id': u'07c1d92374a54135b949a2461891e274', u'OS-DCF:diskConfig': u'AUTO', u'accessIPv4': u'', u'accessIPv6': u'', u'progress': 0, u'OS-EXT-STS:power_state': 1, u'OS-EXT-AZ:availability_zone': u'test', u'config_drive': u'', u'status': u'ACTIVE', u'updated': u'2016-03-24T07:47:08Z', u'hostId': u'0c7c4632660bc6e58cc084b48614fbb2c5a722fea245c4ab345f76dc', u'OS-EXT-SRV-ATTR:host': u'SJ-E15-Cloud6', u'OS-SRV-USG:terminated_at': None, u'key_name': None, u'OS-EXT-SRV-ATTR:hypervisor_hostname': u'SJ-E15-Cloud6', u'name': u'test', u'created': u'2016-03-24T07:47:00Z', u'tenant_id': u'd40f594067e548148084be98dd48f9ed', u'os-extended-volumes:volumes_attached': [{u'id': u'14596e1c-6a8e-41bc-9241-7e5e3ab2ec3c'}], u'metadata': {}}}
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG REQ: 
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG url: http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/flavors/0867a43b-3c58-4246-99ce-b316045563d9
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'e032cddc3e794431a983edebcd2500a6'}
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG method: GET
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:37] DEBUG body: None
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:38] DEBUG 
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG RESP: status:200, reason:OK
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:26] DEBUG REQ: 
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:27] DEBUG url: http://192.168.39.115:8777/v2/meters/cpu_util/statistics?q.field=resource_id&q.field=timestamp&q.op=eq&q.op=gt&q.type=&q.type=&q.value=1fa07011-61d5-4c6e-afd9-a107129501b3&q.value=2016-03-29T07%3A48%3A52Z&period=300
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'329d7288a56f45c3ae63a5b02ca23af4'}
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG method: GET
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:37] DEBUG body: None
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:38] DEBUG 
+Tue, 29 Mar 2016 18:48:52 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG RESP: status:200, reason:OK
+Tue, 29 Mar 2016 18:48:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [29/Mar/2016 18:48:52] "POST /mana_api/vm_monitor/statics/kilo/cpu_util/1fa07011-61d5-4c6e-afd9-a107129501b3/3h/ HTTP/1.1" 200 -
+Wed, 30 Mar 2016 15:38:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Wed, 30 Mar 2016 15:38:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 15:41:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\vm\\nova.py', reloading
+Wed, 30 Mar 2016 15:41:18 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 15:43:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Wed, 30 Mar 2016 15:43:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:00:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:00:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:01:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:01:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:01:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:01:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:11:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:11:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:13:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:13:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:14:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:14:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Wed, 30 Mar 2016 16:17:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Wed, 30 Mar 2016 16:17:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 11:46:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Thu, 31 Mar 2016 11:46:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:36:51 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:36:51 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://222.73.243.57:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:36:51 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': 'c8442ce938bb8b0b4267'}
+Thu, 31 Mar 2016 14:36:51 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:36:51 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:36:51 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:37:06 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:500, reason:timed out
+Thu, 31 Mar 2016 14:37:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:37:06] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:37:58 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:37:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:37:58] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:38:40 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:38:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:38:41] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:40:07 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:40:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:40:07] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:41:33 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 14:41:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:41:35 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:41:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:41:35] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:42:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 14:42:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:43:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Thu, 31 Mar 2016 14:43:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:43:09 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:43:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:43:09] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:44:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\config.py', reloading
+Thu, 31 Mar 2016 14:44:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:46:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Thu, 31 Mar 2016 14:46:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:46:38 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:46:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:46:38] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:50:29 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:50:29 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:50:29 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:50:29 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:50:29 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:50:29 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:50:30 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:50:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:50:30] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:54:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 14:54:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:54:15 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:54:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:54:15] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:54:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 14:54:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:54:30 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:54:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:54:30] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:54:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 14:54:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:55:47 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:55:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:55:47] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:55:58 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:55:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:55:58] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 14:57:30 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 14:57:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 14:57:31] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:10:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:10:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:11:14 E:\mana_api\mana_api\api\pm_mana.py[line:176] ERROR MyError raise
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 602, in add_pm
+    raise MyError('snid already exist')
+MyError: 'snid already exist'
+Thu, 31 Mar 2016 15:11:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:11:14] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:11:55 E:\mana_api\mana_api\api\pm_mana.py[line:179] ERROR Error with add pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 611, in add_pm
+    db.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 150, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 801, in commit
+    self.transaction.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 392, in commit
+    self._prepare_impl()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2015, in flush
+    self._flush(objects)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2133, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2097, in _flush
+    flush_context.execute()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 532, in execute
+    uow
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 752, in _emit_insert_statements
+    execute(statement, multiparams)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\compat.py", line 199, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (_mysql_exceptions.OperationalError) (1048, "Column 'state' cannot be null") [SQL: u'INSERT INTO pm_firmware (id, snid, asset_id, manufacturer, state, create_at, update_at) VALUES (%s, %s, %s, %s, %s, %s, %s)'] [parameters: (None, 'test12345', 'test1234567', 'qiuqiu', None, datetime.datetime(2016, 3, 31, 15, 11, 55, 886000), None)]
+Thu, 31 Mar 2016 15:11:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:11:56] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:13:30 E:\mana_api\mana_api\api\pm_mana.py[line:179] ERROR Error with add pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 619, in add_pm
+    db.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 150, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 801, in commit
+    self.transaction.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 392, in commit
+    self._prepare_impl()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2015, in flush
+    self._flush(objects)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2133, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2097, in _flush
+    flush_context.execute()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 532, in execute
+    uow
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 785, in _emit_insert_statements
+    execute(statement, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\compat.py", line 199, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (_mysql_exceptions.OperationalError) (1048, "Column 'status' cannot be null") [SQL: u'INSERT INTO pm_variable (snid, host_name, os_type, region, status, cpu_num, mem_size, disk_size, ip, ilo_ip, ilo_user, ilo_passwd, ilo_state, remark, update_at) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('test12345', 'qiuqiu.com', 'windows', 'kilo', None, 4, 8, 1000, '192.168.0.2', '172.30.28.3', 'root', 'ztgame', 0, 'hehe', None)]
+Thu, 31 Mar 2016 15:13:30 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:13:30] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:14:05 E:\mana_api\mana_api\api\pm_mana.py[line:176] ERROR MyError raise
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 602, in add_pm
+    raise MyError('snid already exist')
+MyError: 'snid already exist'
+Thu, 31 Mar 2016 15:14:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:14:05] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:14:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:14:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:15:08 E:\mana_api\mana_api\api\pm_mana.py[line:179] ERROR Error with add pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 618, in add_pm
+    db.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 150, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 801, in commit
+    self.transaction.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 392, in commit
+    self._prepare_impl()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2015, in flush
+    self._flush(objects)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2133, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2097, in _flush
+    flush_context.execute()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 532, in execute
+    uow
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 785, in _emit_insert_statements
+    execute(statement, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\compat.py", line 199, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (_mysql_exceptions.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`cmdb`.`pm_variable`, CONSTRAINT `Configuration_ibfk_1` FOREIGN KEY (`snid`) REFERENCES `pm_firmware` (`snid`) ON UPDATE CASCADE)') [SQL: u'INSERT INTO pm_variable (snid, host_name, os_type, region, status, cpu_num, mem_size, disk_size, ip, ilo_ip, ilo_user, ilo_passwd, ilo_state, remark, update_at) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('test12345', 'qiuqiu.com', 'windows', 'kilo', None, 4, 8, 1000, '192.168.0.2', '172.30.28.3', 'root', 'ztgame', 0, 'hehe', None)]
+Thu, 31 Mar 2016 15:15:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:15:08] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:25:02 E:\mana_api\mana_api\api\pm_mana.py[line:179] ERROR Error with add pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 618, in add_pm
+    db.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 150, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 801, in commit
+    self.transaction.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 392, in commit
+    self._prepare_impl()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2015, in flush
+    self._flush(objects)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2133, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2097, in _flush
+    flush_context.execute()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 532, in execute
+    uow
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 785, in _emit_insert_statements
+    execute(statement, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\compat.py", line 199, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (_mysql_exceptions.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`cmdb`.`pm_variable`, CONSTRAINT `Configuration_ibfk_1` FOREIGN KEY (`snid`) REFERENCES `pm_firmware` (`snid`) ON UPDATE CASCADE)') [SQL: u'INSERT INTO pm_variable (snid, host_name, os_type, region, status, cpu_num, mem_size, disk_size, ip, ilo_ip, ilo_user, ilo_passwd, ilo_state, remark, update_at) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('test12345', 'qiuqiu.com', 'windows', 'kilo', None, 4, 8, 1000, '192.168.0.2', '172.30.28.3', 'root', 'ztgame', 0, 'hehe', None)]
+Thu, 31 Mar 2016 15:25:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:25:02] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:26:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:26:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:26:28 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:26:29] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:26:32 E:\mana_api\mana_api\api\pm_mana.py[line:176] ERROR MyError raise
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 602, in add_pm
+    raise MyError('snid already exist')
+MyError: 'snid already exist'
+Thu, 31 Mar 2016 15:26:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:26:32] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:28:10 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:28:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:28:10] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:29:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:29:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:29:38 E:\mana_api\mana_api\api\pm_mana.py[line:176] ERROR MyError raise
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 602, in add_pm
+    raise MyError('snid already exist')
+MyError: 'snid already exist'
+Thu, 31 Mar 2016 15:29:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:29:38] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:30:21 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:30:22 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:30:22] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:31:37 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:31:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:31:37] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:34:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:34:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:35:34 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:35:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:35:34] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:37:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\models.py', reloading
+Thu, 31 Mar 2016 15:37:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:37:31 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:37:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:37:31] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:38:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\models.py', reloading
+Thu, 31 Mar 2016 15:38:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:38:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\models.py', reloading
+Thu, 31 Mar 2016 15:38:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:38:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\models.py', reloading
+Thu, 31 Mar 2016 15:38:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:39:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:39:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:40:21 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:40:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:40:21] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:42:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:42:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:43:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:43:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:43:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:43:56 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:44:13 E:\mana_api\mana_api\api\pm_mana.py[line:179] ERROR Error with add pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 173, in pm_add
+    result = add_pm(add_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 589, in add_pm
+    if not snid or not asset_id or not tenant_id or not region:
+NameError: global name 'tenant_id' is not defined
+Thu, 31 Mar 2016 15:44:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:44:13] "POST /mana_api/pm_add HTTP/1.1" 400 -
+Thu, 31 Mar 2016 15:44:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:44:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:44:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:44:55 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 15:45:00 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 15:45:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 15:45:00] "POST /mana_api/pm_add HTTP/1.1" 200 -
+Thu, 31 Mar 2016 15:50:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:50:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:50:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:50:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 15:56:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 15:56:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 16:02:46 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Thu, 31 Mar 2016 16:02:46 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 16:03:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 16:03:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 16:03:48 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 16:03:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 16:03:48] "GET /mana_api/pm/6test12345/ HTTP/1.1" 200 -
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 16:03:52 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 16:03:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 16:03:52] "GET /mana_api/pm/6test12345 HTTP/1.1" 301 -
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 16:03:54 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 16:03:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 16:03:54] "GET /mana_api/pm/6test12345/ HTTP/1.1" 200 -
+Thu, 31 Mar 2016 16:06:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 16:06:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 16:06:40 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 16:06:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 16:06:41] "GET /mana_api/pm/6test12345 HTTP/1.1" 200 -
+Thu, 31 Mar 2016 16:09:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 16:09:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:11:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Thu, 31 Mar 2016 17:11:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:12:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 17:12:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 17:15:12 E:\mana_api\mana_api\api\pm_mana.py[line:182] ERROR Error with update pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 179, in pm_update
+    result = pm_update(snid, update_data)
+TypeError: pm_update() takes exactly 1 argument (2 given)
+Thu, 31 Mar 2016 17:15:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 17:15:12] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 400 -
+Thu, 31 Mar 2016 17:16:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 17:16:11 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 17:16:17 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 17:16:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 17:16:17] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 17:16:54 E:\mana_api\mana_api\api\pm_mana.py[line:182] ERROR Error with update pm server
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_mana.py", line 179, in pm_modify
+    result = pm_update(snid, update_data)
+  File "E:\mana_api\mana_api\apiUtil.py", line 672, in pm_update
+    db.session.query(pm_variable).filter(pm_variable.snid == snid).update(data)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\query.py", line 3005, in update
+    update_op.exec_()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 1111, in exec_
+    self._do_pre_synchronize()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 1176, in _do_pre_synchronize
+    self._additional_evaluators(evaluator_compiler)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 1305, in _additional_evaluators
+    key = self._resolve_key_to_attrname(key)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\persistence.py", line 1232, in _resolve_key_to_attrname
+    attr = _entity_descriptor(self.mapper, key)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\base.py", line 383, in _entity_descriptor
+    (description, key)
+InvalidRequestError: Entity '<class 'mana_api.models.pm_variable'>' has no property 'tenant_id'
+Thu, 31 Mar 2016 17:16:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 17:16:54] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 400 -
+Thu, 31 Mar 2016 17:21:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 17:21:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:22:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 17:22:34 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:23:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 17:23:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:24:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Thu, 31 Mar 2016 17:24:23 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:25:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Thu, 31 Mar 2016 17:25:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 17:25:08 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 17:25:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 17:25:09] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/3811ec9fa09742e488d6c6ce844611b4
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Thu, 31 Mar 2016 17:25:32 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Thu, 31 Mar 2016 17:25:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [31/Mar/2016 17:25:32] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Thu, 31 Mar 2016 17:33:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Thu, 31 Mar 2016 17:33:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 10:20:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 10:20:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 10:36:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 10:36:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 10:42:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 10:42:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 10:56:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 10:56:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:09:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 11:09:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:15:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Fri, 01 Apr 2016 11:15:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:42:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\__init__.py', reloading
+Fri, 01 Apr 2016 11:42:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:49:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Fri, 01 Apr 2016 11:49:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/2750b9ead12445c5a6d2ed264e473137
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:50:40 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:50:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:50:40] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/2750b9ead12445c5a6d2ed264e473137
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:51:35 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:51:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:51:35] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'Content-type': 'application/json'}
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: POST
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: {"auth": {"passwordCredentials": {"username": "liujiahua", "password": "12Nm34@sh"}}}
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:52:39 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:52:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:52:39] "POST /mana_api/tokens HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:53:10 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:53:10 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:53:10] "PUT /mana_apipm_update/6test12345 HTTP/1.1" 404 -
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:53:47 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:53:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:53:47] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:54:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 11:54:12 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:54:16 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:54:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:54:17] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:54:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 11:54:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:54:35 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:54:35 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:54:35] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 500 -
+Fri, 01 Apr 2016 11:57:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 11:57:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:32] DEBUG REQ: 
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:33] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:41] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:42] DEBUG method: GET
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG body: None
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG 
+Fri, 01 Apr 2016 11:57:46 E:\mana_api\mana_api\apiUtil.py[line:49] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:57:46 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:57:46] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:58:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 11:58:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:58:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 11:58:32 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG REQ: 
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG method: GET
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG body: None
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG 
+Fri, 01 Apr 2016 11:58:36 E:\mana_api\mana_api\apiUtil.py[line:51] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:58:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:58:36] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 403 -
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG REQ: 
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/418efcd208d8493896db0017923c20da
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG method: GET
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG body: None
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG 
+Fri, 01 Apr 2016 11:58:59 E:\mana_api\mana_api\apiUtil.py[line:51] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:58:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:58:59] "PUT /mana_apipm_update/6test12345 HTTP/1.1" 404 -
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:34] DEBUG REQ: 
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/418efcd208d8493896db0017923c20da
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:43] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG method: GET
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG body: None
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG 
+Fri, 01 Apr 2016 11:59:15 E:\mana_api\mana_api\apiUtil.py[line:51] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 11:59:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 11:59:15] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 11:59:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 11:59:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:03:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 12:03:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:04:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Fri, 01 Apr 2016 12:04:19 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/418efcd208d8493896db0017923c20da
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Fri, 01 Apr 2016 12:04:36 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 12:04:36 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 12:04:36] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Fri, 01 Apr 2016 12:04:40 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 12:04:40 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 12:04:40] "PUT /mana_api/pm_update/6test12345 HTTP/1.1" 403 -
+Fri, 01 Apr 2016 12:07:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 12:07:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:08:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 12:08:41 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:09:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 12:09:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:31:22 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 12:31:22 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:31:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 12:31:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Fri, 01 Apr 2016 12:38:13 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 12:38:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 12:38:13] "GET /mana_apipm_update/6test12345 HTTP/1.1" 404 -
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens/47c202d126e040deb85ae722b922bea6
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'X-Auth-Token': '8fb30fe54e3a44658bda97ab18a0eb1d'}
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Fri, 01 Apr 2016 12:38:24 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Fri, 01 Apr 2016 12:38:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [01/Apr/2016 12:38:24] "GET /mana_api/pm/6test12345 HTTP/1.1" 200 -
+Fri, 01 Apr 2016 16:16:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 16:16:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 16:20:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Fri, 01 Apr 2016 16:20:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Mon, 04 Apr 2016 11:30:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
+Mon, 04 Apr 2016 11:30:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat

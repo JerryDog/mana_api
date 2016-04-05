@@ -1,17 +1,26 @@
 # -*- coding: utf-8 -*-
 from __future__ import division
 from flask import g
+from flask import jsonify
+from functools import wraps
 from mana_api import db
-from mana_api.models import netflow, netrate_project, pm_servers, pm_ilo_list, \
-    pm_accounts, pm_monitors, expense_virtual
+from mana_api.models import netflow, netrate_project, pm_relation, pm_variable, pm_firmware, \
+    pm_expense, pm_monitors, expense_virtual, pm_contact_list
 from config import logging
 import datetime
-import base64
 import json
 import httplib
 import urlparse
 
+
 logger = logging.getLogger(__name__)
+
+# 自定义异常
+class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)
 
 class Resp(object):
     def __init__(self, status, msg):
@@ -204,70 +213,68 @@ def get_flow(project_id, region, start, end):
 
 # 返回所有物理机列表
 def get_pm(tenant_id, region, f, t):
-    if tenant_id and not region:
-        db_query = pm_servers.query.filter(
-            pm_servers.tenant_id == tenant_id
-        ).all()
-    elif region and not tenant_id:
-        db_query = pm_servers.query.filter(
-            pm_servers.region == region
-        ).all()
-    elif not region and not tenant_id:
-        db_query = pm_servers.query.all()
-    else:
-        db_query = pm_servers.query.filter(
-            pm_servers.tenant_id == tenant_id,
-            pm_servers.region == region
-        ).all()
+    select_by_project = pm_relation.query.filter(
+        pm_relation.tenant_id == tenant_id
+    ).all()
+    if not select_by_project:
+        return {"code": 200, "msg": "", "total_count": 0, "pm_servers": []}
+    db_query = []
+    for i in select_by_project:
+        match_obj = pm_variable.query.filter(
+            pm_variable.snid == i.snid,
+            pm_variable.region == region
+        ).first()
+        if match_obj:
+            db_query.append(match_obj)
 
     total_count = len(db_query)
     db_query = db_query[f:t]
 
     pm = []
     for i in db_query:
-        status, available = get_stat_by_snid(i.system_snid)
-        create_at = i.create_at.strftime('%Y-%m-%d %H:%M:%S') if i.create_at else None
+        asset_id, manufacturer, state, create_at = get_stat_by_snid(i.snid)
         update_at = i.update_at.strftime('%Y-%m-%d %H:%M:%S') if i.update_at else None
         pm.append({
-            "system_snid": i.system_snid,
-            "asset_id": i.asset_id,
+            "snid": i.snid,
             "host_name": i.host_name,
-            "system_type": i.system_type,
+            "os_type": i.os_type,
+            "region": i.region,
+            "status": i.status,
             "cpu_num": i.cpu_num,
             "mem_size": i.mem_size,
             "disk_size": i.disk_size,
             "ip": i.ip,
-            "tenant_id": i.tenant_id,
-            "tenant_name": base64.encodestring(i.tenant_name),
-            "region": i.region,
-            "manufacturer": i.manufacturer,
-            "deleted": i.deleted,
-            "status": status,
-            "available": available,
+            "ilo_state": i.ilo_state,
+            "state": state,
+            "asset_id": asset_id,
+            "tenant_id": tenant_id,
+            "manufacturer": manufacturer,
             "create_at": create_at,
             "update_at": update_at
         })
-        del status, available, create_at, update_at
+        del asset_id, manufacturer, state, create_at
 
     return {"code": 200, "msg": "", "total_count": total_count, "pm_servers": pm}
 
 
 # 根据系统序列号获取物理机状态和可用状态
 def get_stat_by_snid(snid):
-    pm_ilo_obj = pm_ilo_list.query.filter_by(system_snid=snid).first()
+    pm_ilo_obj = pm_firmware.query.filter_by(snid=snid).first()
     if not pm_ilo_obj:
-        return "unavailable", 0
-    available = pm_ilo_obj.available
-    status = pm_ilo_obj.status
-    return status, available
+        return None, None, None, None
+    asset_id = pm_ilo_obj.asset_id
+    manufacturer = pm_ilo_obj.manufacturer
+    state = pm_ilo_obj.state
+    create_at = pm_ilo_obj.create_at.strftime('%Y-%m-%d %H:%M:%S') if pm_ilo_obj.create_at else None
+    return asset_id, manufacturer, state, create_at
 
 
 # 根据系统序列号获取用户名密码和 ilo_ip
-def get_info_by_snid(snid):
+def get_info_by_snid(snids):
     # 系统序列号是一个 list
     all_pm_info = []
-    for s in snid.split(','):
-        pm_ilo_obj = pm_ilo_list.query.filter_by(system_snid=s).first()
+    for s in snids.split(','):
+        pm_ilo_obj = pm_variable.query.filter_by(snid=s).first()
         if not pm_ilo_obj:
             this_pm = [None, None, None, s]
         else:
@@ -282,13 +289,13 @@ def get_info_by_snid(snid):
 # 在对物理机开关机后更新DB
 def update_stat_after_act(act, snid):
     if act == "on":
-        db.session.query(pm_ilo_list).filter(pm_ilo_list.system_snid == snid).update({
-            pm_ilo_list.status: "starting"
+        db.session.query(pm_variable).filter(pm_variable.snid == snid).update({
+            pm_variable.status: "starting"
         })
         db.session.commit()
     elif act == "off":
-        db.session.query(pm_ilo_list).filter(pm_ilo_list.system_snid == snid).update({
-            pm_ilo_list.status: "stopping"
+        db.session.query(pm_variable).filter(pm_variable.system_snid == snid).update({
+            pm_variable.status: "stopping"
         })
         db.session.commit()
     else:
@@ -298,8 +305,8 @@ def update_stat_after_act(act, snid):
 # 根据 tenant_id 获取这个项目所有的每个月的计费
 def get_pm_accounts(tenant_id):
     # 获取物理机的 dict
-    db_query_pm = pm_accounts.query.filter(
-        pm_accounts.tenant_id == tenant_id
+    db_query_pm = pm_expense.query.filter(
+        pm_expense.tenant_id == tenant_id
     ).all()
     daily_list_pm = []
     for i in db_query_pm:
@@ -444,11 +451,11 @@ def get_time(month):
 # 根据 tenant_id, region, month 列出这个月这个区域详细的每台机器的花费
 def get_pm_accounts_detail(tenant_id, region, month):
     start, end = get_time(month)
-    db_query = pm_accounts.query.filter(
-        pm_accounts.tenant_id == tenant_id,
-        pm_accounts.region == region,
-        pm_accounts.update_at >= start,
-        pm_accounts.update_at <= end
+    db_query = pm_expense.query.filter(
+        pm_expense.tenant_id == tenant_id,
+        pm_expense.region == region,
+        pm_expense.update_at >= start,
+        pm_expense.update_at <= end
     ).all()
     if not db_query:
         return {"accounts_detail": []}
@@ -562,3 +569,167 @@ def get_pm_monitor_statics(metric, system_snid, duration):
                 "name": ip
             })
         return result
+
+# 新增物理机
+def add_pm(data):
+    # snid,Assetid,hostname,os_type,ip,tenant_id,region,ilo,remark,Manufacturer,cpu_num,mem_size,disk_size
+    snid = data.get('snid', None)
+    asset_id = data.get('asset_id', None)
+    host_name = data.get('host_name', None)
+    os_type = data.get('os_type', None)
+    ip = data.get('ip', None)
+    region = data.get('region', None)
+    ilo_ip = data.get('ilo_ip', None)
+    ilo_user = data.get('ilo_user', None)
+    ilo_passwd = data.get('ilo_passwd', None)
+    ilo_state = data.get('ilo_state', 0)
+    remark = data.get('remark', None)
+    manufacturer = data.get('manufacturer', None)
+    cpu_num = data.get('cpu_num', None)
+    mem_size = data.get('mem_size', None)
+    disk_size = data.get('disk_size', None)
+
+    if not snid or not asset_id  or not region:
+        raise MyError('sind|asset_id|region required')
+
+    check_snid_asset_id(snid, asset_id)
+
+    # 通过了所有条件判断，开始向 DB 录入数据
+    # pm_firmware 录入
+    now = datetime.datetime.now()
+    new_pm_firmware = pm_firmware(snid=snid, asset_id=asset_id, manufacturer=manufacturer,
+                                  create_at=now)
+    db.session.add(new_pm_firmware)
+    db.session.commit()
+
+    # pm_variable 录入
+    new_pm_variable = pm_variable(snid=snid, host_name=host_name, os_type=os_type,
+                                  region=region, cpu_num=cpu_num, mem_size=mem_size,
+                                  disk_size=disk_size, ip=ip, ilo_ip=ilo_ip,ilo_state=ilo_state, remark=remark)
+    if ilo_user:
+        new_pm_firmware.ilo_user = ilo_user
+    if ilo_passwd:
+        new_pm_firmware.ilo_passwd = ilo_passwd
+    db.session.add(new_pm_variable)
+    db.session.commit()
+
+    # pm_relation 录入
+    new_pm_relation = pm_relation(snid=snid, tenant_id=g.admin_proj)
+    db.session.add(new_pm_relation)
+    db.session.commit()
+
+    return {"code": 200, "msg": "add success"}
+
+
+# 查询 snid 与 asset_id 是否有重复
+def check_snid_asset_id(snid, asset_id):
+    check_snid = pm_firmware.query.filter(
+        pm_firmware.snid == snid
+    ).first()
+
+    check_asset_id = pm_firmware.query.filter(
+        pm_firmware.asset_id == asset_id
+    ).first()
+
+    if check_snid:
+        raise MyError('snid already exist')
+    if check_asset_id:
+        raise MyError('asset_id already exist')
+
+
+# 获取单台物理机信息
+def get_single_pm(snid):
+    asset_id, manufacturer, state, create_at = get_stat_by_snid(snid)
+    i = pm_variable.query.filter(
+        pm_variable.snid == snid
+    ).first()
+    if not i:
+        return {"code": 200, "msg": "", "pm_server": []}
+    update_at = i.update_at.strftime('%Y-%m-%d %H:%M:%S') if i.update_at else None
+    j = pm_relation.query.filter(
+        pm_relation.snid == snid
+    ).first()
+    tenant_id = j.tenant_id if j else None
+    pm_server = {
+            "snid": i.snid,
+            "host_name": i.host_name,
+            "os_type": i.os_type,
+            "region": i.region,
+            "status": i.status,
+            "cpu_num": i.cpu_num,
+            "mem_size": i.mem_size,
+            "disk_size": i.disk_size,
+            "ip": i.ip,
+            "ilo_state": i.ilo_state,
+            "state": state,
+            "asset_id": asset_id,
+            "tenant_id": tenant_id,
+            "manufacturer": manufacturer,
+            "create_at": create_at,
+            "update_at": update_at
+    }
+    return {"code": 200, "msg": "", "pm_server": pm_server}
+
+
+# 修改物理机
+def pm_update(snid, data):
+    deny_list = ['tenant_id', 'state', 'manufacturer', 'create_at', 'snid', 'asset_id']
+    for i in deny_list:
+        try:
+            data.pop(i)
+        except KeyError:
+            continue
+    db.session.query(pm_variable).filter(pm_variable.snid == snid).update(data)
+    db.session.commit()
+    return {"code": 200, "msg": "update success"}
+
+
+# 新增项目下联系人(单个新增)
+def add_contact_single(tenant_id, data):
+    email = data.get('email', None)
+    phone = data.get('phone', None)
+    name = data.get('name', None)
+    new_contact = pm_contact_list(tenant_id=tenant_id, email=email, phone=phone, name=name)
+    db.session.add(new_contact)
+    db.session.commit()
+    return {"code": 200, "msg": "add success"}
+
+
+# 删除项目下联系人列表
+def delete_contact_list(ids):
+    for i in ids.split(','):
+        me = pm_contact_list.query.filter(
+            pm_contact_list.id == i
+        ).first()
+        db.session.delete(me)
+    db.session.commit()
+    return {"code": 200, "msg": "delete success"}
+
+# 获取项目下联系人列表
+def get_contact_list(tenant_id):
+    db_query = pm_contact_list.query.filter(
+        pm_contact_list.tenant_id == tenant_id
+    ).all()
+    contact_list = []
+    for i in db_query:
+        contact_list.append({
+            "id": i.id,
+            "tenant_id": i.tenant_id,
+            "email": i.email,
+            "phone": i.phone,
+            "name": i.name
+        })
+
+    return {"code": 200, "msg": "", "contact_list": contact_list}
+
+
+# 定义只有管理员才可以访问的api
+def admin_required(func):
+    @wraps(func)
+    def is_admin(*args, **kwargs):
+        if g.username == 'admin':
+            ret = func(*args, **kwargs)
+        else:
+            ret = jsonify({"code": 403, "msg": "Only admin have access permissions"}), 403
+        return ret
+    return is_admin

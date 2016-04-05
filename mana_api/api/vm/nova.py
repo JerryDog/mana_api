@@ -54,6 +54,7 @@ def vm():
             instance = {
                 "instance_name": i.name,
                 "instance_id": i.id,
+                "region": region,
                 "cpu_num": i.cpu,
                 "mem_size": i.mem,
                 "disk_size": i.disk,

@@ -37,7 +37,7 @@ KEYSTONE = {
 
 
 DATABASE = 'mysql://root:@localhost/netflow'
-DATABASE_CLOUD = 'mysql://root:@localhost/cloud'
+DATABASE_CMDB = 'mysql://root:@localhost/cmdb'
 
 
 logging.basicConfig(level=logging.DEBUG,

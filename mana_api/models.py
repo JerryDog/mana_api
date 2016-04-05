@@ -38,7 +38,7 @@ class pm_firmware(db.Model):
     snid = db.Column(db.String(255), primary_key=True)
     asset_id = db.Column(db.String(255))
     manufacturer = db.Column(db.String(255))
-    state = db.Column(db.String(64))
+    state = db.Column(db.String(64), default='active')
     create_at = db.Column(db.DateTime)
     update_at = db.Column(db.DateTime)
 
@@ -51,14 +51,14 @@ class pm_variable(db.Model):
     host_name = db.Column(db.String(255))
     os_type = db.Column(db.String(255))
     region = db.Column(db.String(64))
-    status = db.Column(db.String(64))
+    status = db.Column(db.String(64), default='running')
     cpu_num = db.Column(db.Integer)
     mem_size = db.Column(db.Integer)
     disk_size = db.Column(db.Integer)
     ip = db.Column(db.String(255))
     ilo_ip = db.Column(db.String(255))
-    ilo_user = db.Column(db.String(255))
-    ilo_passwd = db.Column(db.String(255))
+    ilo_user = db.Column(db.String(255), default='root')
+    ilo_passwd = db.Column(db.String(255), default='ztgame@123')
     ilo_state = db.Column(db.Integer)
     remark = db.Column(db.String(255))
     update_at = db.Column(db.DateTime)
@@ -110,61 +110,6 @@ class pm_contact_list(db.Model):
     phone = db.Column(db.String(255))
     name = db.Column(db.String(255))
 
-# 物理机信息表
-class pm_servers(db.Model):
-    __bind_key__ = 'cloud'
-    id = db.Column(db.Integer, primary_key=True)
-    system_snid = db.Column(db.String(255))
-    asset_id = db.Column(db.String(255))
-    host_name = db.Column(db.String(255))
-    system_type = db.Column(db.String(255))
-    cpu_num = db.Column(db.Integer)
-    mem_size = db.Column(db.Integer)
-    disk_size = db.Column(db.Integer)
-    ip = db.Column(db.String(255))
-    tenant_id = db.Column(db.String(255))
-    tenant_name = db.Column(db.String(255))
-    region = db.Column(db.String(255))
-    manufacturer = db.Column(db.String(255))
-    deleted = db.Column(db.Integer)
-    create_at = db.Column(db.DateTime)
-    update_at = db.Column(db.DateTime)
-
-    def __repr__(self):
-        return '<Project(Detail) %r>' % self.tenant_name
-
-
-# ilo 表
-class pm_ilo_list(db.Model):
-    __bind_key__ = 'cloud'
-    id = db.Column(db.Integer, primary_key=True)
-    system_snid = db.Column(db.String(255))
-    asset_id = db.Column(db.String(255))
-    ilo_ip = db.Column(db.String(255))
-    ilo_user = db.Column(db.String(255))
-    ilo_passwd = db.Column(db.String(255))
-    status = db.Column(db.String(255))
-    available = db.Column(db.Integer)
-    create_at = db.Column(db.DateTime)
-    update_at = db.Column(db.DateTime)
-
-    def __repr__(self):
-        return '<Project(Detail) %r>' % self.system_snid
-
-
-# 计费表
-class pm_accounts(db.Model):
-    __bind_key__ = 'cloud'
-    id = db.Column(db.Integer, primary_key=True)
-    system_snid = db.Column(db.String(255))
-    price = db.Column(db.Float)
-    tenant_id = db.Column(db.String(255))
-    region = db.Column(db.String(255))
-    update_at = db.Column(db.DateTime)
-
-    def __repr__(self):
-        return '<Project(Detail) %r>' % self.system_snid
-
 
 # 监控数据表
 class pm_monitors(db.Model):
@@ -179,7 +124,7 @@ class pm_monitors(db.Model):
 
 # 虚拟机计费表
 class expense_virtual(db.Model):
-    __bind_key__ = 'cloud'
+    __bind_key__ = 'cmdb'
     __tablename__ = 'expense_virtual'
     id = db.Column(db.Integer, primary_key=True)
     locationID = db.Column(db.String(64))
