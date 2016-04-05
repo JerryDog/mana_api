@@ -3626,3 +3626,398 @@ Fri, 01 Apr 2016 16:20:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.eg
 Fri, 01 Apr 2016 16:20:04 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
 Mon, 04 Apr 2016 11:30:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\pm_mana.py', reloading
 Mon, 04 Apr 2016 11:30:20 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 10:08:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 05 Apr 2016 10:08:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 12:24:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 05 Apr 2016 12:24:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 12:24:49 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:24:49 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:24:49 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:24:49 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:24:49 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:24:49 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:24:50 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:24:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:50] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:24:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:50] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:24:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:50] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:24:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:50] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:24:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:50] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:24:50 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:50] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:24:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:24:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:24:51 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:24:51 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:24:51 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:24:51 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:24:52 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:24:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:52] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:24:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:24:52] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:25:38 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:25:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:38] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:25:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:38] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:38] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:38] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:38] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:38] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:25:39 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:25:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:39] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:25:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:39] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:39] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:39] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:39] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:25:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:25:39] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:26:29 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:29] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:29] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:29] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:29] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:29] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:26:29 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:29] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:26:42 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:26:42 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:26:42 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:26:42 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:26:42 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:26:42 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:26:43 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:26:43 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:26:43 E:\mana_api\mana_api\api\pm_monitor.py[line:34] ERROR Error with get pm monitor: cpu_util, 123, 3h
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\pm_monitor.py", line 30, in pm_monitor_statics
+    result = get_pm_monitor_statics(metric, system_snid, duration)
+  File "E:\mana_api\mana_api\apiUtil.py", line 520, in get_pm_monitor_statics
+    ).order_by(pm_monitors.update_at).all()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\query.py", line 2423, in all
+    return list(self)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\query.py", line 2571, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\query.py", line 2586, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\compat.py", line 199, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (_mysql_exceptions.ProgrammingError) (1146, "Table 'cmdb.pm_monitors' doesn't exist") [SQL: u'SELECT pm_monitors.id AS pm_monitors_id, pm_monitors.system_snid AS pm_monitors_system_snid, pm_monitors.info AS pm_monitors_info, pm_monitors.update_at AS pm_monitors_update_at \nFROM pm_monitors \nWHERE pm_monitors.system_snid = %s AND pm_monitors.update_at >= %s ORDER BY pm_monitors.update_at'] [parameters: ('123', '2016-04-05 09:26:43')]
+Tue, 05 Apr 2016 12:26:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:26:43] "POST /mana_api/pm_monitor/statics/cpu_util/123/3h/ HTTP/1.1" 400 -
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:27:38 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:27:38] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:27:38] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:27:38] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:27:38] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:27:38] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:27:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:27:38] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:42 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "POST /mana_api/pm_monitor/statics/cpu_util/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:42 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:42] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:48 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => network_out system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:48] "POST /mana_api/pm_monitor/statics/network_out/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:49 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => network_in system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:49] "POST /mana_api/pm_monitor/statics/network_in/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:51 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => disk_write system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:51] "POST /mana_api/pm_monitor/statics/disk_write/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:52 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:52 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:52 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:52 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:52 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:52 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:53 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:53 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => disk_read system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:53] "POST /mana_api/pm_monitor/statics/disk_read/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => network_in system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:54] "POST /mana_api/pm_monitor/statics/network_in/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:28:54 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:28:54 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:28:54] "POST /mana_api/pm_monitor/statics/cpu_util/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:45:27 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:45:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:45:27] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:45:28 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:45:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:45:28] "POST /mana_api/pm_monitor/statics/cpu_util/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:45:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:45:28] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"passwordCredentials": {"username": "liujiahua", "password": "12Nm34@sh"}}}
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:53:05 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:53:05 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [05/Apr/2016 12:53:05] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"passwordCredentials": {"username": "liujiahua", "password": "12Nm34@sh"}}}
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:53:17 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:53:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [05/Apr/2016 12:53:17] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:53:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:53:25] "GET /mana_api/pm_monitor/123/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:53:25 E:\mana_api\mana_api\api\pm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 123 duration => 3h 
+Tue, 05 Apr 2016 12:53:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:53:25] "POST /mana_api/pm_monitor/statics/cpu_util/123/3h/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 12:53:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 12:53:25] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"passwordCredentials": {"username": "liujiahua", "password": "12Nm34@sh"}}}
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 12:53:43 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 12:53:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [05/Apr/2016 12:53:43] "POST /mana_api/tokens HTTP/1.1" 200 -
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:24] "GET /mana_api/vm_monitor/kilo/1fa07011-61d5-4c6e-afd9-a107129501b3/ HTTP/1.1" 200 -
+Tue, 05 Apr 2016 14:15:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:24] "GET /static/jquery-1.8.3.min.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 14:15:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:24] "GET /static/highcharts.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 14:15:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:24] "GET /static/chart.css HTTP/1.1" 304 -
+Tue, 05 Apr 2016 14:15:24 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:24] "GET /static/jquery.json-2.3.js HTTP/1.1" 304 -
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 14:15:24 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\api\vm\vm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 1fa07011-61d5-4c6e-afd9-a107129501b3 duration => 3h 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tenants
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'X-Auth-Token': u'13ead9bb9aa444dfaa2b2f00a25513dd'}
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "13ead9bb9aa444dfaa2b2f00a25513dd"}}}
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'b08ef7c57d0b49409afd57802a0a7e15'}
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:404, reason:Not Found
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\api\vm\tools\compute.py[line:132] INFO scloudm response: {u'itemNotFound': {u'message': u'Instance 1fa07011-61d5-4c6e-afd9-a107129501b3 could not be found.', u'code': 404}}
+Tue, 05 Apr 2016 14:15:25 E:\mana_api\mana_api\api\vm\vm_monitor.py[line:34] ERROR Error with get pm monitor: cpu_util, 1fa07011-61d5-4c6e-afd9-a107129501b3, 3h
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\vm_monitor.py", line 30, in vm_monitor_statics
+    result = get_vm_monitor_statics(metric, uuid, duration, region)
+  File "E:\mana_api\mana_api\api\vm\tools\telemetry.py", line 75, in get_vm_monitor_statics
+    obj["name"] = mana.nova_show(uuid).name
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 133, in nova_show
+    instance = Instance(dd['server'], token=self.token, endpoint=self.endpoint)
+KeyError: 'server'
+Tue, 05 Apr 2016 14:15:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:25] "POST /mana_api/vm_monitor/statics/kilo/cpu_util/1fa07011-61d5-4c6e-afd9-a107129501b3/3h/ HTTP/1.1" 400 -
+Tue, 05 Apr 2016 14:15:25 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:25] "GET /favicon.ico HTTP/1.1" 401 -
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "passwordCredentials": {"username": "admin", "password": "be5e5bf0ce0b542fe"}}}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\api\vm\vm_monitor.py[line:27] INFO Request: get pm monitor data metric => cpu_util system_snid => 1fa07011-61d5-4c6e-afd9-a107129501b3 duration => 30d 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tenants
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'X-Auth-Token': u'4846899d79d34d7da7969ae0a1644fdf'}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:5000/v2.0/tokens
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json'}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: POST
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: {"auth": {"tenantId": "d40f594067e548148084be98dd48f9ed", "token": {"id": "4846899d79d34d7da7969ae0a1644fdf"}}}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:200, reason:OK
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:35] DEBUG REQ: 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:36] DEBUG url: http://192.168.39.115:8774/v2/d40f594067e548148084be98dd48f9ed/servers/1fa07011-61d5-4c6e-afd9-a107129501b3
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:44] DEBUG header:{'Content-type': 'application/json', 'X-Auth-Token': u'41b5d8e6190a4fbbb9b8e840111dc7b1'}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:45] DEBUG method: GET
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:46] DEBUG body: None
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:47] DEBUG 
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\apiUtil.py[line:52] DEBUG RESP: status:404, reason:Not Found
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\api\vm\tools\compute.py[line:132] INFO scloudm response: {u'itemNotFound': {u'message': u'Instance 1fa07011-61d5-4c6e-afd9-a107129501b3 could not be found.', u'code': 404}}
+Tue, 05 Apr 2016 14:15:26 E:\mana_api\mana_api\api\vm\vm_monitor.py[line:34] ERROR Error with get pm monitor: cpu_util, 1fa07011-61d5-4c6e-afd9-a107129501b3, 30d
+Traceback (most recent call last):
+  File "E:\mana_api\mana_api\api\vm\vm_monitor.py", line 30, in vm_monitor_statics
+    result = get_vm_monitor_statics(metric, uuid, duration, region)
+  File "E:\mana_api\mana_api\api\vm\tools\telemetry.py", line 75, in get_vm_monitor_statics
+    obj["name"] = mana.nova_show(uuid).name
+  File "E:\mana_api\mana_api\api\vm\tools\compute.py", line 133, in nova_show
+    instance = Instance(dd['server'], token=self.token, endpoint=self.endpoint)
+KeyError: 'server'
+Tue, 05 Apr 2016 14:15:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.82.181 - - [05/Apr/2016 14:15:26] "POST /mana_api/vm_monitor/statics/kilo/cpu_util/1fa07011-61d5-4c6e-afd9-a107129501b3/30d/ HTTP/1.1" 400 -
+Tue, 05 Apr 2016 15:14:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 15:14:07 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 17:44:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 05 Apr 2016 17:44:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 17:45:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 17:45:53 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 17:47:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 17:47:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 17:59:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 17:59:17 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:00:57 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:00:57 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:06:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:06:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:06:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:06:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:07:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:07:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:08:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:08:01 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:10:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:10:38 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:11:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:11:08 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:23:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:23:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:25:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:25:31 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:26:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:26:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:26:57 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:26:57 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:33:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:33:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:33:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:33:28 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:46:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:46:15 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:47:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:47:14 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:52:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\apiUtil.py', reloading
+Tue, 05 Apr 2016 18:52:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 18:56:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:8181/ (Press CTRL+C to quit)
+Tue, 05 Apr 2016 18:56:26 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 05 Apr 2016 19:03:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\mana_api\\mana_api\\api\\__init__.py', reloading
+Tue, 05 Apr 2016 19:03:13 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat

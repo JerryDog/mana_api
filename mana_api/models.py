@@ -81,7 +81,7 @@ class pm_orders(db.Model):
     resource_project = db.Column(db.String(255))
     dest_project = db.Column(db.String(255))
     user = db.Column(db.String(255))
-    state = db.Column(db.String(255))
+    state = db.Column(db.String(255), default='unfinished')
     warnning_times = db.Column(db.String(255))
     create_at = db.Column(db.DateTime)
     update_at = db.Column(db.DateTime)

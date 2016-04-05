@@ -5,7 +5,7 @@ from flask import jsonify
 from functools import wraps
 from mana_api import db
 from mana_api.models import netflow, netrate_project, pm_relation, pm_variable, pm_firmware, \
-    pm_expense, pm_monitors, expense_virtual, pm_contact_list
+    pm_expense, pm_monitors, expense_virtual, pm_contact_list, pm_orders
 from config import logging
 import datetime
 import json
@@ -733,3 +733,194 @@ def admin_required(func):
             ret = jsonify({"code": 403, "msg": "Only admin have access permissions"}), 403
         return ret
     return is_admin
+
+
+############# 以下为物理机订单部分 #################
+def sendmail(subject, mailto, msg):
+    import smtplib
+    from email.mime.text import MIMEText
+    sender = 'pm_order@ztgame.com'
+    #邮件信息
+    _msg =MIMEText(msg)
+    _msg['Subject'] = subject
+    _msg['to'] = ';'.join(mailto)
+    _msg['From'] = sender
+    try:
+        #连接发送服务器
+        smtp = smtplib.SMTP('localhost')
+        #发送
+        smtp.sendmail(sender,mailto, _msg.as_string())
+        smtp.quit()
+        return 'send mail success'
+    except:
+        logger.exception('Error with sendmail, mailto: %s; msg:%s' % (mailto, msg))
+        return 'send mail failed'
+
+
+# 获取订单
+def _get_orders(tenant_id, order_type):
+    if order_type == '0':
+        # 未完成订单
+        msg = 'unfinished orders'
+        db_query = pm_orders.query.filter(
+            pm_orders.dest_project == tenant_id,
+            pm_orders.state == 'unfinished'
+        ).all()
+    if order_type == '1':
+        # 已完成订单
+        msg = 'finished orders'
+        db_query = pm_orders.query.filter(
+            pm_orders.dest_project == tenant_id,
+            pm_orders.state == 'finished'
+        ).all()
+    if order_type == '2':
+        # 我拒绝的订单
+        msg = 'refused orders'
+        db_query = pm_orders.query.filter(
+            pm_orders.dest_project == tenant_id,
+            pm_orders.state == 'refused'
+        ).all()
+    if order_type == '3':
+        # 我发起的订单
+        msg = 'new order by me'
+        db_query = pm_orders.query.filter(
+            pm_orders.resource_project == tenant_id
+        ).all()
+    if order_type == '4':
+        # 所有订单
+        msg = 'all orders'
+        db_query1 = pm_orders.query.filter(
+            pm_orders.resource_project == tenant_id
+        ).all()
+        db_query2 = pm_orders.query.filter(
+            pm_orders.dest_project == tenant_id
+        ).all()
+        db_query = db_query1 + db_query2
+    total_count = len(db_query)
+    orders = []
+    for i in db_query:
+        create_at = pm_orders.create_at.strftime('%Y-%m-%d %H:%M:%S') if pm_orders.create_at else None
+        update_at = pm_orders.update_at.strftime('%Y-%m-%d %H:%M:%S') if pm_orders.update_at else None
+        orders.append({
+            "id": i.id,
+            "snids": i.snids,
+            "resource_project": i.resource_project,
+            "dest_project": i.dest_project,
+            "user": i.user,
+            "state": i.state,
+            "warnning_times": i.warnning_times,
+            "create_at": create_at,
+            "update_at": update_at
+        })
+    return {"code": 200, "msg": msg, "total_count": total_count,  "orders": orders}
+
+
+# 新增订单
+def _add_order(tenant_id, data):
+    snids = data.get('snids', None)
+    dest_project = data.get('dest_project', None)
+
+    # 获取收件人
+    contact_obj = pm_contact_list.query.filter(
+        pm_contact_list.tenant_id == dest_project
+    ).all()
+    contact_list = [i.email for i in contact_obj]
+    mailto = ','.join(contact_list)
+
+    if not snids or not dest_project:
+        raise MyError('snids|dest_project required')
+
+    # 更新物理机状态为 changing
+    for i in snids.split(','):
+        pm_obj = pm_firmware.query.filter(
+            pm_firmware.snid == i
+        ).first()
+        if not pm_obj:
+            raise MyError('pm server %s does not exist' % i)
+        if pm_obj.state == 'changing':
+            raise MyError('pm server %s is changing' % i)
+        db.session.query(pm_firmware).filter(pm_firmware.snid == i).update({
+            pm_firmware.state: "changing"
+        })
+    db.session.commit()
+
+    # order表插入新的订单
+    now = datetime.datetime.now()
+    new_order = pm_orders(snids=snids, resource_project=tenant_id,
+                          dest_project=dest_project, user=g.username,
+                          create_at=now)
+    db.session.add(new_order)
+    db.session.commit()
+
+    # 发通知邮件
+    subject = '物理机项目变更通知'
+    msg = """
+    物理机编号：%s, \n
+    请求用户：%s, \n
+    请登陆云上云系统接收或拒绝该订单
+    """ % (snids, g.username)
+    send_result = sendmail(subject, mailto, msg)
+    return {"code": 200, "msg": "add success", "sendmail": send_result}
+
+
+# 用户接收或者拒绝订单
+def _process_orders(tenant_id, data):
+    order_ids = data.get('order_ids', None)
+    accept = data.get('accept', 0)
+    if not order_ids or not accept:
+        raise MyError('order_ids|accept required')
+
+    _state = 'finished' if accept == 1 else 'refused'
+
+    # 开始处理订单
+    detail = []
+    for i in order_ids.split(','):
+        order_obj = pm_orders.query.filter(
+            pm_orders.dest_project == tenant_id,
+            pm_orders.id == i,
+            pm_orders.state == 'unfinished'
+        ).first()
+        if not order_obj:
+            detail.append({
+                "order_id": i,
+                "result": "failed",
+                "sendmail": "do-nothing"
+            })
+            continue
+        try:
+            for s in order_obj.snids.split(','):
+                db.session.query(pm_relation).filter(pm_relation.snid == s).update({
+                    pm_relation.tenant_id: tenant_id
+                })
+            db.session.query(pm_orders).filter(pm_orders.id == i).update({
+                    pm_orders.state: _state
+            })
+            db.session.commit()
+
+            # 获取收件人,并发送邮件
+            contact_obj = pm_contact_list.query.filter(
+                pm_contact_list.tenant_id == order_obj.resource_project
+            ).all()
+            contact_list = [i.email for i in contact_obj]
+            mailto = ','.join(contact_list)
+            subject = '物理机转移订单确认通知' if accept == 1 else '物理机转移订单拒收通知'
+            msg = """
+            订单号：%s,
+            订单状态：%s
+            """ % (i, _state)
+            mail_result = sendmail(subject, mailto, msg)
+
+            detail.append({
+                "order_id": i,
+                "result": "success",
+                "sendmail": mail_result
+            })
+        except:
+            logger.exception('Error with order processing, order_id: %s' % i)
+            detail.append({
+                "order_id": i,
+                "result": "failed",
+                "sendmail": "do-nothing"
+            })
+
+    return {"code": 200, "msg": "Order processing success", "detail": detail}
