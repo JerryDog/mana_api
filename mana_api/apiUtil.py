@@ -725,6 +725,29 @@ def get_contact_list(tenant_id):
     return {"code": 200, "msg": "", "contact_list": contact_list}
 
 
+# 实体机退库
+def _pm_refund(data):
+    snids = data.get('snids', None)
+    if not snids:
+        raise MyError('sind required')
+
+    detail = []
+    for s in snids.split(','):
+        pm_obj = pm_variable.query.filter(
+            pm_variable.snid == s
+        ).first()
+        if not pm_obj:
+            detail.append({"code": 404, "msg": "pm server not found", "snid": s})
+            continue
+        if pm_obj.status != "stop":
+            detail.append({"code": 403, "msg": "please stop pm server first", "snid": s})
+            continue
+        db.session.query(pm_relation).filter(pm_relation.snid == s).update({
+            pm_relation.tenant_id: g.admin_proj
+        })
+    db.session.commit()
+    return {"code": 200, "msg": "", "detail": detail}
+
 # 定义只有管理员才可以访问的api
 def admin_required(func):
     @wraps(func)
@@ -884,8 +907,9 @@ def _process_orders(tenant_id, data):
         ).first()
         if not order_obj:
             detail.append({
+                "code": 404,
+                "msg": "order not found",
                 "order_id": i,
-                "result": "failed",
                 "sendmail": "do-nothing"
             })
             continue
@@ -917,15 +941,17 @@ def _process_orders(tenant_id, data):
             mail_result = sendmail(subject, mailto, msg.decode('utf-8'))
 
             detail.append({
+                "code": 200,
+                "msg": "success",
                 "order_id": i,
-                "result": "success",
                 "sendmail": mail_result
             })
-        except:
+        except Exception, e:
             logger.exception('Error with order processing, order_id: %s' % i)
             detail.append({
+                "code": 400,
+                "msg": "%s" % e,
                 "order_id": i,
-                "result": "failed",
                 "sendmail": "do-nothing"
             })
 

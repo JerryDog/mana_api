@@ -5,10 +5,8 @@ from flask import request
 from flask import g
 from mana_api.api import zt_api
 from mana_api.config import logging
-from mana_api.apiUtil import get_pm, get_info_by_snid, update_stat_after_act, \
-    get_pm_accounts, get_pm_accounts_detail, getUserProjByToken, add_pm, \
-    MyError, get_single_pm, pm_update, get_contact_list, admin_required, add_contact_single, \
-    delete_contact_list
+from mana_api import apiUtil
+from mana_api.apiUtil import MyError, admin_required
 import sys
 import os
 
@@ -30,7 +28,7 @@ def pm():
     tenant_id = request.args.get('tenant_id', None)
 
     # 禁止跨项目操作
-    user = getUserProjByToken(tenant_id)
+    user = apiUtil.getUserProjByToken(tenant_id)
     if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "无权限操作该项目".decode('utf-8')}), 403
 
@@ -46,7 +44,7 @@ def pm():
                 'to => %s' % (tenant_id, region, f, t))
 
     try:
-        result = get_pm(tenant_id, region, f, t)
+        result = apiUtil.get_pm(tenant_id, region, f, t)
         return jsonify(result)
     except:
         logger.exception('Error with get pm_servers')
@@ -64,11 +62,11 @@ def pm_act(tenant_id):
         return jsonify({"code": 400, "msg": "Bad request, no json data"}), 400
 
     # 禁止跨项目操作
-    user = getUserProjByToken(tenant_id)
+    user = apiUtil.getUserProjByToken(tenant_id)
     if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
-    all_pm_info = get_info_by_snid(snids=snids)
+    all_pm_info = apiUtil.get_info_by_snid(snids=snids)
 
     logger.info('Request: execute pm action '
                 'username => %s '
@@ -87,7 +85,7 @@ def pm_act(tenant_id):
                 result["detail"].append({"code": 400, "msg": "failed", "snid": a[3]})
             else:
                 result["detail"].append({"code": 200, "msg": "success", "snid": a[3]})
-            update_stat_after_act(act, a[3])
+            apiUtil.update_stat_after_act(act, a[3])
         return jsonify(result)
     except:
         logger.exception('Error with execute act %s' % act)
@@ -101,7 +99,7 @@ def pm_bill():
          return jsonify({"code": 400, "msg": "Bad request, tenant_id required"}), 400
 
     # 禁止跨项目操作
-    user = getUserProjByToken(tenant_id)
+    user = apiUtil.getUserProjByToken(tenant_id)
     if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
@@ -109,7 +107,7 @@ def pm_bill():
                 '-X GET "http://api.scloudm.com/mana_api/pm_bill?tenant_id=%s"' % (g.token, tenant_id))
 
     try:
-        result = get_pm_accounts(tenant_id)
+        result = apiUtil.get_pm_accounts(tenant_id)
         return jsonify(result)
     except:
         logger.exception('Error with get pm_accounts')
@@ -125,7 +123,7 @@ def pm_bill_detail():
         return jsonify({"code": 400, "msg": "Bad request, lost params"}), 400
 
     # 禁止跨项目操作
-    user = getUserProjByToken(tenant_id)
+    user = apiUtil.getUserProjByToken(tenant_id)
     if tenant_id not in user.proj_dict.keys():
         return jsonify({"code": 403, "msg": "project is not yours"}), 403
 
@@ -135,7 +133,7 @@ def pm_bill_detail():
                 'month => %s '% (tenant_id, region, month))
 
     try:
-        result = get_pm_accounts_detail(tenant_id, region, month)
+        result = apiUtil.get_pm_accounts_detail(tenant_id, region, month)
         return jsonify(result)
     except:
         logger.exception('Error with get pm_accounts_detail')
@@ -146,7 +144,7 @@ def pm_bill_detail():
 def pm_get(snid):
     # 获取单台物理机，新增物理机前判断是否存在
     try:
-        result = get_single_pm(snid)
+        result = apiUtil.get_single_pm(snid)
         return jsonify(result)
     except:
         logger.exception('Error with get single pm')
@@ -161,7 +159,7 @@ def pm_add():
     if not add_data:
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
     try:
-        result = add_pm(add_data)
+        result = apiUtil.add_pm(add_data)
         return jsonify(result)
     except MyError, e:
         logger.exception('MyError raise')
@@ -181,11 +179,35 @@ def pm_modify(snid):
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
 
     try:
-        result = pm_update(snid, update_data)
+        result = apiUtil.pm_update(snid, update_data)
         return jsonify(result)
     except:
         logger.exception('Error with update pm server')
         return jsonify({"code": 400, "msg": "Error with update pm server"}), 400
+
+
+@zt_api.route('/pm_refund/<tenant_id>', methods=['POST'])
+def pm_refund(tenant_id):
+    # 实体机退库
+
+    # 禁止跨项目操作
+    user = apiUtil.getUserProjByToken(tenant_id)
+    if tenant_id not in user.proj_dict.keys():
+        return jsonify({"code": 403, "msg": "project is not yours"}), 403
+
+    data = request.json
+    if not data:
+        return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
+
+    try:
+        result = apiUtil._pm_refund(data)
+        return jsonify(result)
+    except MyError, e:
+        logger.exception('MyError raise')
+        return jsonify({"code": 400, "msg": '%s' % e.value}), 400
+    except:
+        logger.exception('Error with refund pm server')
+        return jsonify({"code": 400, "msg": "Error with refund pm server"}), 400
 
 
 @zt_api.route('/pm_contact/<tenant_id>', methods=['POST'])
@@ -195,7 +217,7 @@ def add_contact(tenant_id):
     if not data:
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
     try:
-        result = add_contact_single(tenant_id, data)
+        result = apiUtil.add_contact_single(tenant_id, data)
         return jsonify(result)
     except:
         logger.exception('Error with add contact')
@@ -209,7 +231,7 @@ def delete_contact(tenant_id):
     if not ids:
         return jsonify({"code": 400, "msg": "Bad request, could not find id to delete"}), 400
     try:
-        result = delete_contact_list(ids)
+        result = apiUtil.delete_contact_list(ids)
         return jsonify(result)
     except:
         logger.exception('Error with delete contact')
@@ -220,7 +242,7 @@ def delete_contact(tenant_id):
 def get_contact(tenant_id):
     # 获取邮件联系人列表
     try:
-        result = get_contact_list(tenant_id)
+        result = apiUtil.get_contact_list(tenant_id)
         return jsonify(result)
     except:
         logger.exception('Error with get contact list')
