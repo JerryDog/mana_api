@@ -158,6 +158,10 @@ def pm_add():
     add_data = request.json
     if not add_data:
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
+
+    logger.info('Request: add pm server:'
+                'add_data => %s '
+                'username => %s ' % (add_data, g.username))
     try:
         result = apiUtil.add_pm(add_data)
         return jsonify(result)
@@ -177,6 +181,10 @@ def pm_modify(snid):
     update_data = request.json
     if not update_data:
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
+
+    logger.info('Request: modify pm server:'
+                'update_data => %s '
+                'username => %s ' % (update_data, g.username))
 
     try:
         result = apiUtil.pm_update(snid, update_data)
@@ -199,6 +207,10 @@ def pm_refund(tenant_id):
     if not data:
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
 
+    logger.info('Request: refund pm server:'
+                'data => %s '
+                'username => %s ' % (data, g.username))
+
     try:
         result = apiUtil._pm_refund(data)
         return jsonify(result)
@@ -216,6 +228,11 @@ def add_contact(tenant_id):
     data = request.json
     if not data:
         return jsonify({"code": 400, "msg": "Bad request, could not find json data"}), 400
+
+    logger.info('Request: add pm contact:'
+                'data => %s '
+                'username => %s ' % (data, g.username))
+
     try:
         result = apiUtil.add_contact_single(tenant_id, data)
         return jsonify(result)
@@ -230,6 +247,10 @@ def delete_contact(tenant_id):
     ids = request.args.get('ids', None)
     if not ids:
         return jsonify({"code": 400, "msg": "Bad request, could not find id to delete"}), 400
+
+    logger.info('Request: delete pm contact:'
+                'ids => %s '
+                'username => %s ' % (ids, g.username))
     try:
         result = apiUtil.delete_contact_list(ids)
         return jsonify(result)

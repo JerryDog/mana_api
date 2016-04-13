@@ -18,7 +18,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask import abort
 from flask import request
 from flask import jsonify
-from config import KEYSTONE, DATABASE, DATABASE_CMDB, logging
+from config import KEYSTONE, DATABASE, DATABASE_CMDB, DATABASE_CLOUD, logging
 from flask import g
 import urlparse
 import json
@@ -26,7 +26,8 @@ import re
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
 app.config['SQLALCHEMY_BINDS'] = {
-    'cmdb': DATABASE_CMDB
+    'cmdb': DATABASE_CMDB,
+    'cloud': DATABASE_CLOUD
 }
 
 db = SQLAlchemy(app)

@@ -124,7 +124,7 @@ class pm_monitors(db.Model):
 
 # 虚拟机计费表
 class expense_virtual(db.Model):
-    __bind_key__ = 'cmdb'
+    __bind_key__ = 'cloud'
     __tablename__ = 'expense_virtual'
     id = db.Column(db.Integer, primary_key=True)
     locationID = db.Column(db.String(64))
