@@ -213,7 +213,7 @@ def pm_refund(tenant_id):
 
     try:
         result = apiUtil._pm_refund(data)
-        return jsonify(result)
+        return jsonify(result), result['code']
     except MyError, e:
         logger.exception('MyError raise')
         return jsonify({"code": 400, "msg": '%s' % e.value}), 400

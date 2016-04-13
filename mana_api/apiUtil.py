@@ -731,22 +731,29 @@ def _pm_refund(data):
     if not snids:
         raise MyError('sind required')
 
+    code = 200
+    msg = "all success"
     detail = []
     for s in snids.split(','):
         pm_obj = pm_variable.query.filter(
             pm_variable.snid == s
         ).first()
         if not pm_obj:
-            detail.append({"code": 404, "msg": "pm server not found", "snid": s})
+            code = 404
+            msg = "pm server not found"
+            detail.append({"code": code, "msg": msg, "snid": s})
             continue
         if pm_obj.status != "stop":
-            detail.append({"code": 403, "msg": "please stop pm server first", "snid": s})
+            code = 403
+            msg = "please stop pm server first"
+            detail.append({"code": code, "msg": msg, "snid": s})
             continue
         db.session.query(pm_relation).filter(pm_relation.snid == s).update({
             pm_relation.tenant_id: g.admin_proj
         })
+        detail.append({"code": 200, "msg": "success", "snid": s})
     db.session.commit()
-    return {"code": 200, "msg": "", "detail": detail}
+    return {"code": code, "msg": msg, "detail": detail}
 
 # 定义只有管理员才可以访问的api
 def admin_required(func):
