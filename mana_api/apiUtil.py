@@ -296,7 +296,7 @@ def update_stat_after_act(act, snid):
         })
         db.session.commit()
     elif act == "off":
-        db.session.query(pm_variable).filter(pm_variable.system_snid == snid).update({
+        db.session.query(pm_variable).filter(pm_variable.snid == snid).update({
             pm_variable.status: "stopping"
         })
         db.session.commit()
@@ -315,7 +315,7 @@ def get_pm_accounts(tenant_id):
         daily_dict = {"month": i.update_at.strftime('%Y-%m'),
                       "price": i.price,
                       "region": i.region,
-                      "pm_id": i.system_snid}
+                      "pm_id": i.snid}
         daily_list_pm.append(daily_dict)
         del daily_dict
     # 将物理机每天的数据按月按区域分类
@@ -464,12 +464,12 @@ def get_pm_accounts_detail(tenant_id, region, month):
 
     pm_dict = {}
     for d in db_query:
-        if pm_dict.has_key(d.system_snid):
-            pm_dict[d.system_snid]['price'] += d.price
+        if pm_dict.has_key(d.snid):
+            pm_dict[d.snid]['price'] += d.price
         else:
-            pm_dict[d.system_snid] = {}
-            pm_dict[d.system_snid]['system_snid'] = d.system_snid
-            pm_dict[d.system_snid]['price'] = d.price
+            pm_dict[d.snid] = {}
+            pm_dict[d.snid]['snid'] = d.snid
+            pm_dict[d.snid]['price'] = d.price
 
     month_pm_list = []
     for key in pm_dict:
