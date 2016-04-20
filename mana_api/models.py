@@ -56,6 +56,8 @@ class pm_variable(db.Model):
     mem_size = db.Column(db.Integer)
     disk_size = db.Column(db.Integer)
     ip = db.Column(db.String(255))
+    wan_ip = db.Column(db.String(255))
+    lan_ip = db.Column(db.String(255))
     ilo_ip = db.Column(db.String(255))
     ilo_user = db.Column(db.String(255), default='root')
     ilo_passwd = db.Column(db.String(255), default='ztgame@123')

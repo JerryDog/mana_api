@@ -246,6 +246,8 @@ def get_pm(tenant_id, region, f, t):
             "mem_size": i.mem_size,
             "disk_size": i.disk_size,
             "ip": i.ip,
+            "wan_ip": i.wan_ip,
+            "lan_ip": i.lan_ip,
             "ilo_state": i.ilo_state,
             "state": state,
             "asset_id": asset_id,
@@ -580,6 +582,8 @@ def add_pm(data):
     host_name = data.get('host_name', None)
     os_type = data.get('os_type', None)
     ip = data.get('ip', None)
+    wan_ip = data.get('wan_ip', None)
+    lan_ip = data.get('lan_ip', None)
     region = data.get('region', None)
     ilo_ip = data.get('ilo_ip', None)
     ilo_user = data.get('ilo_user', None)
@@ -607,7 +611,8 @@ def add_pm(data):
     # pm_variable 录入
     new_pm_variable = pm_variable(snid=snid, host_name=host_name, os_type=os_type,
                                   region=region, cpu_num=cpu_num, mem_size=mem_size,
-                                  disk_size=disk_size, ip=ip, ilo_ip=ilo_ip,ilo_state=ilo_state, remark=remark)
+                                  disk_size=disk_size, ip=ip, wan_ip=wan_ip, lan_ip=lan_ip,
+                                  ilo_ip=ilo_ip,ilo_state=ilo_state, remark=remark)
     if ilo_user:
         new_pm_firmware.ilo_user = ilo_user
     if ilo_passwd:
@@ -662,6 +667,8 @@ def get_single_pm(snid):
             "mem_size": i.mem_size,
             "disk_size": i.disk_size,
             "ip": i.ip,
+            "wan_ip": i.wan_ip,
+            "lan_ip": i.lan_ip,
             "ilo_state": i.ilo_state,
             "state": state,
             "asset_id": asset_id,
